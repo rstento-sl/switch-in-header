@@ -1,0 +1,440 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2026"><meta name="generator" content="DITA-OT"><title>Analyze metrics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <!-- <link rel="icon" type="image/x-icon" href="/img/icons/logo/sl-logo.ico"/> -->
+  <!-- <link rel="icon" type="image/svg+xml" href="/img/icons/logo/sl-logo.svg"/> -->
+  <!--<link rel="icon" type="image/x-icon"  href="https://d3132s9xzuu9s8.cloudfront.net/k/sl-logo-teal.ico" />-->
+  <!-- <link rel="icon" type="image/svg+xml" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/favicon-teal-grad-128.svg"/> -->
+  <link rel="icon" type="image/svg+xml" href="https://d3132s9xzuu9s8.cloudfront.net/ux/sl-logo-indigo-icon.svg">
+  <!--<link rel="icon" type="image/svg+xml" href="https://d3132s9xzuu9s8.cloudfront.net/k/sl-logo-teal.svg"/>-->
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rainbow/2.1.4/themes/github.css" /> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/2.1.4/rainbow.min.js"></script> -->
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script> -->
+
+  <!-- Google Analytics (gtag.js) – Enable for live site only.
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-W8ZVFJP785"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W8ZVFJP785');
+  </script>
+  -->
+
+  <!-- GCSE -->
+  <!-- <script async="true" src="https://cse.google.com/cse.js?cx=25d4aa9829a3148ff"/> -->
+
+  <!-- FontAwesome -->
+  <!-- <script src="https://kit.fontawesome.com/a548053f9e.js" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://kit.fontawesome.com/77a505b9e0.js" crossorigin="anonymous"></script> -->
+
+  <!-- Preload images -->
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-blue.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/thumbs-up.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/thumbs-down.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-left-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-right-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/codeblock-copy-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/permalink-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/Close Icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/thumbs-up-fill-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/thumbs-down-fill-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-down-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/IMPORTANT.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/NOTE.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/TIP.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/REMEMBER.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/WARNING.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/CAUTION.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/community-logo-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/icon-legacy-site-search.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/3-stars-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/cross-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/sl-logo-indigo-icon.svg" as="image">
+  <!-- BugHerd -->
+  <!-- <script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=1tn2hl0shbd0tgl9ifyteq" async="true"></script> stage-main -->
+  <!-- Include Bing Custom Search JavaScript SDK -->
+  <!-- <script src="https://www.bing.com/api/customsearch/search/sdk"></script> -->
+<link rel="stylesheet" type="text/css" href="theme/commonltr.css"><link rel="stylesheet" type="text/css" href="theme/sldocs.css"></head><body id="task-analyze-metrics"><header role="banner"><div class="header">
+<ul class="headertopsection">
+  <ul class="mainbanner">
+    <!-- Hamburger for mobile -->
+    <i class="hamburgericon"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/hamburger-icon.svg" alt="menu"></i>
+
+    <!-- Logo and Site Title -->
+    <a href="/index.html" class="header-logo-link">
+      <img class="noborder noexpand header-logo-img" src="https://d3132s9xzuu9s8.cloudfront.net/ux/sl-logo-indigo-icon.svg" alt="SnapLogic Logo">
+    </a>
+    <ph class="site-title site-title-compact"><a href="/index.html">SnapLogic Documentation</a></ph>
+
+    <!-- Search bar (compact) -->
+    <div class="search-container-compact desktop-nav">
+      <span onclick="showPopup()" class="search-icon-compact"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
+      <input type="text" id="searchQuery" placeholder="Search docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+    </div>
+
+    <!-- Product Dropdown Menus (smaller) -->
+    <nav class="product-menu-header desktop-nav">
+      <!-- Dropdown 1: Integration Platform -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Integration Platform <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/autosync/autosync-home.html">AutoSync</a>
+          <a href="/designer/designer-home.html">Designer</a>
+          <a href="/snapgpt/snapgpt-home.html">SnapGPT</a>
+        </div>
+      </div>
+
+      <!-- Dropdown 2: Administration &amp; Governance -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Administration &amp; Governance <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/admin-manager/admin-manager-home.html">Admin Manager</a>
+        </div>
+      </div>
+
+      <!-- Dropdown 3: Observability -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Observability <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/monitor/monitor-home.html">Monitor</a>
+        </div>
+      </div>
+    </nav>
+  </ul>
+
+  <ul class="topmenu">
+    <!-- Original search for mobile -->
+     <li class="search-popup-hdr">
+                <div id="search-container">
+                    <span onclick="showPopup()" id="search-container-icon"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
+                    <input type="text" id="searchQueryDesktop" placeholder="Search the documentation and community posts" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+                </div>
+            </li>
+  </ul>
+
+  <ul class="topmenusearch">
+  <li>
+                <div id="search-container-mobile">
+                    <span onclick="showPopup()"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-blue.svg" alt="search-icon"></span>
+                    <input type="text" id="searchQuerymobile" placeholder="Search the docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+                </div>
+            </li>
+      <li><span><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span></li>
+  </ul>
+</ul>
+  <p class="newsbanner">
+   <span>  The migration of the <a href="https://docs-snaplogic.atlassian.net/wiki/spaces/SD/overview?homepageId=34537" target="_blank"> legacy documentation </a> to this site is in progress.
+    </span>
+    <span><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/x-close.svg" alt="thumbsup-icon"></span>
+  </p>
+  <div id="search-popup">
+    <div class="search-main">
+      <div class="Search-filters">
+      <div>
+      <li><h1>Filter search results</h1><img class="noborder noexpand close-filters-button" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/Close Icon.svg" alt="Close Filters"></li>
+      <li class="filter-item"><input type="checkbox" value="All" name="Content" checked=""><p>All</p></li>
+      <li class="filter-item"><input type="checkbox" value="Documentation" name="Content">
+        <p>New Documentation Site</p>
+        <img src="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-down-icon.svg" class="docfilterchevron noborder" alt="Toggle"></li>
+        <ul class="Doc-filters">
+          <li class="filter-item"><input type="checkbox" value="autosync" name="AutoSync"><p>AutoSync</p></li>
+          <li class="filter-item"><input type="checkbox" value="admin-manager" name="Admin Manager"><p>Admin Manager</p></li>
+          <li class="filter-item"><input type="checkbox" value="security" name="Security"><p>Security</p></li>
+          <li class="filter-item"><input type="checkbox" value="snaps" name="Snaps"><p>Snaps</p></li>
+          <li class="filter-item"><input type="checkbox" value="snaplexes" name="Snaplexes"><p>Snaplexes</p></li>
+          <li class="filter-item"><input type="checkbox" value="monitor" name="Monitor"><p>Monitor</p></li>
+          <li class="filter-item"><input type="checkbox" value="public-apis" name="Snaplogic Public APIs"><p>Snaplogic Public APIs</p></li>
+          <li class="filter-item"><input type="checkbox" value="cicd/git-integration" name="Git Integration"><p>Git Integration</p></li>
+          <li class="filter-item"><input type="checkbox" value="cicd/secrets-mgm" name="Secrets Management"><p>Secrets Management</p></li>
+          <li class="filter-item"><input type="checkbox" value="genai" name="GenAI App Builder"><p>AgentCreator</p></li>
+        </ul>
+        <li class="filter-item"><input type="checkbox" value="Confluence" name="Content">
+        <p>Legacy Site</p></li>
+        <ul class="legacy-filters-text">
+          <li>
+            <span><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/tool-tip-icon.svg" alt="icon"></span>
+            <span>No advanced filters available</span>
+          </li>
+        </ul>
+      </div>
+      </div>
+      <div class="search-page-main">
+        <div class="search-bar-advanced">
+           <div class="back-button">
+           <img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/arrow-narrow-left.svg" alt="backicon">
+           </div>
+          <div class="search-bar">
+          <div>
+          <span class="cleartext"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/Close Icon.svg" alt="clearicon"></span>
+           <span class="advancedsearchicon"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-blue.svg" alt="search-icon"></span>
+            <input placeholder="Search the documentation and community posts" type="text" spellcheck="false" autocomplete="off" onfocus="showdropdown2()">
+            </div>
+            <div id="autosuggest-dropdown2"></div>
+          </div>
+          <div class="show-filters-button"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/show-filters.svg" alt="clearicon"></div>
+          <div class="advance_search_button">Search</div>
+
+        </div>
+        <div class="results_count"></div>
+        <div id="searched-results"></div>
+         <div id="show-more" class="">Show more results</div>
+      </div>
+    </div>
+  </div>
+</div></header><nav class="toc" role="navigation"><ul><li><a href="placeholders/task-landing-get-started.html">Get Started</a><ul><li><a href="placeholders/agent-developers.html">Agent Developers</a></li><li><a href="placeholders/environment-admins.html">Environment Admins</a><ul><li><a href="create-user-account.html">Create User Accounts</a></li><li><a href="admin-manager-create-snaplex.html">Create a Snaplex</a></li><li><a href="placeholders/manage-snap-packs.html">Manage Snap Packs</a></li></ul></li><li><a href="placeholders/integration-developers.html">Integration Developers</a><ul><li><a href="placeholders/configure-your-profile.html">Configure Your Profile</a></li><li><a href="placeholders/configure-snap-accounts.html">Configure Snap Accounts</a></li><li><a href="placeholders/monitor-integrations.html">Monitor Integrations</a></li></ul></li><li><a href="placeholders/tutorials.html">Tutorials</a><ul><li><a href="placeholders/create-first-pipeline-designer.html">Create Your First Pipeline in Designer</a></li><li><a href="placeholders/create-first-autosync-pipeline.html">Create Your First AutoSync Pipeline</a></li><li><a href="placeholders/create-first-agent.html">Create Your First Agent</a></li><li><a href="placeholders/create-first-apim-service.html">Create Your First APIM Service</a></li></ul></li></ul></li><li><a href="placeholders/task-landing-administer.html">Administer the Environment</a><ul><li><a href="placeholders/control-plane.html">Control Plane</a><ul><li><a href="configure-custom-org-branding.html">Configure Custom Organization Branding</a></li><li><a href="placeholders/autosync-settings-snap-pack.html">AutoSync Settings: Snap Pack Versions &amp; Allow Nullable Columns</a></li><li><a href="placeholders/apim-3-settings.html">APIM 3.0 Settings</a></li><li><a href="placeholders/designer-settings-validation.html">Designer Settings: Pipeline Validation &amp; Data Preview</a></li><li><a href="placeholders/snapgpt-settings-task.html">SnapGPT Settings</a></li><li><a href="placeholders/user-session-timeouts.html">User Session Timeouts</a></li><li><a href="placeholders/password-expiration.html">Password Expiration</a></li><li><a href="create-user-account.html">Create User Accounts</a></li><li><a href="create-team-account.html">Create Team Accounts</a></li><li><a href="create-service-account.html">Create Service Accounts</a></li><li><a href="edit-user-account.html">Edit User Accounts</a></li><li><a href="account-groups.html">Organize Accounts into Groups</a></li></ul></li><li><a href="placeholders/data-plane.html">Data Plane</a><ul><li><a href="admin-manager-create-snaplex.html">Create a Snaplex</a></li><li><a href="admin-manager-update-snaplex.html">Update a Snaplex</a></li><li><a href="placeholders/configure-snaplex-allowlists.html">Configure Snaplex Allowlists</a></li><li><a href="placeholders/add-snaplogic-ips-allowlists.html">Add SnapLogic IPs to Client Allowlists</a></li><li><a href="placeholders/configure-snaplex-auto-upgrade.html">Configure Snaplex Auto-Upgrade</a></li><li><a href="placeholders/start-a-snaplex.html">Start a Snaplex</a></li><li><a href="placeholders/stop-a-snaplex.html">Stop a Snaplex</a></li><li><a href="placeholders/install-a-groundplex.html">Install a Groundplex</a></li><li><a href="placeholders/configure-a-groundplex.html">Configure a Groundplex</a></li><li><a href="upgrade-snaplex-version.html">Upgrade to a New Snaplex Version</a></li></ul></li><li><a href="placeholders/security-task.html">Security</a><ul><li><a href="create-idp-integration.html">Create Identity Provider Integration</a></li><li><a href="configure-sso.html">Configure Single Sign-On</a></li><li><a href="enhanced-encryption.html">Enable Enhanced Encryption (Admin)</a></li><li><a href="enhanced-account-encryption.html">Enable Enhanced Encryption (AutoSync)</a></li></ul></li></ul></li><li><a href="placeholders/task-landing-develop-integrations.html">Develop &amp; Deploy Integrations</a><ul><li><a href="placeholders/autosync-data-pipelines.html">AutoSync Data Pipelines</a><ul><li><a href="create-credentials.html">Create Data Source Credentials</a></li><li><a href="create-data-pipeline.html">Create a Data Pipeline</a></li><li><a href="choose-tables.html">Choose Tables to Sync</a></li><li><a href="view-data-pipeline.html">View Data Pipeline Status</a></li><li><a href="enable-notifications.html">Enable Data Pipeline Notifications</a></li></ul></li><li><a href="placeholders/designer-pipelines.html">Designer Pipelines</a><ul><li><a href="snapgpt-pipe-gen-rag.html">Generate a Pipeline with SnapGPT</a></li><li><a href="snapgpt-gen-expressions.html">Generate Expressions with SnapGPT</a></li><li><a href="mapper-expr-example1.html">Generate Mapper Expressions with SnapGPT</a></li><li><a href="generate-queries.html">Generate SQL Queries with SnapGPT</a></li><li><a href="mapper-expr-example2.html">Extract Pipeline Parameters with SnapGPT</a></li><li><a href="snapgpt-analyze-pipelines.html">Analyze Pipelines with SnapGPT</a></li><li><a href="snapgpt-refine-pipelines.html">Refine Pipelines with SnapGPT</a></li><li><a href="snapgpt-pipe-gen-image.html">Generate a Pipeline from an Image</a></li><li><a href="print-pipeline.html">Print a Pipeline</a></li><li><a href="using-pipeline-notes.html">Use Pipeline Notes in Designer</a></li></ul></li></ul></li><li><a href="placeholders/task-landing-develop-agents.html">Develop Agents</a><ul><li><a href="placeholders/develop-agents.html">Develop Agents</a></li></ul></li><li><a href="placeholders/task-landing-manage-apis.html">Manage APIs</a><ul><li><a href="placeholders/api-management.html">API Management</a></li><li><a href="placeholders/snaplogic-public-apis.html">SnapLogic Public APIs</a></li></ul></li><li><a href="placeholders/task-landing-monitor.html">Monitor the Runtime</a><ul><li><a href="placeholders/monitor-apis.html">APIs</a><ul><li><a href="observe-api-metrics.html">View API Metrics</a></li></ul></li><li><a href="placeholders/monitor-environment-assets.html">Environment Assets</a><ul><li><a href="catalog.html">Browse the Asset Catalog</a></li><li><a href="view-metadata.html">View Asset Metadata</a></li><li><a href="asset-table-config.html">Configure the Asset Table</a></li><li><a href="custom-metadata.html">Manage Custom Metadata</a></li><li><a href="download-upload-metadata.html">Download and Upload Metadata</a></li><li><a href="add-supplemental-metadata.html">Add Supplemental Metadata</a></li><li><a href="edit-task-metadata.html">Edit Task Metadata</a></li></ul></li><li><a href="placeholders/monitor-mcp.html">MCP</a></li><li><a href="placeholders/monitor-pipelines.html">Pipelines</a><ul><li><a href="monitor-analyze.html">Analyze Pipelines</a></li><li><a href="insights.html">View Pipeline Insights</a></li><li><a href="analyze-execution.html">Analyze Execution</a></li><li><a href="find-executions.html">Find Executions</a></li><li><a href="stop-executions.html">Stop Executions</a></li><li><a href="download-executions.html">Download Executions</a></li><li><a href="pipeline-details-panel.html">View Pipeline Details</a></li><li><a href="snap-statistics-tab.html">View Snap Statistics</a></li><li><a href="pipeline-logs-tab.html">View Pipeline Logs</a></li><li><a href="pipeline-parameters-tab.html">View Pipeline Parameters</a></li><li><a href="state-transition-tab.html">View State Transitions</a></li></ul></li><li><a href="placeholders/monitor-snaplexes.html">Snaplexes</a></li><li><a href="placeholders/monitor-snaps.html">Snaps</a><ul><li><a href="snap-statistics-tab.html">View Snap Statistics</a></li></ul></li></ul></li><li><a href="placeholders/task-landing-observe.html">Observe with a Third-Party Tool</a><ul><li><a href="observe-api-metrics.html">View API Metrics</a></li><li><a href="insights.html">View Pipeline Insights</a></li><li class="active"><a href="analyze-metrics.html">Analyze Snaplex Metrics</a></li></ul></li><li><a href="placeholders/task-landing-troubleshoot.html">Troubleshoot</a><ul><li><a href="placeholders/troubleshoot-accounts.html">Accounts</a></li><li><a href="placeholders/troubleshoot-agents.html">Agents</a></li><li><a href="placeholders/troubleshoot-apim-services.html">APIM Services</a></li><li><a href="placeholders/troubleshoot-mcp-servers.html">MCP Servers</a></li><li><a href="placeholders/troubleshoot-pipelines.html">Pipelines</a></li><li><a href="placeholders/troubleshoot-runtime-behavior.html">Runtime Behavior</a></li><li><a href="placeholders/troubleshoot-snaplexes.html">Snaplexes</a></li><li><a href="placeholders/troubleshoot-snaps.html">Snaps</a></li><li><a href="placeholders/troubleshoot-tasks.html">Tasks</a></li></ul></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+
+  <h1 class="title topictitle1" id="ariaid-title1">Analyze metrics</h1>
+  
+
+  <div class="body conbody" id="task-analyze-metrics__task-analyze-metrics-body">
+    <section class="section">
+      <p class="p">Metrics graphs report key Snaplex node information. The table below lists the graphs in alphabetic
+        order. The SnapLogic platform <a class="xref" href="monitor/analyze-metrics.html#analyze-metrics__downsampling">downsamples data</a> to simplify the presentation. </p>
+      <table class="table flddesc" id="task-analyze-metrics__table_pdm_zzc_mbc"><caption></caption><colgroup><col style="width:33.33333333333333%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+            <tr class="row">
+              <th class="entry align-left valign-top" id="task-analyze-metrics__table_pdm_zzc_mbc__entry__1">Graph title</th>
+              <th class="entry align-left valign-top" id="task-analyze-metrics__table_pdm_zzc_mbc__entry__2">Description</th>
+            </tr>
+          </thead><tbody class="tbody">
+            <tr class="row" id="task-analyze-metrics__active-pipelines">
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__1"><span class="ph uicontrol">Active pipelines (count)</span></td>
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__2">The number of pipelines currently running on this node.</td>
+            </tr>
+            <tr class="row" id="task-analyze-metrics__active-threads">
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__1"><span class="ph uicontrol">Active threads (count)</span></td>
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__2">The current number of live threads in the JVM. This includes both daemon and non-daemon
+                threads.</td>
+            </tr>
+            <tr class="row" id="task-analyze-metrics__combined-memory">
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__1"><span class="ph uicontrol">Combined memory (GiB)</span></td>
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__2">The orange text and dotted line shows the amount of physical memory available on the
+                selected node in <a class="xref" href="https://simple.wikipedia.org/wiki/Gibibyte" target="_blank" rel="external noopener">gibibytes</a>. The blue line indicates heap average usage added to the
+                green line for non-heap memory average usage. </td>
+            </tr>
+            <tr class="row" id="task-analyze-metrics__disk-utilization">
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__1"><span class="ph uicontrol">Disk utilization (%)</span></td>
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__2">The average percentage of space used on all available mounts.</td>
+            </tr>
+            <tr class="row" id="task-analyze-metrics__file-descriptor">
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__1"><span class="ph uicontrol">File descriptor utilization (%)</span></td>
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__2">The average node use of the maximum number of configured file descriptors as a
+                percentage. On Linux, file descriptors are used to open files and make network connections.
+                Pipelines executions can encounter errors if the maximum number of descriptors isn't
+                sufficient.</td>
+            </tr>
+            <tr class="row" id="task-analyze-metrics__heap-memory">
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__1"><span class="ph uicontrol">Used heap memory (% max, and GiB)</span></td>
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__2">
+                <p class="p">The average percentage of the heap space allocated and used by the Snaplex service on the
+                  selected node. The orange text shows the maximum size set for JVM heap memory in <a class="xref" href="https://simple.wikipedia.org/wiki/Gibibyte" target="_blank" rel="external noopener">gibibytes</a>. The blue line indicates the average amount of committed (allocated)
+                  heap memory. The gold line shows the average amount of space used for heap memory.</p>
+                <p class="p">For Groundplexes, you can set the <span class="ph uicontrol">Max heap size</span> when you <a class="xref" href="monitor/../admin-manager/admin-manager-create-snaplex.html" title="Add a Groundplex in Admin Manager">create</a> or <a class="xref" href="monitor/../admin-manager/admin-manager-update-snaplex.html" title="Update a Snaplex">update</a> a Snaplex. Refer
+                  to the <a class="xref" href="https://docs.oracle.com/en/java/javase/22/core/heap-and-heap-memory.html" target="_blank" rel="external noopener">Java documentation</a> for an explanation of the
+                  difference between heap and non-heap memory.</p>   
+                <p class="p" id="task-analyze-metrics__maintenance-mode-resource-use">When a Snaplex node is in maintenance mode, some resources are still in use. 
+                  Therefore, when viewing the node details in Monitor, you might notice relatively low memory consumption.</p>
+              </td>
+            </tr>
+            <tr class="row" id="task-analyze-metrics__network-received">
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__1"><span class="ph uicontrol">Network received (KiB/sec)</span></td>
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__2">The total amount of data coming in over the network to the Snaplex service measured in
+                kibibytes per second. </td>
+            </tr>
+            <tr class="row" id="task-analyze-metrics__network-sent">
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__1"><span class="ph uicontrol">Network sent (KiB/sec)</span></td>
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__2">The total amount of data sent over the network by the Snaplex service measured in
+                kibibytes per second. </td>
+            </tr>
+            <tr class="row" id="task-analyze-metrics__non-heap-memory">
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__1"><span class="ph uicontrol">Used non-heap memory (GiB)</span></td>
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__2">
+                <p class="p">The non-heap space allocated and used by the Snaplex service on the selected node in <a class="xref" href="https://simple.wikipedia.org/wiki/Gibibyte" target="_blank" rel="external noopener">gibibytes</a>. The green line indicates the average amount of committed heap memory.
+                  The gold line shows the average amount of space used for non-heap memory.</p>
+                <p class="p">Refer to the <a class="xref" href="https://docs.oracle.com/en/java/javase/22/core/heap-and-heap-memory.html" target="_blank" rel="external noopener">Java documentation</a> for an explanation of the
+                  difference between heap and non-heap memory.</p>
+              </td>
+            </tr>
+            <tr class="row" id="task-analyze-metrics__service-CPU">
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__1"><span class="ph uicontrol">Service CPU utilization (%)</span></td>
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__2">The average percentage of the node's CPU capacity used by the Snaplex service. The
+                percentage reflects the CPU time used by Snaplex service process compared with the total CPU
+                time available. <div class="note tip note_tip"><span class="note__title">Tip:</span> Total CPU usage and Service CPU usage are measured separately and
+                  change rapidly, so the relative percentages don't always align. Although the Service CPU is
+                  often lower than Total CPU, it can appear higher due to data collection and <a class="xref" href="monitor/analyze-metrics.html#analyze-metrics__downsampling">downsampling</a>.</div>
+              </td>
+            </tr>
+            <tr class="row" id="task-analyze-metrics__system-load">
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__1"><span class="ph uicontrol">System load</span></td>
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__2">
+                <p class="p">Only for nodes running on Unix-based operating systems. Not visible for nodes on Windows
+                  operating systems. </p>
+                <p class="p">Represents the 1 minute system load average, normalized by CPU core count. The values
+                  indicate:</p>
+                <p class="p">0.5 -&gt; 50% CPU usage</p>
+                <p class="p">1.0 -&gt; 100% CPU usage (fully saturated)</p>
+                <p class="p">&gt;1.0 -&gt; CPU is overloaded (fully saturated with task waiting)</p>
+                <p class="p">The normalized metric supports comparison of different node sizes. For example:</p>
+                <ul class="ul">
+                  <li class="li">
+                    <p class="p">On a 4-core system, a raw system load average of 4.0 means full usage, while on an
+                      8-core system, a raw system load average of 8.0 indicates full usage.</p>
+                  </li>
+                  <li class="li">
+                    <p class="p">Monitor normalizes both the 4-core and 8-core fully utilized systems to a value of 1.0,
+                      making them easier to compare.</p>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="row" id="task-analyze-metrics__total-CPU">
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__1"><span class="ph uicontrol">Total CPU utilization (%)</span></td>
+              <td class="entry align-left" headers="task-analyze-metrics__table_pdm_zzc_mbc__entry__2">The average percentage of node CPU capacity used over time by all processes running on
+                the node. The percentage reflects active time compared with the total time available. <div class="note tip note_tip" id="task-analyze-metrics__note"><span class="note__title">Tip:</span> Total CPU usage and Service CPU usage are measured separately and
+                  change rapidly, so the relative percentages don't always align. Although the Service CPU is
+                  often lower than Total CPU, it can appear higher due to data collection and <a class="xref" href="monitor/analyze-metrics.html#analyze-metrics__downsampling">downsampling</a>.</div></td>
+            </tr>
+          </tbody></table>
+      
+
+    </section>
+    <section class="section"><h2 class="title sectiontitle">Statistic downsampling</h2>
+      
+      
+    
+      <p class="p" id="task-analyze-metrics__downsampling">Because metric statistics include high volumes, the SnapLogic Platform downsamples
+        them for visual representation. The following table describes the time granularity for the selectable
+        time periods:</p>
+      <table class="table"><caption></caption><colgroup><col><col></colgroup><tbody class="tbody">
+            <tr class="row">
+              <td class="entry"><strong class="ph b">Time period</strong></td>
+              <td class="entry"><strong class="ph b">Time granularity</strong></td>
+            </tr>
+            <tr class="row">
+              <td class="entry">Last 15 minutes</td>
+              <td class="entry">10s</td>
+            </tr>
+            <tr class="row">
+              <td class="entry">Last 1 hour</td>
+              <td class="entry">30s</td>
+            </tr>
+            <tr class="row">
+              <td class="entry">Last 2 hours</td>
+              <td class="entry">1m</td>
+            </tr>
+            <tr class="row">
+              <td class="entry">Last 4 hours</td>
+              <td class="entry">2m</td>
+            </tr>
+            <tr class="row">
+              <td class="entry">Last 12 hours</td>
+              <td class="entry">5m</td>
+            </tr>
+            <tr class="row">
+              <td class="entry">Last 1 day</td>
+              <td class="entry">10m</td>
+            </tr>
+            <tr class="row">
+              <td class="entry">Last 2 days</td>
+              <td class="entry">20m</td>
+            </tr>
+            <tr class="row">
+              <td class="entry">Last 1 week</td>
+              <td class="entry">2 hrs</td>
+            </tr>
+            <tr class="row">
+              <td class="entry">Select from calendar Max (45 days)</td>
+              <td class="entry">8 hrs</td>
+            </tr>
+          </tbody></table>
+    </section>
+  </div>
+
+</article></main><footer role="contentinfo"><div class="footer">
+  <div>
+  <p class="newsbanner">
+   <span> The migration of the <a href="https://docs-snaplogic.atlassian.net/wiki/spaces/SD/overview?homepageId=34537" target="_blank"> legacy docs </a> to this site is in progress.
+   </span>
+   <span>
+   <img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/x-close.svg" alt="thumbsup-icon">
+   </span>
+  </p>
+  </div>
+  <div class="ftrlegal">
+    <!-- <p class="copyright"><a href="/refs/copyright.html">© <ph class="copyrightyear"></ph> SnapLogic, Inc.</a></p> -->
+     <div class="footer_top">
+     <div>
+     <a href="/index.html"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/ux/sl-logo-indigo-icon.svg" alt="SnapLogic Logo"></a>
+     <a href="/index.html">SnapLogic Documentation</a>
+     </div>
+     <div>
+     <ul>
+      <!-- <li><a href="/refs/copyright.html">© <ph class="copyrightyear"></ph> SnapLogic, Inc.</a></li>  <a class="xref" href="https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/49855/SnapLogic+Releases" target="_blank" rel="external noopener">Release Notes</a>-->
+        <!-- <li><a href="https://learn.snaplogic.com/" target="_blank" rel="external noopener">SnapLogic Academy</a></li> -->
+        <li><span>Explore</span><span><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-up-white-icon.svg" alt="SnapLogic Logo"></span></li>
+        <li><a class="xref" href="https://learn.snaplogic.com/" target="_blank" rel="external noopener">SnapLogic Academy</a></li>
+        <li><a class="xref" href="https://community.snaplogic.com/" target="_blank" rel="external noopener">Integration Nation</a></li>
+        <li><a class="xref" href="https://www.snaplogic.com/" target="_blank" rel="external noopener">Company</a></li>
+    <!-- <li><a href="https://community.snaplogic.com/" target="_blank" rel="external noopener">Integration Nation</a></li> -->
+    <!-- <li><a href="mailto:support@snaplogic.com" target="_blank" rel="external noopener">Support</a></li> -->
+    <!-- <li><a href="https://www.snaplogic.com/" target="_blank" rel="external noopener">Company</a></li> -->
+    </ul>
+       <ul>
+      <li><span>Need Help?</span><span><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-up-white-icon.svg" alt="SnapLogic Logo"></span></li>
+      <li>
+      <!-- <a><img class='noborder noexpand' src='https://d3132s9xzuu9s8.cloudfront.net/k/img/envelope-icon.svg' alt='envelope-icon'/></a> -->
+      <a href="mailto:documentation@snaplogic.com">Documentation Team</a></li>
+      <li>
+      <!-- <a><img class='noborder noexpand' src='https://d3132s9xzuu9s8.cloudfront.net/k/img/envelope-icon.svg' alt='envelope-icon'/></a> -->
+      <a href="mailto:support@snaplogic.com">Customer Support Team</a></li>
+      </ul>
+      </div>
+    </div>
+    <div class="footer_bottom">
+     <!-- <p  class="footer_logo"> -->
+    <!-- <a href="../index.html"><img class="noborder" src="https://d3132s9xzuu9s8.cloudfront.net/ux/sl-logo-new.svg" alt="SnapLogic Logo"/></a> -->
+    <!-- <a href="../index.html"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/sl-logo-teal.svg" alt="SnapLogic Logo"/></a> -->
+    <!-- <a href="/index.html"><img class="noborder" src="/img/icons/logo/sl_logo_combo_rev_rgb.svg" alt="SnapLogic Logo"/></a> -->
+    <!-- <ph class="footer-site-title">SnapLogic Documentation</ph> -->
+    <!-- </p> -->
+     <ul>
+      <li><a href="/refs/copyright.html">Copyright</a></li>
+       <li class="copyright">© <ph class="copyrightyear"></ph> SnapLogic, Inc.</li>
+    </ul>
+     <!-- <ul> -->
+      <!-- <ul>
+      <li>Need Help?</li>
+      <li><a><img class='noborder noexpand' src='https://d3132s9xzuu9s8.cloudfront.net/k/img/envelope-icon.svg' alt='envelope-icon'/></a><a href="mailto:documentation@snaplogic.com">Documentation Team</a></li>
+      <li><a><img class='noborder noexpand' src='https://d3132s9xzuu9s8.cloudfront.net/k/img/envelope-icon.svg' alt='envelope-icon'/></a><a href="mailto:support@snaplogic.com">Customer Support Team</a></li>
+      </ul> -->
+    <!-- </ul> -->
+    <ul>
+      <li><a class="xref" href="https://www.facebook.com/SnapLogic" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-facebook.svg" alt="ftr-logo"></a></li>
+      <li><a class="xref" href="https://twitter.com/SnapLogic" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-twitter.svg" alt="ftr-logo"></a></li>
+      <li><a class="xref" href="https://www.linkedin.com/company/snaplogic" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-linkedin.svg" alt="ftr-logo"></a></li>
+      <li><a class="xref" href="https://www.instagram.com/snaplogicinc" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-instagram.svg" alt="ftr-logo"></a></li>
+      <li><a class="xref" href="https://www.youtube.com/snaplogic" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-youtube.svg" alt="ftr-logo"></a></li>
+    </ul>
+    </div>
+
+  </div>
+
+  <!-- <script src="https://d3132s9xzuu9s8.cloudfront.net/k/sldocs.js"/> -->
+  <script src="../theme/sldocs.js"></script>
+
+</div></footer></body></html>

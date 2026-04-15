@@ -1,0 +1,328 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2026"><meta name="generator" content="DITA-OT"><title>Alert history</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <!-- <link rel="icon" type="image/x-icon" href="/img/icons/logo/sl-logo.ico"/> -->
+  <!-- <link rel="icon" type="image/svg+xml" href="/img/icons/logo/sl-logo.svg"/> -->
+  <!--<link rel="icon" type="image/x-icon"  href="https://d3132s9xzuu9s8.cloudfront.net/k/sl-logo-teal.ico" />-->
+  <!-- <link rel="icon" type="image/svg+xml" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/favicon-teal-grad-128.svg"/> -->
+  <link rel="icon" type="image/svg+xml" href="https://d3132s9xzuu9s8.cloudfront.net/ux/sl-logo-indigo-icon.svg">
+  <!--<link rel="icon" type="image/svg+xml" href="https://d3132s9xzuu9s8.cloudfront.net/k/sl-logo-teal.svg"/>-->
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rainbow/2.1.4/themes/github.css" /> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/2.1.4/rainbow.min.js"></script> -->
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script> -->
+
+  <!-- Google Analytics (gtag.js) – Enable for live site only.
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-W8ZVFJP785"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W8ZVFJP785');
+  </script>
+  -->
+
+  <!-- GCSE -->
+  <!-- <script async="true" src="https://cse.google.com/cse.js?cx=25d4aa9829a3148ff"/> -->
+
+  <!-- FontAwesome -->
+  <!-- <script src="https://kit.fontawesome.com/a548053f9e.js" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://kit.fontawesome.com/77a505b9e0.js" crossorigin="anonymous"></script> -->
+
+  <!-- Preload images -->
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-blue.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/thumbs-up.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/thumbs-down.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-left-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-right-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/codeblock-copy-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/permalink-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/Close Icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/thumbs-up-fill-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/thumbs-down-fill-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-down-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/IMPORTANT.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/NOTE.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/TIP.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/REMEMBER.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/WARNING.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/CAUTION.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/community-logo-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/icon-legacy-site-search.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/3-stars-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/cross-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/sl-logo-indigo-icon.svg" as="image">
+  <!-- BugHerd -->
+  <!-- <script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=1tn2hl0shbd0tgl9ifyteq" async="true"></script> stage-main -->
+  <!-- Include Bing Custom Search JavaScript SDK -->
+  <!-- <script src="https://www.bing.com/api/customsearch/search/sdk"></script> -->
+<link rel="stylesheet" type="text/css" href="../theme/commonltr.css"><link rel="stylesheet" type="text/css" href="../theme/sldocs.css"></head><body id="merge-columns"><header role="banner"><div class="header">
+<ul class="headertopsection">
+  <ul class="mainbanner">
+    <!-- Hamburger for mobile -->
+    <i class="hamburgericon"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/hamburger-icon.svg" alt="menu"></i>
+
+    <!-- Logo and Site Title -->
+    <a href="/index.html" class="header-logo-link">
+      <img class="noborder noexpand header-logo-img" src="https://d3132s9xzuu9s8.cloudfront.net/ux/sl-logo-indigo-icon.svg" alt="SnapLogic Logo">
+    </a>
+    <ph class="site-title site-title-compact"><a href="/index.html">SnapLogic Documentation</a></ph>
+
+    <!-- Search bar (compact) -->
+    <div class="search-container-compact desktop-nav">
+      <span onclick="showPopup()" class="search-icon-compact"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
+      <input type="text" id="searchQuery" placeholder="Search docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+    </div>
+
+    <!-- Product Dropdown Menus (smaller) -->
+    <nav class="product-menu-header desktop-nav">
+      <!-- Dropdown 1: Integration Platform -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Integration Platform <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/autosync/autosync-home.html">AutoSync</a>
+          <a href="/designer/designer-home.html">Designer</a>
+          <a href="/snapgpt/snapgpt-home.html">SnapGPT</a>
+        </div>
+      </div>
+
+      <!-- Dropdown 2: Administration &amp; Governance -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Administration &amp; Governance <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/admin-manager/admin-manager-home.html">Admin Manager</a>
+        </div>
+      </div>
+
+      <!-- Dropdown 3: Observability -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Observability <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/monitor/monitor-home.html">Monitor</a>
+        </div>
+      </div>
+    </nav>
+  </ul>
+
+  <ul class="topmenu">
+    <!-- Original search for mobile -->
+     <li class="search-popup-hdr">
+                <div id="search-container">
+                    <span onclick="showPopup()" id="search-container-icon"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
+                    <input type="text" id="searchQueryDesktop" placeholder="Search the documentation and community posts" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+                </div>
+            </li>
+  </ul>
+
+  <ul class="topmenusearch">
+  <li>
+                <div id="search-container-mobile">
+                    <span onclick="showPopup()"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-blue.svg" alt="search-icon"></span>
+                    <input type="text" id="searchQuerymobile" placeholder="Search the docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+                </div>
+            </li>
+      <li><span><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span></li>
+  </ul>
+</ul>
+  <p class="newsbanner">
+   <span>  The migration of the <a href="https://docs-snaplogic.atlassian.net/wiki/spaces/SD/overview?homepageId=34537" target="_blank"> legacy documentation </a> to this site is in progress.
+    </span>
+    <span><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/x-close.svg" alt="thumbsup-icon"></span>
+  </p>
+  <div id="search-popup">
+    <div class="search-main">
+      <div class="Search-filters">
+      <div>
+      <li><h1>Filter search results</h1><img class="noborder noexpand close-filters-button" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/Close Icon.svg" alt="Close Filters"></li>
+      <li class="filter-item"><input type="checkbox" value="All" name="Content" checked=""><p>All</p></li>
+      <li class="filter-item"><input type="checkbox" value="Documentation" name="Content">
+        <p>New Documentation Site</p>
+        <img src="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-down-icon.svg" class="docfilterchevron noborder" alt="Toggle"></li>
+        <ul class="Doc-filters">
+          <li class="filter-item"><input type="checkbox" value="autosync" name="AutoSync"><p>AutoSync</p></li>
+          <li class="filter-item"><input type="checkbox" value="admin-manager" name="Admin Manager"><p>Admin Manager</p></li>
+          <li class="filter-item"><input type="checkbox" value="security" name="Security"><p>Security</p></li>
+          <li class="filter-item"><input type="checkbox" value="snaps" name="Snaps"><p>Snaps</p></li>
+          <li class="filter-item"><input type="checkbox" value="snaplexes" name="Snaplexes"><p>Snaplexes</p></li>
+          <li class="filter-item"><input type="checkbox" value="monitor" name="Monitor"><p>Monitor</p></li>
+          <li class="filter-item"><input type="checkbox" value="public-apis" name="Snaplogic Public APIs"><p>Snaplogic Public APIs</p></li>
+          <li class="filter-item"><input type="checkbox" value="cicd/git-integration" name="Git Integration"><p>Git Integration</p></li>
+          <li class="filter-item"><input type="checkbox" value="cicd/secrets-mgm" name="Secrets Management"><p>Secrets Management</p></li>
+          <li class="filter-item"><input type="checkbox" value="genai" name="GenAI App Builder"><p>AgentCreator</p></li>
+        </ul>
+        <li class="filter-item"><input type="checkbox" value="Confluence" name="Content">
+        <p>Legacy Site</p></li>
+        <ul class="legacy-filters-text">
+          <li>
+            <span><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/tool-tip-icon.svg" alt="icon"></span>
+            <span>No advanced filters available</span>
+          </li>
+        </ul>
+      </div>
+      </div>
+      <div class="search-page-main">
+        <div class="search-bar-advanced">
+           <div class="back-button">
+           <img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/arrow-narrow-left.svg" alt="backicon">
+           </div>
+          <div class="search-bar">
+          <div>
+          <span class="cleartext"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/Close Icon.svg" alt="clearicon"></span>
+           <span class="advancedsearchicon"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-blue.svg" alt="search-icon"></span>
+            <input placeholder="Search the documentation and community posts" type="text" spellcheck="false" autocomplete="off" onfocus="showdropdown2()">
+            </div>
+            <div id="autosuggest-dropdown2"></div>
+          </div>
+          <div class="show-filters-button"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/show-filters.svg" alt="clearicon"></div>
+          <div class="advance_search_button">Search</div>
+
+        </div>
+        <div class="results_count"></div>
+        <div id="searched-results"></div>
+         <div id="show-more" class="">Show more results</div>
+      </div>
+    </div>
+  </div>
+</div></header><nav class="toc" role="navigation"><ul><li><a href="../admin-manager/admin-manager-home.html">Admin Manager</a><ul><li><a href="../admin-manager/admin-manager-about.html">Introduction</a></li><li><a href="../admin-manager/administration-get-started.html">Get Started</a></li><li><a href="../admin-manager/designer-settings.html">Designer settings</a></li><li><a href="../admin-manager/snapgpt-settings.html">SnapGPT settings</a></li><li><a href="../admin-manager/apim.html">API Management 3.0 settings</a></li><li><a href="../admin-manager/asset-catalog.html">Asset catalog settings</a></li><li><a href="../admin-manager/autosync-settings.html">AutoSync settings</a></li><li><a href="../admin-manager/users-groups-roles.html">User management</a><ul><li><a href="../admin-manager/admin-manager-users.html">Manage user accounts</a><ul><li><a href="../admin-manager/create-user-account.html">Create user account</a></li><li><a href="../admin-manager/create-team-account.html">Create team account</a></li><li><a href="../admin-manager/create-service-account.html">Create service account</a></li><li><a href="../admin-manager/approve-portal-user.html">Approve or reject Portal users</a></li><li><a href="../admin-manager/delete-account.html">Delete accounts</a></li><li><a href="../admin-manager/edit-user-account.html">Edit accounts</a></li></ul></li><li><a href="../admin-manager/admin-manager-groups.html">Manage groups</a></li><li><a href="../admin-manager/admin-manager-roles.html">Manage roles</a></li></ul></li><li><a href="../admin-manager/general-settings.html">Environment settings</a></li><li><a href="../admin-manager/snaplexes.html">Snaplexes</a><ul><li><a href="../admin-manager/admin-manager-create-snaplex.html">Add a Groundplex</a></li><li><a href="../admin-manager/admin-manager-update-snaplex.html">Update a Snaplex</a></li></ul></li><li><a href="../admin-manager/git-integration.html">Git Integration</a></li><li><a href="../admin-manager/slack.html">Slack setup</a></li><li><a href="../admin-manager/custom-privacy-notice.html">Custom privacy notice</a></li><li><a href="../admin-manager/snap-packs.html">Snap Packs</a><ul><li><a href="../admin-manager/restrict-snap-visibility.html">Restrict Snap visibility</a></li></ul></li><li><a href="../admin-manager/password-expiration.html">Password expiry</a></li><li><a href="../admin-manager/admin-manager-sessions.html">Session timeouts</a></li><li><a href="../admin-manager/authentication.html">Authentication</a><ul><li><a href="../admin-manager/sso.html">SSO authentication</a><ul><li><a href="../admin-manager/create-idp-integration.html">Create IdP application</a></li><li><a href="../admin-manager/configure-sso.html">Configure SSO</a></li></ul></li><li><a href="../admin-manager/jwt.html">JWT authentication</a><ul><li><a href="../admin-manager/jwt-config.html">JWT configuration</a></li></ul></li></ul></li><li><a href="../admin-manager/email-encryption.html">Email encryption</a></li><li><a href="../admin-manager/allowlist.html">Allowlists</a><ul><li><a href="../admin-manager/cloud-triggered-allowlist.html">Cloud-triggered allowlist</a></li><li><a href="../admin-manager/cors-allowlist.html">CORS allowlist</a></li><li><a href="../admin-manager/groundplex-allowlist.html">Groundplex allowlist</a></li><li><a href="../admin-manager/email-allowlist.html">Email domain allowlist</a></li></ul></li><li><a href="../admin-manager/account-encryption.html">Account encryption</a><ul><li><a href="../admin-manager/enhanced-encryption.html">Enable Enhanced Account Encryption (EAE)</a></li><li><a href="../admin-manager/trusted-environment.html">Trusted environments</a></li></ul></li></ul></li><li><a href="../autosync/autosync-home.html">AutoSync</a><ul><li><a href="../autosync/autosync-about.html">Introduction</a></li><li><a href="../autosync/use-autosync.html">How to use AutoSync</a><ul><li><a href="../autosync/create-data-pipeline.html">Create a data pipeline</a></li><li><a href="../autosync/view-data-pipeline.html">View data pipeline</a></li><li><a href="../autosync/dashboard-list-view.html">Use dashboard list view</a></li><li><a href="../autosync/multiple-sources.html">Use multiple sources</a></li><li><a href="../autosync/choose-tables.html">Choose tables</a></li><li><a href="../autosync/transformations.html">Define transformations</a><ul><li><a href="../autosync/filter-columns.html">Filter columns</a></li><li><a href="../autosync/empty-values.html">Replace empty values</a></li><li><a href="../autosync/merge-columns.html">Merge columns</a></li><li><a href="../autosync/mask-data.html">Mask data</a></li><li><a href="../autosync/transformations-csv.html">CSV file transformations</a></li><li><a href="../autosync/transformations-guidelines.html">Transformation tips</a></li></ul></li><li><a href="../autosync/edit-data-pipeline.html">Edit a data pipeline</a></li><li><a href="../autosync/share-pipeline.html">Share a data pipeline</a></li><li><a href="../autosync/enable-notifications.html">Enable notifications</a></li><li><a href="../autosync/stop-data-pipeline.html">Stop a data pipeline</a></li><li><a href="../autosync/delete-data-pipeline.html">Delete a data pipeline</a></li><li><a href="../autosync/retrieve-deleted-data-pipeline.html">Retrieve or remove deleted</a></li><li><a href="../autosync/upgrade-data-pipeline.html">Upgrade data pipelines</a></li><li><a href="../autosync/export-import-pipeline.html">Migrate a data pipeline across environments</a></li></ul></li><li><a href="../autosync/data-load.html">How AutoSync loads data</a><ul><li><a href="../autosync/name-data-type.html">Names and data types</a></li><li><a href="../autosync/precision-scale.html">Precision and scale</a></li><li><a href="../autosync/change-capture.html">Reconcile changes</a></li><li><a href="../autosync/handle-errors.html">Error handling</a></li><li><a href="../autosync/synchronization-schedules.html">Synchronization schedules</a></li><li><a href="../autosync/load-type.html">Load types</a><ul><li><a href="../autosync/file-load.html">Load from files</a></li><li><a href="../autosync/incremental.html">Incremental</a></li><li><a href="../autosync/scd2.html">SCD2</a></li></ul></li></ul></li><li><a href="../autosync/map-data.html">How AutoSync maps data</a><ul></ul></li><li><a href="../autosync/connection-overview.html">Configure endpoints</a><ul><li><a href="../autosync/on-prem-overview.html">On-premises endpoints</a></li><li><a href="../autosync/create-credentials.html">Create credentials</a></li><li><a href="../autosync/edit-credentials.html">Edit or delete credentials</a></li></ul></li><li><a href="../autosync/supported-endpoints.html">Supported endpoints</a><ul><li><a href="../autosync/adls-gen2-as-target.html">ADLS Gen2 target</a></li><li><a href="../autosync/config-redshift-acct-as-data-source.html">Amazon Redshift source</a></li><li><a href="../autosync/config-redshift-acct-as-data-destination.html">Amazon Redshift target</a></li><li><a href="../autosync/config-aws-s3-acct-as-data-source.html">Amazon S3 source</a></li><li><a href="../autosync/aws-s3-as-target.html">Amazon S3 target</a></li><li><a href="../autosync/config-azure-synapse-acct-as-data-source.html">Azure Synapse source</a></li><li><a href="../autosync/config-azure-synapse-acct-as-data-destination.html">Azure Synapse target</a></li><li><a href="../autosync/config-csv-as-data-source.html">CSV file source</a></li><li><a href="../autosync/databricks-as-target.html">Databricks target</a></li><li><a href="../autosync/config-dynamics-365-acct-as-data-source.html">Microsoft Dynamics 365 for Sales source</a></li><li><a href="../autosync/config-gainsightpx-as-data-source.html">Gainsight PX source</a></li><li><a href="../autosync/config-google-analytics-acct-as-data-source.html">Google Analytics 4 source</a></li><li><a href="../autosync/config-bigquery-as-data-source.html">Google BigQuery source</a></li><li><a href="../autosync/config-bigquery-as-destination.html">Google BigQuery target</a></li><li><a href="../autosync/config-google-sheets-acct-as-data-source.html">Google Sheets source</a></li><li><a href="../autosync/source-http-client.html">HTTP client source</a></li><li><a href="../autosync/config-jdbc-acct-as-data-source.html">Generic JDBC source</a></li><li><a href="../autosync/config-marketo-acct-as-data-source.html">Marketo source</a></li><li><a href="../autosync/config-mysql-server-acct-as-data-source.html">MySQL source</a></li><li><a href="../autosync/config-mysql-server-acct-as-data-destination.html">MySQL target</a></li><li><a href="../autosync/config-oracle-acct-as-data-source.html">Oracle source</a></li><li><a href="../autosync/config-oracle-acct-as-data-destination.html">Oracle target</a></li><li><a href="../autosync/config-postgre-as-data-source.html">PostgreSQL source</a></li><li><a href="../autosync/config-postgre-as-data-destination.html">PostgreSQL target</a></li><li><a href="../autosync/config-salesforce-acct-as-data-source.html">Salesforce source</a></li><li><a href="../autosync/config-sap-hana-acct-as-data-destination.html">SAP HANA target</a></li><li><a href="../autosync/config-servicenow-acct-as-data-source.html">ServiceNow source</a></li><li><a href="../autosync/config-sftp-acct-as-data-source.html">SFTP source</a></li><li><a href="../autosync/config-snowflake-acct-as-data-source.html">Snowflake source</a></li><li><a href="../autosync/config-snowflake-acct-as-data-destination.html">Snowflake target</a></li><li><a href="../autosync/config-sql-server-acct-as-data-source.html">SQL Server source</a></li><li><a href="../autosync/config-sql-server-acct-as-data-destination.html">SQL Server target</a></li><li><a href="../autosync/sql-server-target-bulk.html">SQL Server Bulk Load target</a></li><li><a href="../autosync/config-zendesk-acct-as-data-source.html">Zendesk source</a></li></ul></li><li><a href="../autosync/custom-endpoints.html">Create custom endpoints</a><ul><li><a href="../autosync/endpoint-components.html">Endpoint components</a></li><li><a href="../autosync/maven-archetype.html">Maven archetype</a></li><li><a href="../autosync/folder-structure.html">Project folder structure</a></li><li><a href="../autosync/endpoint-schema.html">Endpoint schema</a></li><li><a href="../autosync/common-model.html">Common data model</a></li><li><a href="../autosync/endpoint-mapping-examples.html">CDM mapping examples</a></li><li><a href="../autosync/maven-package.html">Package and deploy</a></li></ul></li><li><a href="../autosync/administration-overview.html">Administration</a><ul><li><a href="../autosync/management-overview.html">Manage AutoSync users</a></li><li><a href="../autosync/account-groups.html">Manage user groups</a></li><li><a href="../autosync/enhanced-account-encryption.html">Interaction with Enhanced Account Encryption</a></li><li><a href="../autosync/monitor-autosync.html">Monitor data pipelines</a></li><li><a href="../autosync/troubleshoot-data-pipelines.html">Troubleshoot data pipelines</a></li></ul></li></ul></li><li><a href="../monitor/monitor-home.html">Monitor</a><ul><li><a href="../monitor/monitor-about.html">Introduction</a></li><li><a href="../monitor/faq.html">FAQs</a></li><li><a href="../monitor/monitor-quick-reference.html">Monitor quick reference</a></li><li><a href="../monitor/monitor-analyze.html">Analyze pipelines and infrastructure</a></li><li><a href="../monitor/insights.html">Insights</a></li><li><a href="../monitor/catalog.html">Asset catalog</a><ul><li><a href="../monitor/view-metadata.html">View metadata and relationships</a><ul><li><a href="../monitor/catalog-task-details.html">View task details</a></li><li><a href="../monitor/catalog-pipeline-details.html">View pipeline details</a></li><li><a href="../monitor/catalog-account-details.html">View account details</a></li></ul></li><li><a href="../monitor/asset-table-config.html">Configure asset table</a></li><li><a href="../monitor/custom-metadata.html">Manage custom metadata</a><ul><li><a href="../monitor/download-upload-metadata.html">Download and upload</a></li><li><a href="../monitor/add-supplemental-metadata.html">Add custom metadata</a></li><li><a href="../monitor/edit-task-metadata.html">Edit task metadata</a></li><li><a href="../monitor/ic-reserved-names.html">Reserved names</a></li></ul></li><li><a href="../monitor/catalog-faq.html">FAQs</a></li></ul></li><li><a href="../monitor/analyze-execution.html">Pipeline executions</a><ul><li><a href="../monitor/find-executions.html">Find executions</a></li><li><a href="../monitor/stop-executions.html">Stop executions</a></li><li><a href="../monitor/execution-table.html">Configure the executions table</a></li><li><a href="../monitor/download-executions.html">Download execution records</a></li><li><a href="../monitor/pipeline-details-panel.html">View pipeline details</a><ul><li><a href="../monitor/snap-statistics-tab.html">Snap Statistics tab</a></li><li><a href="../monitor/pipeline-logs-tab.html">Pipeline Logs tab</a></li><li><a href="../monitor/pipeline-parameters-tab.html">Pipeline Parameters tab</a></li><li><a href="../monitor/state-transition-tab.html">State Transition tab</a></li></ul></li></ul></li><li><a href="../monitor/monitor-snaplex.html">Infrastructure</a><ul><li><a href="../monitor/sys-overview-graph-view.html">System overview graph view</a></li><li><a href="../monitor/sys-overview-list-view.html">System overview table view</a></li><li><a href="../monitor/analyze-infrastructure.html">Analyze and manage Snaplexes</a></li><li><a href="../monitor/snaplex-details-panel.html">Snaplex details panel</a></li><li><a href="../monitor/node-details-panel.html">Node details panel</a></li></ul></li><li><a href="../monitor/metrics-about.html">Metrics</a><ul><li><a href="../monitor/analyze-metrics.html">Graph descriptions</a></li><li><a href="../monitor/use-metric-charts.html">Work with Metrics graphs</a></li></ul></li><li><a href="../monitor/observe-api-metrics.html">API metrics</a><ul><li><a href="../monitor/troubleshooting-api-metrics.html">Troubleshoot APIM requests and Ultra Tasks</a></li></ul></li><li><a href="../monitor/api-usage.html">API usage</a></li><li><a href="../monitor/notification-center.html">Notification center</a><ul><li><a href="../monitor/alerts-tab.html">Alerts tab</a></li><li><a href="../monitor/activity-tab.html">Activity tab</a></li><li><a href="../monitor/notices-tab.html">Notices tab</a></li><li><a href="../monitor/notification-settings-tab.html">Notification settings tab</a></li><li><a href="../monitor/new-notification.html">Create a notification</a></li><li><a href="../monitor/new-broadcast.html">Create a broadcast notice</a></li><li><a href="../monitor/snaplex-node-notification.html">Create a Snaplex node notification</a></li><li><a href="../monitor/task-notification.html">Create a task notification</a></li><li><a href="../monitor/configure-slack.html">Manage the Slack integration</a></li><li><a href="../monitor/node-init-alerts.html">Node initialization alerts</a></li></ul></li><li><a href="../monitor/review-alert-history.html">Alert history</a></li><li><a href="../monitor/review-activity-log.html">Activity logs</a></li><li><a href="../monitor/troubleshooting.html">Troubleshooting</a></li></ul></li><li><a href="../snapgpt/snapgpt-home.html">SnapGPT</a><ul><li><a href="../snapgpt/snapgpt-about.html">Introduction</a></li><li><a href="../snapgpt/snapgpt-use.html">Interact with SnapGPT</a><ul><li><a href="../snapgpt/snapgpt-pipe-gen-rag.html">Generate pipeline</a></li><li><a href="../snapgpt/snapgpt-analyze-pipelines.html">Analyze pipeline</a></li><li><a href="../snapgpt/generate-queries.html">Generate queries</a></li><li><a href="../snapgpt/snapgpt-copilot.html">Configure Snaps with Snap copilot</a><ul><li><a href="../snapgpt/snapgpt-copilot-snap-banner.html">Launch SnapGPT from Snap settings </a></li></ul></li><li><a href="../snapgpt/snapgpt-refine-pipelines.html">Refine pipelines</a></li><li><a href="../snapgpt/snapgpt-pipe-gen-image.html">Generate a pipeline from an image</a></li><li><a href="../snapgpt/snapgpt-generate-expressions-mapper-snap.html">Generate expressions</a><ul><li><a href="../snapgpt/mapper-expr-example1.html">Map to target</a></li><li><a href="../snapgpt/mapper-expr-example2.html">Extract pipeline parameters</a></li></ul></li></ul></li><li><a href="../snapgpt/snapgpt-settings.html">Configure SnapGPT</a></li><li><a href="../snapgpt/snapgpt-best-practices.html">Prompt tips</a></li><li><a href="../snapgpt/snapgpt-thinking-modes.html">Thinking modes</a></li><li><a href="../snapgpt/snapgpt-question-and-answer.html">SnapGPT FAQ</a></li></ul></li><li><a href="../designer/designer-home.html">Designer</a><ul><li><a href="../designer/designer-about.html">Introduction</a></li><li><a href="../designer/designer-toolbar.html">Designer Toolbar</a></li><li><a href="../designer/keyboard-commands.html">Keyboard Commands</a></li><li><a href="../designer/print-pipeline.html">Print Pipeline</a></li><li><a href="../designer/using-pipeline-notes-in-designer.html">Using Pipeline Notes in SnapLogic Designer</a></li></ul></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+
+  <h1 class="title topictitle1" id="ariaid-title1">Alert history</h1>
+  
+
+  <div class="body conbody">
+
+    <section class="section">
+      <p class="p">The <span class="ph uicontrol">Alert history</span> page displays the alerts generated by Snaplex nodes for the
+        specified time range. View alerts and the accompanying logs to identify and address Snaplex issues
+        such as congestion. A variety of Snaplex-related events also show up in the <a class="xref" href="review-activity-log.html" title="View and download event logs.">Activity log</a>. </p>
+      <div class="note tip note_tip"><span class="note__title">Tip:</span> Check out the <a class="xref" href="notification-center.html">Notification Center</a> <span class="ph uicontrol">Alerts</span> tab,
+      which contains the same alerts as the <span class="ph uicontrol">Alert history</span> page.</div>
+      <p class="p">The following image shows alerts for tasks that are taking longer than expected and for node crashes.
+        The shaded rows indicate closed alerts:</p>
+      <br><div class="imageleft"><img class="image imageleft" src="../img/monitor/alert-history.png" alt="Alert history page in Monitor"></div><br>
+      
+      <p class="p">Use controls on this page to:</p>
+      <ul class="ul">
+        <li class="li">Filter alerts by status: <span class="ph uicontrol">All</span>, <span class="ph uicontrol">Open</span>, or <span class="ph uicontrol">Closed</span>. 
+          Alerts are open until you close them.</li>
+        <li class="li">Select the report date range.</li>
+        <li class="li">Download the log of alerts in CSV file format. 
+          The log includes the alerts for the selected date range and status.</li>
+        <li class="li">Close alerts that you've addressed. </li>
+      </ul> 
+      
+      <p class="p">Snaplex nodes raise <a class="xref" href="node-init-alerts.html">alerts for problems during
+          initialization</a>. You can address these alerts for self-managed Snaplexes (Groundplexes).
+        SnapLogic manages issues with Cloudplexes.</p>
+      <p class="p">The <span class="ph uicontrol">Alert history</span> table also displays the alerts generated due to excess memory usage on the
+        Snaplex node as displayed in the image below:</p>
+      <br><div class="imageleft"><img class="image imageleft img75pc" src="../img/monitor/pipeline-killer-alert-history.png"></div><br>
+      <p class="p sectiondivtitle">Table configuration and filters</p>
+      <div class="p">Click <img class="image noborder" id="merge-columns__image_vp2_wyn_4hc" src="../img/icons/app/table-config-filter.svg" width="14"> to open the <span class="ph uicontrol">Table
+            configuration and filters</span> dialog. <br><div class="imageleft"><img class="image imageleft img50pc" src="../img/monitor/mon_alert_hist_table_config.png" alt="Table configuration and filters"></div><br></div>
+      <div class="p">From the <span class="ph uicontrol">Table configuration and filters</span> dialog, you can:<ul class="ul" id="merge-columns__ul_gty_2zn_4hc">
+          <li class="li">Select any of the following row spacing options: <ul class="ul" id="merge-columns__ul_ktk_4qn_4hc">
+              <li class="li"><span class="ph uicontrol">Compact</span> to show more table rows with the decreased row
+                height. </li>
+              <li class="li"><span class="ph uicontrol">Expanded</span> to show fewer table rows with the increased row
+                height.</li>
+              <li class="li"><span class="ph uicontrol">Dense</span> to display the same number of table rows as shown in
+                the <span class="ph uicontrol">Compact</span> view but with reduced icon size and padding.</li>
+            </ul></li>
+          <li class="li">Enable row striping.</li>
+          <li class="li">Show or hide columns by checking or unchecking the box next to the name.</li>
+          <li class="li">Reorder columns by hovering near the name and dragging the handle that displays to the
+            right.</li>
+          <li class="li">Filter columns by selecting a value from the dropdown list.</li>
+        </ul></div>
+      <p class="p">Click <span class="ph uicontrol">Apply</span> to save the changes. </p>
+    </section>
+
+  </div>
+
+</article></main><footer role="contentinfo"><div class="footer">
+  <div>
+  <p class="newsbanner">
+   <span> The migration of the <a href="https://docs-snaplogic.atlassian.net/wiki/spaces/SD/overview?homepageId=34537" target="_blank"> legacy docs </a> to this site is in progress.
+   </span>
+   <span>
+   <img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/x-close.svg" alt="thumbsup-icon">
+   </span>
+  </p>
+  </div>
+  <div class="ftrlegal">
+    <!-- <p class="copyright"><a href="/refs/copyright.html">© <ph class="copyrightyear"></ph> SnapLogic, Inc.</a></p> -->
+     <div class="footer_top">
+     <div>
+     <a href="/index.html"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/ux/sl-logo-indigo-icon.svg" alt="SnapLogic Logo"></a>
+     <a href="/index.html">SnapLogic Documentation</a>
+     </div>
+     <div>
+     <ul>
+      <!-- <li><a href="/refs/copyright.html">© <ph class="copyrightyear"></ph> SnapLogic, Inc.</a></li>  <a class="xref" href="https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/49855/SnapLogic+Releases" target="_blank" rel="external noopener">Release Notes</a>-->
+        <!-- <li><a href="https://learn.snaplogic.com/" target="_blank" rel="external noopener">SnapLogic Academy</a></li> -->
+        <li><span>Explore</span><span><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-up-white-icon.svg" alt="SnapLogic Logo"></span></li>
+        <li><a class="xref" href="https://learn.snaplogic.com/" target="_blank" rel="external noopener">SnapLogic Academy</a></li>
+        <li><a class="xref" href="https://community.snaplogic.com/" target="_blank" rel="external noopener">Integration Nation</a></li>
+        <li><a class="xref" href="https://www.snaplogic.com/" target="_blank" rel="external noopener">Company</a></li>
+    <!-- <li><a href="https://community.snaplogic.com/" target="_blank" rel="external noopener">Integration Nation</a></li> -->
+    <!-- <li><a href="mailto:support@snaplogic.com" target="_blank" rel="external noopener">Support</a></li> -->
+    <!-- <li><a href="https://www.snaplogic.com/" target="_blank" rel="external noopener">Company</a></li> -->
+    </ul>
+       <ul>
+      <li><span>Need Help?</span><span><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-up-white-icon.svg" alt="SnapLogic Logo"></span></li>
+      <li>
+      <!-- <a><img class='noborder noexpand' src='https://d3132s9xzuu9s8.cloudfront.net/k/img/envelope-icon.svg' alt='envelope-icon'/></a> -->
+      <a href="mailto:documentation@snaplogic.com">Documentation Team</a></li>
+      <li>
+      <!-- <a><img class='noborder noexpand' src='https://d3132s9xzuu9s8.cloudfront.net/k/img/envelope-icon.svg' alt='envelope-icon'/></a> -->
+      <a href="mailto:support@snaplogic.com">Customer Support Team</a></li>
+      </ul>
+      </div>
+    </div>
+    <div class="footer_bottom">
+     <!-- <p  class="footer_logo"> -->
+    <!-- <a href="../index.html"><img class="noborder" src="https://d3132s9xzuu9s8.cloudfront.net/ux/sl-logo-new.svg" alt="SnapLogic Logo"/></a> -->
+    <!-- <a href="../index.html"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/sl-logo-teal.svg" alt="SnapLogic Logo"/></a> -->
+    <!-- <a href="/index.html"><img class="noborder" src="/img/icons/logo/sl_logo_combo_rev_rgb.svg" alt="SnapLogic Logo"/></a> -->
+    <!-- <ph class="footer-site-title">SnapLogic Documentation</ph> -->
+    <!-- </p> -->
+     <ul>
+      <li><a href="/refs/copyright.html">Copyright</a></li>
+       <li class="copyright">© <ph class="copyrightyear"></ph> SnapLogic, Inc.</li>
+    </ul>
+     <!-- <ul> -->
+      <!-- <ul>
+      <li>Need Help?</li>
+      <li><a><img class='noborder noexpand' src='https://d3132s9xzuu9s8.cloudfront.net/k/img/envelope-icon.svg' alt='envelope-icon'/></a><a href="mailto:documentation@snaplogic.com">Documentation Team</a></li>
+      <li><a><img class='noborder noexpand' src='https://d3132s9xzuu9s8.cloudfront.net/k/img/envelope-icon.svg' alt='envelope-icon'/></a><a href="mailto:support@snaplogic.com">Customer Support Team</a></li>
+      </ul> -->
+    <!-- </ul> -->
+    <ul>
+      <li><a class="xref" href="https://www.facebook.com/SnapLogic" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-facebook.svg" alt="ftr-logo"></a></li>
+      <li><a class="xref" href="https://twitter.com/SnapLogic" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-twitter.svg" alt="ftr-logo"></a></li>
+      <li><a class="xref" href="https://www.linkedin.com/company/snaplogic" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-linkedin.svg" alt="ftr-logo"></a></li>
+      <li><a class="xref" href="https://www.instagram.com/snaplogicinc" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-instagram.svg" alt="ftr-logo"></a></li>
+      <li><a class="xref" href="https://www.youtube.com/snaplogic" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-youtube.svg" alt="ftr-logo"></a></li>
+    </ul>
+    </div>
+
+  </div>
+
+  <!-- <script src="https://d3132s9xzuu9s8.cloudfront.net/k/sldocs.js"/> -->
+  <script src="../theme/sldocs.js"></script>
+
+</div></footer></body></html>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #6A8E9B;
+      }
+    </style>
+  </defs>
+  <title>dialogMinimize-Active</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <path class="cls-1" d="M24,4H20V0H0V20H4v4H24ZM18,4H4V18H2V2H18Zm4,18H6V6H22Z"/>
+      <polygon class="cls-1" points="14.97 13.06 10.34 8.43 8.46 10.31 13.09 14.94 8.03 20 20.03 20 20.03 8 14.97 13.06"/>
+    </g>
+  </g>
+</svg>

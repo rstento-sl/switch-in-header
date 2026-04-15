@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnapLogic Documentation - POC</title>
+  <link rel="stylesheet" href="css/homepage.css">
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <header class="top-nav">
+    <div class="container">
+      <div class="nav-left">
+        <div class="logo">
+          <img src="https://d3132s9xzuu9s8.cloudfront.net/ux/sl-logo-indigo-icon.svg" alt="SnapLogic Logo" class="logo-icon">
+          <h1>SnapLogic Documentation</h1>
+          <span class="poc-badge">POC - Dual Navigation</span>
+        </div>
+
+        <!-- Desktop Navigation - Hidden on homepage -->
+        <nav class="product-menu desktop-nav homepage-hide">
+          <!-- Dropdown 1: Integration Platform -->
+          <div class="dropdown">
+            <button class="dropdown-toggle">
+              Integration Platform <span class="arrow">▼</span>
+            </button>
+            <div class="dropdown-menu">
+              <a href="autosync/autosync-home.html">AutoSync</a>
+              <a href="designer/designer-home.html">Designer</a>
+              <a href="snapgpt/snapgpt-home.html">SnapGPT</a>
+            </div>
+          </div>
+
+          <!-- Dropdown 2: Administration & Governance -->
+          <div class="dropdown">
+            <button class="dropdown-toggle">
+              Administration &amp; Governance <span class="arrow">▼</span>
+            </button>
+            <div class="dropdown-menu">
+              <a href="admin-manager/admin-manager-home.html">Admin Manager</a>
+            </div>
+          </div>
+
+          <!-- Dropdown 3: Observability -->
+          <div class="dropdown">
+            <button class="dropdown-toggle">
+              Observability <span class="arrow">▼</span>
+            </button>
+            <div class="dropdown-menu">
+              <a href="monitor/monitor-home.html">Monitor</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="nav-right">
+        <!-- Mobile Hamburger -->
+        <button class="hamburger" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-section">
+        <h3>Integration Platform</h3>
+        <ul>
+          <li><a href="autosync/autosync-home.html">AutoSync</a></li>
+          <li><a href="designer/designer-home.html">Designer</a></li>
+          <li><a href="snapgpt/snapgpt-home.html">SnapGPT</a></li>
+        </ul>
+      </div>
+      <div class="mobile-menu-section">
+        <h3>Administration &amp; Governance</h3>
+        <ul>
+          <li><a href="admin-manager/admin-manager-home.html">Admin Manager</a></li>
+        </ul>
+      </div>
+      <div class="mobile-menu-section">
+        <h3>Observability</h3>
+        <ul>
+          <li><a href="monitor/monitor-home.html">Monitor</a></li>
+        </ul>
+      </div>
+      <div class="mobile-menu-section">
+        <h3>Common Tasks</h3>
+        <ul>
+          <li><a href="tasks/admin-manager/create-user-account.html" onclick="filterTaskNav('Get Started')">Get Started</a></li>
+          <li><a href="tasks/admin-manager/create-user-account.html" onclick="filterTaskNav('Administer the Environment')">Administer the Environment</a></li>
+          <li><a href="tasks/autosync/create-credentials.html" onclick="filterTaskNav('Develop &amp; Deploy Integrations')">Develop Integrations</a></li>
+          <li><a href="tasks/monitor/observe-api-metrics.html" onclick="filterTaskNav('Monitor the Runtime')">Monitor the Runtime</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section: Navigation Choice -->
+  <section class="hero">
+    <div class="container">
+      <!-- Row 1: Get Started & Products -->
+      <div class="nav-cards" style="grid-template-columns: repeat(2, 1fr); max-width: 1200px;">
+        <!-- Get Started Card -->
+        <div class="nav-card get-started-card has-side-icon">
+          <div class="card-icon">&#x1F680;</div>
+          <h3>Get Started</h3>
+
+          <div class="card-content">
+            <h4>Agent Developers</h4>
+
+            <h4>Environment Admins</h4>
+            <ul>
+              <li><a href="tasks/admin-manager/create-user-account.html" onclick="filterTaskNav('Environment Admins')">Create User Accounts</a></li>
+              <li><a href="tasks/admin-manager/admin-manager-create-snaplex.html" onclick="filterTaskNav('Environment Admins')">Create a Snaplex</a></li>
+            </ul>
+
+            <h4>Integration Developers</h4>
+            <ul>
+              <li><a href="tasks/admin-manager/create-user-account.html" onclick="filterTaskNav('Integration Developers')">Configure Your Profile</a></li>
+              <li><a href="tasks/admin-manager/create-user-account.html" onclick="filterTaskNav('Integration Developers')">Tutorials</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Product View Card -->
+        <div class="nav-card product-card has-side-icon">
+          <div class="card-icon">⬡</div>
+          <h3>Products &amp; Features</h3>
+
+          <div class="card-content">
+            <h4>Integration Platform</h4>
+            <ul>
+              <li><a href="autosync/autosync-home.html" data-product="AUTOSYNC">AutoSync</a></li>
+              <li><a href="designer/designer-home.html" data-product="DESIGNER">Designer</a></li>
+              <li><a href="snapgpt/snapgpt-home.html" data-product="SNAPGPT">SnapGPT</a></li>
+            </ul>
+
+            <h4>Administration &amp; Governance</h4>
+            <ul>
+              <li><a href="admin-manager/admin-manager-home.html" data-product="ADMIN MANAGER">Admin Manager</a></li>
+            </ul>
+
+            <h4>Observability</h4>
+            <ul>
+              <li><a href="monitor/monitor-home.html" data-product="MONITOR">Monitor</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Common Tasks (full width) -->
+      <div class="nav-cards" style="grid-template-columns: 1fr; max-width: 1200px;">
+        <div class="nav-card task-card">
+          <h3><span class="card-icon">&#x2630;</span> Common Tasks</h3>
+
+          <div class="card-content" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+            <div>
+              <h4>Get Started</h4>
+              <ul>
+                <li><a href="tasks/admin-manager/create-user-account.html" onclick="filterTaskNav('Agent Developers', null, 'Get Started')">Agent Developers</a></li>
+                <li><a href="tasks/admin-manager/create-user-account.html" onclick="filterTaskNav('Environment Admins', null, 'Get Started')">Environment Admins</a></li>
+                <li><a href="tasks/admin-manager/create-user-account.html" onclick="filterTaskNav('Get Started')" style="font-style: italic;">more...</a></li>
+              </ul>
+
+              <h4>Develop Agents</h4>
+            </div>
+            <div>
+              <h4>Administer the Environment</h4>
+              <ul>
+                <li><a href="tasks/designer/configure-custom-org-branding.html" onclick="filterTaskNav('Control Plane', null, 'Administer the Environment')">Control Plane</a></li>
+                <li><a href="tasks/admin-manager/admin-manager-create-snaplex.html" onclick="filterTaskNav('Data Plane', null, 'Administer the Environment')">Data Plane</a></li>
+                <li><a href="tasks/designer/configure-custom-org-branding.html" onclick="filterTaskNav('Administer the Environment')" style="font-style: italic;">more...</a></li>
+              </ul>
+
+              <h4>Develop &amp; Deploy Integrations</h4>
+              <ul>
+                <li><a href="tasks/autosync/create-credentials.html" onclick="filterTaskNav('AutoSync Data Pipelines', null, 'Develop &amp; Deploy Integrations')">AutoSync Data Pipelines</a></li>
+                <li><a href="tasks/snapgpt/snapgpt-pipe-gen-rag.html" onclick="filterTaskNav('Designer Pipelines', null, 'Develop &amp; Deploy Integrations')">Designer Pipelines</a></li>
+                <li><a href="tasks/autosync/create-credentials.html" onclick="filterTaskNav('Develop &amp; Deploy Integrations')" style="font-style: italic;">more...</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Manage APIs</h4>
+              <ul>
+                <li><a href="tasks/admin-manager/create-user-account.html" onclick="filterTaskNav('API Management', null, 'Manage APIs')">API Management</a></li>
+                <li><a href="tasks/admin-manager/create-user-account.html" onclick="filterTaskNav('SnapLogic Public APIs', null, 'Manage APIs')">SnapLogic Public APIs</a></li>
+              </ul>
+
+              <h4>Monitor the Runtime</h4>
+              <ul>
+                <li><a href="tasks/monitor/observe-api-metrics.html" onclick="filterTaskNav('APIs', null, 'Monitor the Runtime')">APIs</a></li>
+                <li><a href="tasks/monitor/catalog.html" onclick="filterTaskNav('Environment Assets', null, 'Monitor the Runtime')">Environment Assets</a></li>
+                <li><a href="tasks/monitor/observe-api-metrics.html" onclick="filterTaskNav('Monitor the Runtime')" style="font-style: italic;">more...</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Observe with a Third-Party Tool</h4>
+              <ul>
+                <li><a href="tasks/monitor/observe-api-metrics.html" onclick="filterTaskNav('Observe with a Third-Party Tool')">View API Metrics</a></li>
+                <li><a href="tasks/monitor/insights.html" onclick="filterTaskNav('Observe with a Third-Party Tool')">View Pipeline Insights</a></li>
+                <li><a href="tasks/monitor/observe-api-metrics.html" onclick="filterTaskNav('Observe with a Third-Party Tool')" style="font-style: italic;">more...</a></li>
+              </ul>
+
+              <h4>Troubleshoot</h4>
+              <ul>
+                <li><a href="tasks/admin-manager/create-user-account.html" onclick="filterTaskNav('Accounts', null, 'Troubleshoot')">Accounts</a></li>
+                <li><a href="tasks/admin-manager/create-user-account.html" onclick="filterTaskNav('Agents', null, 'Troubleshoot')">Agents</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's New Section -->
+  <section class="whats-new">
+    <div class="container">
+      <h2 class="section-title">What's New</h2>
+      <div class="whats-new-content">
+        <div class="release-notes">
+          <h3>Latest Release</h3>
+          <ul>
+            <li>
+              <a href="https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/4350771203/January+2026+Release+Notes"
+                 target="_blank" rel="noopener">
+                January 2026 Release Notes
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="carousel-container">
+          <div class="carousel-item">
+            <h4>Dual Navigation POC</h4>
+            <p>Experience both product-based and task-based navigation in this proof of concept.</p>
+          </div>
+          <div class="carousel-item">
+            <h4>Keyref Architecture</h4>
+            <p>Content reuse demonstrated with 27 topics appearing in multiple views.</p>
+          </div>
+          <div class="carousel-item">
+            <h4>Cross-Product Workflows</h4>
+            <p>Task view unifies Admin Manager and AutoSync topics by workflow.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trending Topics Section -->
+  <section class="trending-topics">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Trending Topics</h2>
+        <a href="#" class="view-more">View more →</a>
+      </div>
+
+      <div class="topic-grid">
+        <!-- Topic Card 1 -->
+        <div class="topic-card">
+          <div class="topic-icon">◉</div>
+          <h3><a href="admin-manager/create-user-account.html">Create User Accounts</a></h3>
+          <p>Set up user accounts for your organization</p>
+          <span class="topic-category">Admin Manager</span>
+        </div>
+
+        <!-- Topic Card 2 -->
+        <div class="topic-card">
+          <div class="topic-icon">◉</div>
+          <h3><a href="autosync/create-data-pipeline.html">Create Data Pipeline</a></h3>
+          <p>Build your first data synchronization pipeline</p>
+          <span class="topic-category">AutoSync</span>
+        </div>
+
+        <!-- Topic Card 3 -->
+        <div class="topic-card">
+          <div class="topic-icon">◉</div>
+          <h3><a href="admin-manager/configure-sso.html">Configure SSO</a></h3>
+          <p>Set up single sign-on for secure access</p>
+          <span class="topic-category">Admin Manager</span>
+        </div>
+
+        <!-- Topic Card 4 -->
+        <div class="topic-card">
+          <div class="topic-icon">◉</div>
+          <h3><a href="autosync/monitor-autosync.html">Monitor AutoSync</a></h3>
+          <p>Track pipeline status and performance</p>
+          <span class="topic-category">AutoSync</span>
+        </div>
+
+        <!-- Topic Card 5 -->
+        <div class="topic-card">
+          <div class="topic-icon">◉</div>
+          <h3><a href="admin-manager/admin-manager-create-snaplex.html">Create a Snaplex</a></h3>
+          <p>Set up infrastructure for integration</p>
+          <span class="topic-category">Admin Manager</span>
+        </div>
+
+        <!-- Topic Card 6 -->
+        <div class="topic-card">
+          <div class="topic-icon">◉</div>
+          <h3><a href="autosync/troubleshoot-data-pipelines.html">Troubleshoot Pipelines</a></h3>
+          <p>Diagnose and resolve pipeline issues</p>
+          <span class="topic-category">AutoSync</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About This POC</h4>
+          <p>Proof of concept demonstrating keyref-based dual navigation architecture.</p>
+          <ul>
+            <li>202 topics in source</li>
+            <li>27 topics reused across views</li>
+            <li>Single source of truth</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Documentation</h4>
+          <ul>
+            <li><a href="../README.md">README</a></li>
+            <li><a href="../BUILD_DOCUMENTATION.md">Build Instructions</a></li>
+            <li><a href="../CONTENT_REUSE_PATTERNS.md">Content Reuse</a></li>
+            <li><a href="../INTEGRATION_TEST_RESULTS.md">Test Results</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="">Product View</a></li>
+            <li><a href="tasks/">Task View</a></li>
+            <li><a href="admin-manager/">Admin Manager</a></li>
+            <li><a href="autosync/">AutoSync</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 SnapLogic. POC created by Ruth Stento &amp; Claude Sonnet 4.5</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Store selected task section for nav filtering
+    function filterTaskNav(section, category, parentCategory) {
+      sessionStorage.setItem('filteredTaskSection', section);
+      if (category) {
+        sessionStorage.setItem('filteredTaskCategory', category);
+      } else {
+        sessionStorage.removeItem('filteredTaskCategory');
+      }
+      if (parentCategory) {
+        sessionStorage.setItem('filteredTaskParent', parentCategory);
+      } else {
+        sessionStorage.setItem('filteredTaskParent', section);
+      }
+      sessionStorage.removeItem('showFullTaskTree');
+    }
+  </script>
+  <script src="js/homepage.js"></script>
+</body>
+</html>

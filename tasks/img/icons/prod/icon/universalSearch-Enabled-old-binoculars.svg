@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #7f7f7f;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <title>universalSearch</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Meat">
+      <path class="cls-1" d="M12,6H10V7h2Zm0,3H10v2h2ZM9.29,0V1.43H10V3.57H9.28V5h3.44V3.57H12V1.43h.72V0H17V1.43h.71V3.57H17V5h2.84l1.45,7.86h-.56L22,18.59V20H14.86V18.59l1.27-5.73H12V12H10v.86H5.87l1.27,5.73V20H0V18.59l1.27-5.73H.71L2.16,5H5V3.57H4.29V1.43H5V0Z"/>
+    </g>
+  </g>
+</svg>

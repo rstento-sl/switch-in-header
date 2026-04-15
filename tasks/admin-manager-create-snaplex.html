@@ -1,0 +1,665 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2026"><meta name="generator" content="DITA-OT"><title>Add a Groundplex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <!-- <link rel="icon" type="image/x-icon" href="/img/icons/logo/sl-logo.ico"/> -->
+  <!-- <link rel="icon" type="image/svg+xml" href="/img/icons/logo/sl-logo.svg"/> -->
+  <!--<link rel="icon" type="image/x-icon"  href="https://d3132s9xzuu9s8.cloudfront.net/k/sl-logo-teal.ico" />-->
+  <!-- <link rel="icon" type="image/svg+xml" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/favicon-teal-grad-128.svg"/> -->
+  <link rel="icon" type="image/svg+xml" href="https://d3132s9xzuu9s8.cloudfront.net/ux/sl-logo-indigo-icon.svg">
+  <!--<link rel="icon" type="image/svg+xml" href="https://d3132s9xzuu9s8.cloudfront.net/k/sl-logo-teal.svg"/>-->
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rainbow/2.1.4/themes/github.css" /> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/2.1.4/rainbow.min.js"></script> -->
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script> -->
+
+  <!-- Google Analytics (gtag.js) – Enable for live site only.
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-W8ZVFJP785"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W8ZVFJP785');
+  </script>
+  -->
+
+  <!-- GCSE -->
+  <!-- <script async="true" src="https://cse.google.com/cse.js?cx=25d4aa9829a3148ff"/> -->
+
+  <!-- FontAwesome -->
+  <!-- <script src="https://kit.fontawesome.com/a548053f9e.js" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://kit.fontawesome.com/77a505b9e0.js" crossorigin="anonymous"></script> -->
+
+  <!-- Preload images -->
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-blue.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/thumbs-up.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/thumbs-down.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-left-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-right-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/codeblock-copy-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/permalink-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/Close Icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/thumbs-up-fill-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/thumbs-down-fill-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-down-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/IMPORTANT.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/NOTE.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/TIP.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/REMEMBER.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/WARNING.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/CAUTION.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/community-logo-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/icon-legacy-site-search.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/3-stars-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/cross-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/sl-logo-indigo-icon.svg" as="image">
+  <!-- BugHerd -->
+  <!-- <script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=1tn2hl0shbd0tgl9ifyteq" async="true"></script> stage-main -->
+  <!-- Include Bing Custom Search JavaScript SDK -->
+  <!-- <script src="https://www.bing.com/api/customsearch/search/sdk"></script> -->
+<link rel="stylesheet" type="text/css" href="theme/commonltr.css"><link rel="stylesheet" type="text/css" href="theme/sldocs.css"></head><body id="task-admin-manager-create-snaplex"><header role="banner"><div class="header">
+<ul class="headertopsection">
+  <ul class="mainbanner">
+    <!-- Hamburger for mobile -->
+    <i class="hamburgericon"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/hamburger-icon.svg" alt="menu"></i>
+
+    <!-- Logo and Site Title -->
+    <a href="/index.html" class="header-logo-link">
+      <img class="noborder noexpand header-logo-img" src="https://d3132s9xzuu9s8.cloudfront.net/ux/sl-logo-indigo-icon.svg" alt="SnapLogic Logo">
+    </a>
+    <ph class="site-title site-title-compact"><a href="/index.html">SnapLogic Documentation</a></ph>
+
+    <!-- Search bar (compact) -->
+    <div class="search-container-compact desktop-nav">
+      <span onclick="showPopup()" class="search-icon-compact"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
+      <input type="text" id="searchQuery" placeholder="Search docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+    </div>
+
+    <!-- Product Dropdown Menus (smaller) -->
+    <nav class="product-menu-header desktop-nav">
+      <!-- Dropdown 1: Integration Platform -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Integration Platform <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/autosync/autosync-home.html">AutoSync</a>
+          <a href="/designer/designer-home.html">Designer</a>
+          <a href="/snapgpt/snapgpt-home.html">SnapGPT</a>
+        </div>
+      </div>
+
+      <!-- Dropdown 2: Administration &amp; Governance -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Administration &amp; Governance <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/admin-manager/admin-manager-home.html">Admin Manager</a>
+        </div>
+      </div>
+
+      <!-- Dropdown 3: Observability -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Observability <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/monitor/monitor-home.html">Monitor</a>
+        </div>
+      </div>
+    </nav>
+  </ul>
+
+  <ul class="topmenu">
+    <!-- Original search for mobile -->
+     <li class="search-popup-hdr">
+                <div id="search-container">
+                    <span onclick="showPopup()" id="search-container-icon"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
+                    <input type="text" id="searchQueryDesktop" placeholder="Search the documentation and community posts" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+                </div>
+            </li>
+  </ul>
+
+  <ul class="topmenusearch">
+  <li>
+                <div id="search-container-mobile">
+                    <span onclick="showPopup()"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-blue.svg" alt="search-icon"></span>
+                    <input type="text" id="searchQuerymobile" placeholder="Search the docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+                </div>
+            </li>
+      <li><span><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span></li>
+  </ul>
+</ul>
+  <p class="newsbanner">
+   <span>  The migration of the <a href="https://docs-snaplogic.atlassian.net/wiki/spaces/SD/overview?homepageId=34537" target="_blank"> legacy documentation </a> to this site is in progress.
+    </span>
+    <span><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/x-close.svg" alt="thumbsup-icon"></span>
+  </p>
+  <div id="search-popup">
+    <div class="search-main">
+      <div class="Search-filters">
+      <div>
+      <li><h1>Filter search results</h1><img class="noborder noexpand close-filters-button" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/Close Icon.svg" alt="Close Filters"></li>
+      <li class="filter-item"><input type="checkbox" value="All" name="Content" checked=""><p>All</p></li>
+      <li class="filter-item"><input type="checkbox" value="Documentation" name="Content">
+        <p>New Documentation Site</p>
+        <img src="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-down-icon.svg" class="docfilterchevron noborder" alt="Toggle"></li>
+        <ul class="Doc-filters">
+          <li class="filter-item"><input type="checkbox" value="autosync" name="AutoSync"><p>AutoSync</p></li>
+          <li class="filter-item"><input type="checkbox" value="admin-manager" name="Admin Manager"><p>Admin Manager</p></li>
+          <li class="filter-item"><input type="checkbox" value="security" name="Security"><p>Security</p></li>
+          <li class="filter-item"><input type="checkbox" value="snaps" name="Snaps"><p>Snaps</p></li>
+          <li class="filter-item"><input type="checkbox" value="snaplexes" name="Snaplexes"><p>Snaplexes</p></li>
+          <li class="filter-item"><input type="checkbox" value="monitor" name="Monitor"><p>Monitor</p></li>
+          <li class="filter-item"><input type="checkbox" value="public-apis" name="Snaplogic Public APIs"><p>Snaplogic Public APIs</p></li>
+          <li class="filter-item"><input type="checkbox" value="cicd/git-integration" name="Git Integration"><p>Git Integration</p></li>
+          <li class="filter-item"><input type="checkbox" value="cicd/secrets-mgm" name="Secrets Management"><p>Secrets Management</p></li>
+          <li class="filter-item"><input type="checkbox" value="genai" name="GenAI App Builder"><p>AgentCreator</p></li>
+        </ul>
+        <li class="filter-item"><input type="checkbox" value="Confluence" name="Content">
+        <p>Legacy Site</p></li>
+        <ul class="legacy-filters-text">
+          <li>
+            <span><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/tool-tip-icon.svg" alt="icon"></span>
+            <span>No advanced filters available</span>
+          </li>
+        </ul>
+      </div>
+      </div>
+      <div class="search-page-main">
+        <div class="search-bar-advanced">
+           <div class="back-button">
+           <img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/arrow-narrow-left.svg" alt="backicon">
+           </div>
+          <div class="search-bar">
+          <div>
+          <span class="cleartext"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/Close Icon.svg" alt="clearicon"></span>
+           <span class="advancedsearchicon"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-blue.svg" alt="search-icon"></span>
+            <input placeholder="Search the documentation and community posts" type="text" spellcheck="false" autocomplete="off" onfocus="showdropdown2()">
+            </div>
+            <div id="autosuggest-dropdown2"></div>
+          </div>
+          <div class="show-filters-button"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/show-filters.svg" alt="clearicon"></div>
+          <div class="advance_search_button">Search</div>
+
+        </div>
+        <div class="results_count"></div>
+        <div id="searched-results"></div>
+         <div id="show-more" class="">Show more results</div>
+      </div>
+    </div>
+  </div>
+</div></header><nav class="toc" role="navigation"><ul><li><a href="placeholders/task-landing-get-started.html">Get Started</a><ul><li><a href="placeholders/agent-developers.html">Agent Developers</a></li><li><a href="placeholders/environment-admins.html">Environment Admins</a><ul><li><a href="create-user-account.html">Create User Accounts</a></li><li class="active"><a href="admin-manager-create-snaplex.html">Create a Snaplex</a></li><li><a href="placeholders/manage-snap-packs.html">Manage Snap Packs</a></li></ul></li><li><a href="placeholders/integration-developers.html">Integration Developers</a><ul><li><a href="placeholders/configure-your-profile.html">Configure Your Profile</a></li><li><a href="placeholders/configure-snap-accounts.html">Configure Snap Accounts</a></li><li><a href="placeholders/monitor-integrations.html">Monitor Integrations</a></li></ul></li><li><a href="placeholders/tutorials.html">Tutorials</a><ul><li><a href="placeholders/create-first-pipeline-designer.html">Create Your First Pipeline in Designer</a></li><li><a href="placeholders/create-first-autosync-pipeline.html">Create Your First AutoSync Pipeline</a></li><li><a href="placeholders/create-first-agent.html">Create Your First Agent</a></li><li><a href="placeholders/create-first-apim-service.html">Create Your First APIM Service</a></li></ul></li></ul></li><li><a href="placeholders/task-landing-administer.html">Administer the Environment</a><ul><li><a href="placeholders/control-plane.html">Control Plane</a><ul><li><a href="configure-custom-org-branding.html">Configure Custom Organization Branding</a></li><li><a href="placeholders/autosync-settings-snap-pack.html">AutoSync Settings: Snap Pack Versions &amp; Allow Nullable Columns</a></li><li><a href="placeholders/apim-3-settings.html">APIM 3.0 Settings</a></li><li><a href="placeholders/designer-settings-validation.html">Designer Settings: Pipeline Validation &amp; Data Preview</a></li><li><a href="placeholders/snapgpt-settings-task.html">SnapGPT Settings</a></li><li><a href="placeholders/user-session-timeouts.html">User Session Timeouts</a></li><li><a href="placeholders/password-expiration.html">Password Expiration</a></li><li><a href="create-user-account.html">Create User Accounts</a></li><li><a href="create-team-account.html">Create Team Accounts</a></li><li><a href="create-service-account.html">Create Service Accounts</a></li><li><a href="edit-user-account.html">Edit User Accounts</a></li><li><a href="account-groups.html">Organize Accounts into Groups</a></li></ul></li><li><a href="placeholders/data-plane.html">Data Plane</a><ul><li><a href="admin-manager-create-snaplex.html">Create a Snaplex</a></li><li><a href="admin-manager-update-snaplex.html">Update a Snaplex</a></li><li><a href="placeholders/configure-snaplex-allowlists.html">Configure Snaplex Allowlists</a></li><li><a href="placeholders/add-snaplogic-ips-allowlists.html">Add SnapLogic IPs to Client Allowlists</a></li><li><a href="placeholders/configure-snaplex-auto-upgrade.html">Configure Snaplex Auto-Upgrade</a></li><li><a href="placeholders/start-a-snaplex.html">Start a Snaplex</a></li><li><a href="placeholders/stop-a-snaplex.html">Stop a Snaplex</a></li><li><a href="placeholders/install-a-groundplex.html">Install a Groundplex</a></li><li><a href="placeholders/configure-a-groundplex.html">Configure a Groundplex</a></li><li><a href="upgrade-snaplex-version.html">Upgrade to a New Snaplex Version</a></li></ul></li><li><a href="placeholders/security-task.html">Security</a><ul><li><a href="create-idp-integration.html">Create Identity Provider Integration</a></li><li><a href="configure-sso.html">Configure Single Sign-On</a></li><li><a href="enhanced-encryption.html">Enable Enhanced Encryption (Admin)</a></li><li><a href="enhanced-account-encryption.html">Enable Enhanced Encryption (AutoSync)</a></li></ul></li></ul></li><li><a href="placeholders/task-landing-develop-integrations.html">Develop &amp; Deploy Integrations</a><ul><li><a href="placeholders/autosync-data-pipelines.html">AutoSync Data Pipelines</a><ul><li><a href="create-credentials.html">Create Data Source Credentials</a></li><li><a href="create-data-pipeline.html">Create a Data Pipeline</a></li><li><a href="choose-tables.html">Choose Tables to Sync</a></li><li><a href="view-data-pipeline.html">View Data Pipeline Status</a></li><li><a href="enable-notifications.html">Enable Data Pipeline Notifications</a></li></ul></li><li><a href="placeholders/designer-pipelines.html">Designer Pipelines</a><ul><li><a href="snapgpt-pipe-gen-rag.html">Generate a Pipeline with SnapGPT</a></li><li><a href="snapgpt-gen-expressions.html">Generate Expressions with SnapGPT</a></li><li><a href="mapper-expr-example1.html">Generate Mapper Expressions with SnapGPT</a></li><li><a href="generate-queries.html">Generate SQL Queries with SnapGPT</a></li><li><a href="mapper-expr-example2.html">Extract Pipeline Parameters with SnapGPT</a></li><li><a href="snapgpt-analyze-pipelines.html">Analyze Pipelines with SnapGPT</a></li><li><a href="snapgpt-refine-pipelines.html">Refine Pipelines with SnapGPT</a></li><li><a href="snapgpt-pipe-gen-image.html">Generate a Pipeline from an Image</a></li><li><a href="print-pipeline.html">Print a Pipeline</a></li><li><a href="using-pipeline-notes.html">Use Pipeline Notes in Designer</a></li></ul></li></ul></li><li><a href="placeholders/task-landing-develop-agents.html">Develop Agents</a><ul><li><a href="placeholders/develop-agents.html">Develop Agents</a></li></ul></li><li><a href="placeholders/task-landing-manage-apis.html">Manage APIs</a><ul><li><a href="placeholders/api-management.html">API Management</a></li><li><a href="placeholders/snaplogic-public-apis.html">SnapLogic Public APIs</a></li></ul></li><li><a href="placeholders/task-landing-monitor.html">Monitor the Runtime</a><ul><li><a href="placeholders/monitor-apis.html">APIs</a><ul><li><a href="observe-api-metrics.html">View API Metrics</a></li></ul></li><li><a href="placeholders/monitor-environment-assets.html">Environment Assets</a><ul><li><a href="catalog.html">Browse the Asset Catalog</a></li><li><a href="view-metadata.html">View Asset Metadata</a></li><li><a href="asset-table-config.html">Configure the Asset Table</a></li><li><a href="custom-metadata.html">Manage Custom Metadata</a></li><li><a href="download-upload-metadata.html">Download and Upload Metadata</a></li><li><a href="add-supplemental-metadata.html">Add Supplemental Metadata</a></li><li><a href="edit-task-metadata.html">Edit Task Metadata</a></li></ul></li><li><a href="placeholders/monitor-mcp.html">MCP</a></li><li><a href="placeholders/monitor-pipelines.html">Pipelines</a><ul><li><a href="monitor-analyze.html">Analyze Pipelines</a></li><li><a href="insights.html">View Pipeline Insights</a></li><li><a href="analyze-execution.html">Analyze Execution</a></li><li><a href="find-executions.html">Find Executions</a></li><li><a href="stop-executions.html">Stop Executions</a></li><li><a href="download-executions.html">Download Executions</a></li><li><a href="pipeline-details-panel.html">View Pipeline Details</a></li><li><a href="snap-statistics-tab.html">View Snap Statistics</a></li><li><a href="pipeline-logs-tab.html">View Pipeline Logs</a></li><li><a href="pipeline-parameters-tab.html">View Pipeline Parameters</a></li><li><a href="state-transition-tab.html">View State Transitions</a></li></ul></li><li><a href="placeholders/monitor-snaplexes.html">Snaplexes</a></li><li><a href="placeholders/monitor-snaps.html">Snaps</a><ul><li><a href="snap-statistics-tab.html">View Snap Statistics</a></li></ul></li></ul></li><li><a href="placeholders/task-landing-observe.html">Observe with a Third-Party Tool</a><ul><li><a href="observe-api-metrics.html">View API Metrics</a></li><li><a href="insights.html">View Pipeline Insights</a></li><li><a href="analyze-metrics.html">Analyze Snaplex Metrics</a></li></ul></li><li><a href="placeholders/task-landing-troubleshoot.html">Troubleshoot</a><ul><li><a href="placeholders/troubleshoot-accounts.html">Accounts</a></li><li><a href="placeholders/troubleshoot-agents.html">Agents</a></li><li><a href="placeholders/troubleshoot-apim-services.html">APIM Services</a></li><li><a href="placeholders/troubleshoot-mcp-servers.html">MCP Servers</a></li><li><a href="placeholders/troubleshoot-pipelines.html">Pipelines</a></li><li><a href="placeholders/troubleshoot-runtime-behavior.html">Runtime Behavior</a></li><li><a href="placeholders/troubleshoot-snaplexes.html">Snaplexes</a></li><li><a href="placeholders/troubleshoot-snaps.html">Snaps</a></li><li><a href="placeholders/troubleshoot-tasks.html">Tasks</a></li></ul></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+
+  <h1 class="title topictitle1" id="ariaid-title1">Add a Groundplex</h1>
+  
+
+  <div class="body conbody" id="task-admin-manager-create-snaplex__task-admin-manager-create-snaplex-body">
+
+    <section class="section">
+
+      <p class="p">The <span class="ph uicontrol">Snaplexes</span> screen allows Environment admins to create a Groundplex, add
+        nodes to a Groundplex, and edit the Snaplex details. </p>
+
+      
+
+      <div class="sectiondiv">
+        
+        <p class="p">From the Snaplexes page, click <span class="ph uicontrol">Add Snaplex</span> to open the dialog for creating a Groundplex:</p>
+        
+        <br><div class="imageleft"><img class="image imageleft img75pc" src="admin-manager/../img/admin-manager/addsnaplex.png" alt="New Snaplex page"></div><br>
+        
+        <p class="p">The general steps for creating a Groundplex include:</p>
+          <ol class="ol">
+            <li class="li">Specify the details in the <span class="ph uicontrol">Settings</span>, <span class="ph uicontrol">Logging</span>,
+              <span class="ph uicontrol">Node properties</span>, and <span class="ph uicontrol">Node proxies</span> tabs to
+            configure the Groundplex.</li>
+            <li class="li">Click <span class="ph uicontrol">Save</span>. The new Groundplex is added to the Snaplex list.</li>
+          <li class="li">
+            <p class="p">The <strong class="ph b">Downloads</strong> tab displays after the Snaplex is created. Download the installation files
+              and install the Groundplex by following <a class="xref" href="admin-manager/../snaplexes/groundplex-install-on-environment.html" title="Environment list to install a Groundplex">environment-specific installation
+                procedures</a>. </p>
+          </li>
+          </ol>
+        
+          
+        <p class="p">For detailed descriptions of the fields on each tab refer to the following table.</p>
+        
+        <ul class="ul tabs">
+          <li class="li tabset-snaplex-settings tablink active">Settings</li>
+          <li class="li tabset-snaplex-log tablink">Logging</li>
+          <li class="li tabset-snaplex-node tablink">Node properties</li>
+          <li class="li tabset-snaplex-proxies tablink">Node proxies</li>
+        </ul>
+
+        <div class="div tabset-snaplex-settings tabcontent active">
+          <table class="table flddesc"><caption></caption><colgroup><col style="width:25%"><col style="width:75%"></colgroup><thead class="thead">
+            <tr class="row" id="task-admin-manager-create-snaplex__row-field-desc">
+            	<th class="entry valign-top" id="task-admin-manager-create-snaplex__row-field-desc__entry__1">Field/Field set</th>
+              <th class="entry valign-top" id="task-admin-manager-create-snaplex__row-field-desc__entry__2">Description</th>
+            </tr>
+          </thead><tbody class="tbody">
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__1">Name</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__2">
+                    <p class="p">Specify a unique name for the Groundplex.</p>
+                    <p class="p">The name must not exceed 100 characters and can include characters and numbers.</p>
+                    <p class="p">We recommend you use a descriptive, memorable name for your Snaplex using alphabets followed by numbers.</p>
+                    <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> None.</p>
+                    <p class="p"><span class="ph"><strong class="ph b">Example</strong>: </span> <kbd class="ph userinput">Test123</kbd></p>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__1">Environment</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__2">
+                    <p class="p">Specify the value to configure the Snaplex nodes.</p>
+                    
+                    <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> None.</p>
+                    <p class="p"><span class="ph"><strong class="ph b">Example</strong>: </span> <kbd class="ph userinput">Test-10k</kbd></p>
+                    <div class="note important note_important"><span class="note__title">Important:</span>  For existing Snaplexes, stop the nodes before updating
+                      the <span class="ph uicontrol">Environment</span> value. Download the installation
+                      package and restart the nodes for the Environment value to take effect.</div>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__1">Location</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__2"> Select the default option <kbd class="ph userinput">sidekick</kbd>. <span class="ph"><strong class="ph b">Default value:</strong> </span>
+                    <kbd class="ph userinput">sidekick</kbd>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__1">Select project</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__2">Select your target project or shared folder from the dropdown.</td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__1">Version</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__2">
+                    <p class="p">Select the Snaplex version.</p>
+                    <p class="p">By default, all new Snaplexes are configured to work with the latest version of the Snaplex.</p>
+                    <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> None.</p>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__1">Load balancer</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__2">
+                    <p class="p">Specify the URL for the load balancer for Triggered Task execution requests.
+                      The load balancer URL has to be fully qualified, including the protocol.
+                      The Load Balancer URLs in the Snaplex settings, are used for the Snaplex Trigger URL.
+                    </p>
+                    <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> None.</p>
+                    <p class="p"><span class="ph"><strong class="ph b">Example</strong>: </span> <span class="ph filepath">https://snaplexlb.mydomain.com</span></p>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__1">Ultra load balancer</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__2">
+                    <p class="p">Specify the URL of the FeedMaster load balancer for Ultra Task execution requests. This
+                      property is available only to Environments that have subscribed to Ultra Tasks. </p>
+                    <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> None.</p>
+                    <p class="p"><span class="ph"><strong class="ph b">Example</strong>: </span> <span class="ph filepath">https://ultralb.mydomain.com</span></p>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__1">Notifications email address</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__2">
+                    <p class="p">List the email addresses to notify if one of the Snaplex nodes does not respond for 15 minutes.</p>
+                    <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> N/A</p>
+                    <p class="p"><span class="ph"><strong class="ph b">Example</strong>: </span><kbd class="ph userinput">testuser@snaplogic.com</kbd></p>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__1">Notifications Slack channel</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__2">
+                    <p class="p">Specify the name of Slack channels (separated by commas) to notify if one of the Snaplex nodes does not respond in 15 minutes.</p>
+                    <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> None.</p>
+                    <p class="p"><span class="ph"><strong class="ph b">Example</strong>: </span> <kbd class="ph userinput">DevOps</kbd></p>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__1">Notifications Slack user</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__row-field-desc__entry__2">
+                    <p class="p">Enter the Slack recipients (separated by commas) to notify if one of the Snaplex nodes does not respond for 15 minutes.</p>
+                    <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> N/A</p>
+                    <p class="p"><span class="ph"><strong class="ph b">Example</strong>: </span><kbd class="ph userinput">testuser</kbd></p>
+                  </td>
+                </tr>
+
+              </tbody></table>
+        </div>
+
+        <div class="div tabset-snaplex-log tabcontent">
+          <table class="table flddesc"><caption></caption><colgroup><col style="width:25%"><col style="width:75%"></colgroup><thead class="thead">
+            <tr class="row" id="task-admin-manager-create-snaplex__d1289e266">
+            	<th class="entry valign-top" id="task-admin-manager-create-snaplex__d1289e266__entry__1">Field/Field set</th>
+              <th class="entry valign-top" id="task-admin-manager-create-snaplex__d1289e266__entry__2">Description</th>
+            </tr>
+          </thead><tbody class="tbody">
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">Level</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2">Specify the minimum level of logging or the type of details that you want to enable for the new Snaplex.
+                    Available values:
+                    <ul class="ul">
+                      <li class="li">Trace: Records details of all events associated with the Snaplex.</li>
+                      <li class="li">Debug: Records all events associated with the Snaplex.</li>
+                      <li class="li">Info: Records messages that outline the status of the Snaplex and the completed Tasks.</li>
+                      <li class="li">Warning: Records all warning messages associated with the Snaplex.</li>
+                      <li class="li">Error: Records all error messages associated with the Snaplex.</li>
+                    </ul>
+                    <span class="ph"><strong class="ph b">Default value:</strong> </span> <kbd class="ph userinput">Debug</kbd>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">Log file size</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2">
+                    <p class="p">The maximum size of the log file to be created for the Snaplex.</p>
+                    <span class="ph"><strong class="ph b">Default value:</strong> </span> <kbd class="ph userinput">300</kbd>
+                  </td>
+                </tr>
+                
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">Metric</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2"><p class="p">Select the log file size in <kbd class="ph userinput">KB, MB or GB</kbd> from the
+                    dropdown.</p>
+                    <span class="ph"><strong class="ph b">Default value:</strong> </span>
+                    <kbd class="ph userinput">MB</kbd>
+                  </td>
+                </tr>               
+                
+                <tr class="row">  
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">Main backup count</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2"><p class="p">The number of backup main log files that SnapLogic must maintain for the
+                    Snaplex. </p> 
+                    <span class="ph"><strong class="ph b">Default value:</strong> </span>
+                    <kbd class="ph userinput">40</kbd>
+                  </td>  
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">Error backup count</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2"><p class="p">The number of backup error log files that SnapLogic must maintain for the
+                    Snaplex.</p>
+                    <span class="ph"><strong class="ph b">Default value:</strong> </span><kbd class="ph userinput">5</kbd>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">Access backup count</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2">
+                    <p class="p">The number of backup access log files that SnapLogic must maintain for the Snaplex.</p>
+                    <span class="ph"><strong class="ph b">Default value:</strong> </span> <kbd class="ph userinput">5</kbd>
+                  </td>
+                </tr>
+
+              </tbody></table>
+        </div>
+
+        <div class="div tabset-snaplex-node tabcontent">
+          <table class="table flddesc"><caption></caption><colgroup><col style="width:25%"><col style="width:75%"></colgroup><thead class="thead">
+            <tr class="row" id="task-admin-manager-create-snaplex__d1289e266">
+            	<th class="entry valign-top" id="task-admin-manager-create-snaplex__d1289e266__entry__1">Field/Field set</th>
+              <th class="entry valign-top" id="task-admin-manager-create-snaplex__d1289e266__entry__2">Description</th>
+            </tr>
+          </thead><tbody class="tbody">
+
+                
+                
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">Max. slots</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2"> Each Snap in a pipeline consumes a slot, so a pipeline can only execute on a node with free slots that are equal to or greater than the number of Snaps. If no nodes have sufficient slots for normal pipelines, the execution fails.
+                    For pipelines invoked with Ultra Tasks, the execution is queued.
+                    
+                    <span class="ph"><strong class="ph b">Default value:</strong> </span>
+                    <kbd class="ph userinput">4000</kbd>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">Reserved slot %</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2"> The percentage of slots that you want to reserve on a node for pipelines
+                    executed through the Designer tab. Pipelines executed using Tasks or the
+                    Pipeline Execute Snap do not have access to these slots. Changes made to this
+                    setting do not require a restart. <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span><kbd class="ph userinput">15</kbd>
+                    </p></td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">Max. memory</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2"> The memory threshold at–and above–which no more pipelines can be assigned
+                    to a node. Changes made to this setting do not require a restart. <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span><kbd class="ph userinput">85</kbd>
+                    </p></td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">Max. restart wait time</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2">The maximum wait time before restarting a node. The toggle allows the
+                    Admin Manager to <span class="ph uicontrol">Set restart wait time to Forever</span>. Once
+                    enabled the <span class="ph uicontrol">default value field</span> gets disabled.  
+                    <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span><kbd class="ph userinput">15</kbd> minutes</p></td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">Max. heap size</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2"> The maximum JVM heap size. <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> auto
+                      </p><div class="note important note_important"><span class="note__title">Important:</span> When the value is <kbd class="ph userinput">auto</kbd>,
+                      SnapLogic automatically sets the maximum heap size based on the available
+                      machine memory. </div></td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">HTTP Interface</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2"> Specify the location from which the Snaplex node can accept HTTP network
+                    connections. The following options are available: <ul class="ul">
+                      <li class="li">Localhost only (127.0.0.1)</li>
+                      <li class="li">Any interface (0.0.0.0)</li>
+                    </ul>
+                    <span class="ph"><strong class="ph b">Default value:</strong> </span>
+                    <kbd class="ph userinput">Localhost only (127.0.0.1)</kbd>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">HTTP Port</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2"> The HTTP port on which the Snaplex node listens for connections. 
+                    <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span><kbd class="ph userinput">8090</kbd> for a JCC node and <kbd class="ph userinput">8091</kbd> for a FeedMaster.</p> 
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">HTTPS Ports</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2">
+                    <p class="p">The HTTPS port on which the Snaplex node listens for connections.</p>
+                    <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> None.</p>
+                  </td>
+                </tr>
+
+                 <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">Snaplex node types (Hostname/server type)</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2">
+                    <p class="p">Add a Hostname for the type of server JCC or FeedMaster from the dropdown.
+                      You can also add new nodes using the <span class="ph uicontrol">+ Add new node type</span>.
+                    </p>
+                    <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> None.</p>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">Global properties (Key/Value pairs)</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2">
+                    <p class="p">Internal configuration options. Do not edit these values without contacting your CSM.
+                      You can also add new nodes using the <span class="ph uicontrol">+ Add new global property</span>.
+                    </p>
+                    <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> None.</p>                    
+                  </td>
+                </tr>
+
+              </tbody></table>
+        </div>
+
+        <div class="div tabset-snaplex-proxies tabcontent">
+          <table class="table flddesc"><caption></caption><colgroup><col style="width:25%"><col style="width:75%"></colgroup><thead class="thead">
+            <tr class="row" id="task-admin-manager-create-snaplex__d1289e266">
+            	<th class="entry valign-top" id="task-admin-manager-create-snaplex__d1289e266__entry__1">Field/Field set</th>
+              <th class="entry valign-top" id="task-admin-manager-create-snaplex__d1289e266__entry__2">Description</th>
+            </tr>
+          </thead><tbody class="tbody">
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">HTTP proxy host name</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2"> Configuration details associated with the HTTP proxy server. The URL of
+                    the HTTP proxy host. <p class="p"><span class="ph"><strong class="ph b">Example</strong>: </span> 172.0.10.162 </p><p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> None.</p>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">Port</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2">
+                    <p class="p">The port number on which the HTTP proxy host listens.</p>
+                    <p class="p"><span class="ph"><strong class="ph b">Example</strong>: </span><kbd class="ph userinput">3127</kbd></p>
+                    <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> None.</p>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">Non-proxy host</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2">
+                    <p class="p">The hostnames or IP addresses that should be contacted directly instead of through the proxy.
+                      Patterns might start or end with a * for wildcards.
+                      There is an option to add new proxy host using <span class="ph uicontrol">+ Add new non-proxy host</span>.
+                    </p>
+                  </td>
+                </tr>
+                
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">HTTPS proxy host name</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2"> Configuration details associated with the HTTPS proxy server. The URL of
+                    the HTTPS proxy host. <p class="p"><span class="ph"><strong class="ph b">Example</strong>: </span><kbd class="ph userinput">172.0.10.162</kbd>
+                    </p><p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> None.</p>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">Port</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2">
+                    <p class="p">The port number on which the HTTPS proxy host listens.</p>
+                    <p class="p"><span class="ph"><strong class="ph b">Example</strong>: </span><kbd class="ph userinput">3127</kbd></p>
+                    <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> None.</p>
+                  </td>
+                </tr>
+
+                <tr class="row">
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__1">Non-proxy host</td>
+                  <td class="entry" headers="task-admin-manager-create-snaplex__d1289e266__entry__2">
+                    <p class="p">The hostnames or IP addresses that should be contacted directly instead of through the proxy.
+                      Patterns might start or end with a * for wildcards.
+                      There is an option to add new proxy host using <span class="ph uicontrol">+ Add new non-proxy host</span>.
+                    </p>
+                  </td>
+                </tr>                
+              </tbody></table>
+        </div>
+
+      </div>
+      <div class="p">
+        <div class="note note note_note" id="task-admin-manager-create-snaplex__note_tjn_25z_ncc"><span class="note__title">Note:</span> In the <strong class="ph b">Downloads </strong>tab, only the latest download links are
+          available because deprecated versions cannot be used for installation. After the latest
+          version is installed, the user can change to a previous Snaplex version to debug. For more
+          information on deprecated Snaplex versions refer to <a class="xref" href="admin-manager/../snaplexes/version-compatibility.html">Snaplex and Snap Pack
+            compatibility</a>.</div>
+      </div>
+    </section>
+
+  </div>
+
+</article></main><footer role="contentinfo"><div class="footer">
+  <div>
+  <p class="newsbanner">
+   <span> The migration of the <a href="https://docs-snaplogic.atlassian.net/wiki/spaces/SD/overview?homepageId=34537" target="_blank"> legacy docs </a> to this site is in progress.
+   </span>
+   <span>
+   <img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/x-close.svg" alt="thumbsup-icon">
+   </span>
+  </p>
+  </div>
+  <div class="ftrlegal">
+    <!-- <p class="copyright"><a href="/refs/copyright.html">© <ph class="copyrightyear"></ph> SnapLogic, Inc.</a></p> -->
+     <div class="footer_top">
+     <div>
+     <a href="/index.html"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/ux/sl-logo-indigo-icon.svg" alt="SnapLogic Logo"></a>
+     <a href="/index.html">SnapLogic Documentation</a>
+     </div>
+     <div>
+     <ul>
+      <!-- <li><a href="/refs/copyright.html">© <ph class="copyrightyear"></ph> SnapLogic, Inc.</a></li>  <a class="xref" href="https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/49855/SnapLogic+Releases" target="_blank" rel="external noopener">Release Notes</a>-->
+        <!-- <li><a href="https://learn.snaplogic.com/" target="_blank" rel="external noopener">SnapLogic Academy</a></li> -->
+        <li><span>Explore</span><span><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-up-white-icon.svg" alt="SnapLogic Logo"></span></li>
+        <li><a class="xref" href="https://learn.snaplogic.com/" target="_blank" rel="external noopener">SnapLogic Academy</a></li>
+        <li><a class="xref" href="https://community.snaplogic.com/" target="_blank" rel="external noopener">Integration Nation</a></li>
+        <li><a class="xref" href="https://www.snaplogic.com/" target="_blank" rel="external noopener">Company</a></li>
+    <!-- <li><a href="https://community.snaplogic.com/" target="_blank" rel="external noopener">Integration Nation</a></li> -->
+    <!-- <li><a href="mailto:support@snaplogic.com" target="_blank" rel="external noopener">Support</a></li> -->
+    <!-- <li><a href="https://www.snaplogic.com/" target="_blank" rel="external noopener">Company</a></li> -->
+    </ul>
+       <ul>
+      <li><span>Need Help?</span><span><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-up-white-icon.svg" alt="SnapLogic Logo"></span></li>
+      <li>
+      <!-- <a><img class='noborder noexpand' src='https://d3132s9xzuu9s8.cloudfront.net/k/img/envelope-icon.svg' alt='envelope-icon'/></a> -->
+      <a href="mailto:documentation@snaplogic.com">Documentation Team</a></li>
+      <li>
+      <!-- <a><img class='noborder noexpand' src='https://d3132s9xzuu9s8.cloudfront.net/k/img/envelope-icon.svg' alt='envelope-icon'/></a> -->
+      <a href="mailto:support@snaplogic.com">Customer Support Team</a></li>
+      </ul>
+      </div>
+    </div>
+    <div class="footer_bottom">
+     <!-- <p  class="footer_logo"> -->
+    <!-- <a href="../index.html"><img class="noborder" src="https://d3132s9xzuu9s8.cloudfront.net/ux/sl-logo-new.svg" alt="SnapLogic Logo"/></a> -->
+    <!-- <a href="../index.html"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/sl-logo-teal.svg" alt="SnapLogic Logo"/></a> -->
+    <!-- <a href="/index.html"><img class="noborder" src="/img/icons/logo/sl_logo_combo_rev_rgb.svg" alt="SnapLogic Logo"/></a> -->
+    <!-- <ph class="footer-site-title">SnapLogic Documentation</ph> -->
+    <!-- </p> -->
+     <ul>
+      <li><a href="/refs/copyright.html">Copyright</a></li>
+       <li class="copyright">© <ph class="copyrightyear"></ph> SnapLogic, Inc.</li>
+    </ul>
+     <!-- <ul> -->
+      <!-- <ul>
+      <li>Need Help?</li>
+      <li><a><img class='noborder noexpand' src='https://d3132s9xzuu9s8.cloudfront.net/k/img/envelope-icon.svg' alt='envelope-icon'/></a><a href="mailto:documentation@snaplogic.com">Documentation Team</a></li>
+      <li><a><img class='noborder noexpand' src='https://d3132s9xzuu9s8.cloudfront.net/k/img/envelope-icon.svg' alt='envelope-icon'/></a><a href="mailto:support@snaplogic.com">Customer Support Team</a></li>
+      </ul> -->
+    <!-- </ul> -->
+    <ul>
+      <li><a class="xref" href="https://www.facebook.com/SnapLogic" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-facebook.svg" alt="ftr-logo"></a></li>
+      <li><a class="xref" href="https://twitter.com/SnapLogic" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-twitter.svg" alt="ftr-logo"></a></li>
+      <li><a class="xref" href="https://www.linkedin.com/company/snaplogic" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-linkedin.svg" alt="ftr-logo"></a></li>
+      <li><a class="xref" href="https://www.instagram.com/snaplogicinc" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-instagram.svg" alt="ftr-logo"></a></li>
+      <li><a class="xref" href="https://www.youtube.com/snaplogic" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-youtube.svg" alt="ftr-logo"></a></li>
+    </ul>
+    </div>
+
+  </div>
+
+  <!-- <script src="https://d3132s9xzuu9s8.cloudfront.net/k/sldocs.js"/> -->
+  <script src="../theme/sldocs.js"></script>
+
+</div></footer></body></html>

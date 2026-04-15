@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.59 20.34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #53717c;
+      }
+    </style>
+  </defs>
+  <title>dropdown-Active</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <path class="cls-1" d="M31.34,1.75,16.63,19.94a1.08,1.08,0,0,1-1.67,0L.24,1.75A1.08,1.08,0,0,1,1.08,0H30.51A1.08,1.08,0,0,1,31.34,1.75Z"/>
+    </g>
+  </g>
+</svg>
