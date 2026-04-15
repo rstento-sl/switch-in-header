@@ -2975,9 +2975,14 @@ $(window).on("resize", function () {
   // Helper to detect product view (not task view)
   const isInProductView = (currentPath.includes('/autosync/') || currentPath.includes('/admin-manager/') || currentPath.includes('/designer/') || currentPath.includes('/snapgpt/') || currentPath.includes('/monitor/')) && !currentPath.includes('/tasks/');
 
-  // Only highlight dropdowns if we're in the product view AND not showing all products
-  const showFullTreeHeader = sessionStorage.getItem('showFullTree');
-  if (isInProductView && showFullTreeHeader !== 'true') {
+  // Clear showFullTree when landing on a product-specific page, since the user
+  // has navigated into a product (from home page, All Products, or direct link)
+  if (isInProductView) {
+    sessionStorage.removeItem('showFullTree');
+  }
+
+  // Highlight dropdowns when we're in the product view
+  if (isInProductView) {
     // Check if we're on an AutoSync page
     if (currentPath.includes('/autosync/')) {
       $('.product-menu-header .dropdown').each(function() {
