@@ -393,7 +393,7 @@ function DisplayBreadcrumbs(){
     var bp = '';
     (function() {
       var cp = window.location.pathname;
-      var segs = ['/autosync/', '/admin-manager/', '/designer/', '/snapgpt/', '/monitor/', '/tasks/'];
+      var segs = ['/autosync/', '/admin-manager/', '/designer/', '/snapgpt/', '/monitor/', '/apim/', '/classic-apim/', '/public-apis/', '/tasks/'];
       for (var s = 0; s < segs.length; s++) {
         var si = cp.indexOf(segs[s]);
         if (si >= 0) { bp = cp.substring(0, si); return; }
@@ -2981,7 +2981,7 @@ $(window).on("resize", function () {
   const currentPath = window.location.pathname;
 
   // Helper to detect product view (not task view)
-  const isInProductView = (currentPath.includes('/autosync/') || currentPath.includes('/admin-manager/') || currentPath.includes('/designer/') || currentPath.includes('/snapgpt/') || currentPath.includes('/monitor/')) && !currentPath.includes('/tasks/');
+  const isInProductView = (currentPath.includes('/autosync/') || currentPath.includes('/admin-manager/') || currentPath.includes('/designer/') || currentPath.includes('/snapgpt/') || currentPath.includes('/monitor/') || currentPath.includes('/apim/') || currentPath.includes('/classic-apim/') || currentPath.includes('/public-apis/')) && !currentPath.includes('/tasks/');
 
   // Clear showFullTree when landing on a product-specific page, since the user
   // has navigated into a product (from home page, All Products, or direct link)
@@ -3014,7 +3014,7 @@ $(window).on("resize", function () {
         const $dropdown = $(this);
         const $toggle = $dropdown.find('.dropdown-toggle');
 
-        if ($toggle.text().includes('Administration')) {
+        if ($toggle.text().trim().startsWith('Administration')) {
           $dropdown.addClass('active');
           $dropdown.find('.dropdown-menu a').each(function() {
             if ($(this).text().includes('Admin Manager')) {
@@ -3070,7 +3070,7 @@ $(window).on("resize", function () {
   if ($toc.length > 0) {
     // Determine current view
     const isTaskView = currentPath.includes('/tasks/');
-    const isProductView = (currentPath.includes('/autosync/') || currentPath.includes('/admin-manager/') || currentPath.includes('/designer/') || currentPath.includes('/snapgpt/') || currentPath.includes('/monitor/')) && !currentPath.includes('/tasks/');
+    const isProductView = (currentPath.includes('/autosync/') || currentPath.includes('/admin-manager/') || currentPath.includes('/designer/') || currentPath.includes('/snapgpt/') || currentPath.includes('/monitor/') || currentPath.includes('/apim/') || currentPath.includes('/classic-apim/') || currentPath.includes('/public-apis/')) && !currentPath.includes('/tasks/');
 
     // Add class to nav for CSS styling
     if (isTaskView) {
@@ -3094,7 +3094,7 @@ $(window).on("resize", function () {
     // Looks for the first known product or task path segment and treats everything before it as the base.
     var basePath = '';
     (function() {
-      var knownSegments = ['/autosync/', '/admin-manager/', '/designer/', '/snapgpt/', '/monitor/', '/tasks/'];
+      var knownSegments = ['/autosync/', '/admin-manager/', '/designer/', '/snapgpt/', '/monitor/', '/apim/', '/classic-apim/', '/public-apis/', '/tasks/'];
       for (var i = 0; i < knownSegments.length; i++) {
         var idx = currentPath.indexOf(knownSegments[i]);
         if (idx >= 0) {
@@ -3134,6 +3134,9 @@ $(window).on("resize", function () {
       if (currentPath.includes('/designer/')) return 'Designer';
       if (currentPath.includes('/snapgpt/')) return 'SnapGPT';
       if (currentPath.includes('/monitor/')) return 'Monitor';
+      if (currentPath.includes('/apim/')) return 'API Management 3.0';
+      if (currentPath.includes('/classic-apim/')) return 'Classic API Management';
+      if (currentPath.includes('/public-apis/')) return 'Public APIs';
       return null;
     }
 
@@ -3309,7 +3312,7 @@ $(window).on("resize", function () {
   const showFullTree = sessionStorage.getItem('showFullTree');
 
   // Check if we're in product view (autosync or admin-manager or snapgpt or monitor, but not tasks)
-  const isInProductViewForNav = (currentPath.includes('/autosync/') || currentPath.includes('/admin-manager/') || currentPath.includes('/designer/') || currentPath.includes('/snapgpt/') || currentPath.includes('/monitor/')) && !currentPath.includes('/tasks/');
+  const isInProductViewForNav = (currentPath.includes('/autosync/') || currentPath.includes('/admin-manager/') || currentPath.includes('/designer/') || currentPath.includes('/snapgpt/') || currentPath.includes('/monitor/') || currentPath.includes('/apim/') || currentPath.includes('/classic-apim/') || currentPath.includes('/public-apis/')) && !currentPath.includes('/tasks/');
 
   if (isInProductViewForNav) {
     // Detect which product the current page belongs to
@@ -3424,6 +3427,57 @@ $(window).on("resize", function () {
           $dropdown.addClass('active');
           $dropdown.find('.dropdown-menu a').each(function() {
             if ($(this).text().includes('Monitor')) {
+              $(this).addClass('active');
+            }
+          });
+        }
+      });
+    }
+
+    // Check if we're on an APIM 3.0 page
+    if (currentPath.includes('/apim/')) {
+      $('.product-menu-header .dropdown').each(function() {
+        const $dropdown = $(this);
+        const $toggle = $dropdown.find('.dropdown-toggle');
+
+        if ($toggle.text().includes('APIs')) {
+          $dropdown.addClass('active');
+          $dropdown.find('.dropdown-menu a').each(function() {
+            if ($(this).text().includes('API Management 3.0')) {
+              $(this).addClass('active');
+            }
+          });
+        }
+      });
+    }
+
+    // Check if we're on a Classic APIM page
+    if (currentPath.includes('/classic-apim/')) {
+      $('.product-menu-header .dropdown').each(function() {
+        const $dropdown = $(this);
+        const $toggle = $dropdown.find('.dropdown-toggle');
+
+        if ($toggle.text().includes('APIs')) {
+          $dropdown.addClass('active');
+          $dropdown.find('.dropdown-menu a').each(function() {
+            if ($(this).text().includes('Classic API Management')) {
+              $(this).addClass('active');
+            }
+          });
+        }
+      });
+    }
+
+    // Check if we're on a Public APIs page
+    if (currentPath.includes('/public-apis/')) {
+      $('.product-menu-header .dropdown').each(function() {
+        const $dropdown = $(this);
+        const $toggle = $dropdown.find('.dropdown-toggle');
+
+        if ($toggle.text().includes('APIs')) {
+          $dropdown.addClass('active');
+          $dropdown.find('.dropdown-menu a').each(function() {
+            if ($(this).text().includes('Public APIs')) {
               $(this).addClass('active');
             }
           });

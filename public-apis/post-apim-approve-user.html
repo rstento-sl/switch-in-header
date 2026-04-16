@@ -1,0 +1,464 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2026"><meta name="generator" content="DITA-OT"><title>Approve a list of users</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <!-- <link rel="icon" type="image/x-icon" href="/img/icons/logo/sl-logo.ico"/> -->
+  <!-- <link rel="icon" type="image/svg+xml" href="/img/icons/logo/sl-logo.svg"/> -->
+  <!--<link rel="icon" type="image/x-icon"  href="https://d3132s9xzuu9s8.cloudfront.net/k/sl-logo-teal.ico" />-->
+  <!-- <link rel="icon" type="image/svg+xml" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/favicon-teal-grad-128.svg"/> -->
+  <link rel="icon" type="image/svg+xml" href="https://d3132s9xzuu9s8.cloudfront.net/ux/sl-logo-indigo-icon.svg">
+  <!--<link rel="icon" type="image/svg+xml" href="https://d3132s9xzuu9s8.cloudfront.net/k/sl-logo-teal.svg"/>-->
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rainbow/2.1.4/themes/github.css" /> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/2.1.4/rainbow.min.js"></script> -->
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script> -->
+
+  <!-- Google Analytics (gtag.js) – Enable for live site only.
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-W8ZVFJP785"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W8ZVFJP785');
+  </script>
+  -->
+
+  <!-- GCSE -->
+  <!-- <script async="true" src="https://cse.google.com/cse.js?cx=25d4aa9829a3148ff"/> -->
+
+  <!-- FontAwesome -->
+  <!-- <script src="https://kit.fontawesome.com/a548053f9e.js" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://kit.fontawesome.com/77a505b9e0.js" crossorigin="anonymous"></script> -->
+
+  <!-- Preload images -->
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-blue.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/thumbs-up.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/thumbs-down.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-left-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-right-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/codeblock-copy-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/permalink-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/Close Icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/thumbs-up-fill-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/thumbs-down-fill-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-down-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/IMPORTANT.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/NOTE.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/TIP.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/REMEMBER.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/WARNING.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/CAUTION.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/community-logo-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/icon-legacy-site-search.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/3-stars-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/cross-icon.svg" as="image">
+    <link rel="preload" href="https://d3132s9xzuu9s8.cloudfront.net/k/img/sl-logo-indigo-icon.svg" as="image">
+  <!-- BugHerd -->
+  <!-- <script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=1tn2hl0shbd0tgl9ifyteq" async="true"></script> stage-main -->
+  <!-- Include Bing Custom Search JavaScript SDK -->
+  <!-- <script src="https://www.bing.com/api/customsearch/search/sdk"></script> -->
+<link rel="stylesheet" type="text/css" href="../theme/commonltr.css"><link rel="stylesheet" type="text/css" href="../theme/sldocs.css"></head><body id="post-apim-approve-user"><header role="banner"><div class="header">
+<ul class="headertopsection">
+  <ul class="mainbanner">
+    <!-- Hamburger for mobile -->
+    <i class="hamburgericon"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/hamburger-icon.svg" alt="menu"></i>
+
+    <!-- Logo and Site Title -->
+    <a href="/index.html" class="header-logo-link">
+      <img class="noborder noexpand header-logo-img" src="https://d3132s9xzuu9s8.cloudfront.net/ux/sl-logo-indigo-icon.svg" alt="SnapLogic Logo">
+    </a>
+    <ph class="site-title site-title-compact"><a href="/index.html">SnapLogic Documentation</a></ph>
+
+    <!-- Search bar (compact) -->
+    <div class="search-container-compact desktop-nav">
+      <span onclick="showPopup()" class="search-icon-compact"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
+      <input type="text" id="searchQuery" placeholder="Search docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+    </div>
+
+    <!-- Product Dropdown Menus (smaller) -->
+    <nav class="product-menu-header desktop-nav">
+      <!-- Dropdown 1: Integration Platform -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Integration Platform <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/autosync/autosync-home.html">AutoSync</a>
+          <a href="/designer/designer-home.html">Designer</a>
+          <a href="/snapgpt/snapgpt-home.html">SnapGPT</a>
+        </div>
+      </div>
+
+      <!-- Dropdown 2: Administration -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Administration <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/admin-manager/admin-manager-home.html">Admin Manager</a>
+        </div>
+      </div>
+
+      <!-- Dropdown 3: APIs -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          APIs <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/apim/apim-home.html">API Management 3.0</a>
+          <a href="/classic-apim/classic-apim-home.html">Classic API Management</a>
+          <a href="/public-apis/public-apis-home.html">Public APIs</a>
+        </div>
+      </div>
+
+      <!-- Dropdown 4: Observability -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Observability <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/monitor/monitor-home.html">Monitor</a>
+        </div>
+      </div>
+    </nav>
+  </ul>
+
+  <ul class="topmenu">
+    <!-- Original search for mobile -->
+     <li class="search-popup-hdr">
+                <div id="search-container">
+                    <span onclick="showPopup()" id="search-container-icon"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
+                    <input type="text" id="searchQueryDesktop" placeholder="Search the documentation and community posts" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+                </div>
+            </li>
+  </ul>
+
+  <ul class="topmenusearch">
+  <li>
+                <div id="search-container-mobile">
+                    <span onclick="showPopup()"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-blue.svg" alt="search-icon"></span>
+                    <input type="text" id="searchQuerymobile" placeholder="Search the docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+                </div>
+            </li>
+      <li><span><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span></li>
+  </ul>
+</ul>
+  <p class="newsbanner">
+   <span>  The migration of the <a href="https://docs-snaplogic.atlassian.net/wiki/spaces/SD/overview?homepageId=34537" target="_blank"> legacy documentation </a> to this site is in progress.
+    </span>
+    <span><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/x-close.svg" alt="thumbsup-icon"></span>
+  </p>
+  <div id="search-popup">
+    <div class="search-main">
+      <div class="Search-filters">
+      <div>
+      <li><h1>Filter search results</h1><img class="noborder noexpand close-filters-button" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/Close Icon.svg" alt="Close Filters"></li>
+      <li class="filter-item"><input type="checkbox" value="All" name="Content" checked=""><p>All</p></li>
+      <li class="filter-item"><input type="checkbox" value="Documentation" name="Content">
+        <p>New Documentation Site</p>
+        <img src="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-down-icon.svg" class="docfilterchevron noborder" alt="Toggle"></li>
+        <ul class="Doc-filters">
+          <li class="filter-item"><input type="checkbox" value="autosync" name="AutoSync"><p>AutoSync</p></li>
+          <li class="filter-item"><input type="checkbox" value="admin-manager" name="Admin Manager"><p>Admin Manager</p></li>
+          <li class="filter-item"><input type="checkbox" value="security" name="Security"><p>Security</p></li>
+          <li class="filter-item"><input type="checkbox" value="snaps" name="Snaps"><p>Snaps</p></li>
+          <li class="filter-item"><input type="checkbox" value="snaplexes" name="Snaplexes"><p>Snaplexes</p></li>
+          <li class="filter-item"><input type="checkbox" value="monitor" name="Monitor"><p>Monitor</p></li>
+          <li class="filter-item"><input type="checkbox" value="public-apis" name="Snaplogic Public APIs"><p>Snaplogic Public APIs</p></li>
+          <li class="filter-item"><input type="checkbox" value="cicd/git-integration" name="Git Integration"><p>Git Integration</p></li>
+          <li class="filter-item"><input type="checkbox" value="cicd/secrets-mgm" name="Secrets Management"><p>Secrets Management</p></li>
+          <li class="filter-item"><input type="checkbox" value="genai" name="GenAI App Builder"><p>AgentCreator</p></li>
+        </ul>
+        <li class="filter-item"><input type="checkbox" value="Confluence" name="Content">
+        <p>Legacy Site</p></li>
+        <ul class="legacy-filters-text">
+          <li>
+            <span><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/tool-tip-icon.svg" alt="icon"></span>
+            <span>No advanced filters available</span>
+          </li>
+        </ul>
+      </div>
+      </div>
+      <div class="search-page-main">
+        <div class="search-bar-advanced">
+           <div class="back-button">
+           <img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/arrow-narrow-left.svg" alt="backicon">
+           </div>
+          <div class="search-bar">
+          <div>
+          <span class="cleartext"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/Close Icon.svg" alt="clearicon"></span>
+           <span class="advancedsearchicon"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-blue.svg" alt="search-icon"></span>
+            <input placeholder="Search the documentation and community posts" type="text" spellcheck="false" autocomplete="off" onfocus="showdropdown2()">
+            </div>
+            <div id="autosuggest-dropdown2"></div>
+          </div>
+          <div class="show-filters-button"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/show-filters.svg" alt="clearicon"></div>
+          <div class="advance_search_button">Search</div>
+
+        </div>
+        <div class="results_count"></div>
+        <div id="searched-results"></div>
+         <div id="show-more" class="">Show more results</div>
+      </div>
+    </div>
+  </div>
+</div></header><nav class="toc" role="navigation"><ul><li><a href="../admin-manager/admin-manager-home.html">Admin Manager</a><ul><li><a href="../admin-manager/admin-manager-about.html">Introduction</a></li><li><a href="../admin-manager/administration-get-started.html">Get Started</a></li><li><a href="../admin-manager/designer-settings.html">Designer settings</a></li><li><a href="../admin-manager/snapgpt-settings.html">SnapGPT settings</a></li><li><a href="../admin-manager/apim.html">API Management 3.0 settings</a></li><li><a href="../admin-manager/asset-catalog.html">Asset catalog settings</a></li><li><a href="../admin-manager/autosync-settings.html">AutoSync settings</a></li><li><a href="../admin-manager/users-groups-roles.html">User management</a><ul><li><a href="../admin-manager/admin-manager-users.html">Manage user accounts</a><ul><li><a href="../admin-manager/create-user-account.html">Create user account</a></li><li><a href="../admin-manager/create-team-account.html">Create team account</a></li><li><a href="../admin-manager/create-service-account.html">Create service account</a></li><li><a href="../admin-manager/approve-portal-user.html">Approve or reject Portal users</a></li><li><a href="../admin-manager/delete-account.html">Delete accounts</a></li><li><a href="../admin-manager/edit-user-account.html">Edit accounts</a></li></ul></li><li><a href="../admin-manager/admin-manager-groups.html">Manage groups</a></li><li><a href="../admin-manager/admin-manager-roles.html">Manage roles</a></li></ul></li><li><a href="../admin-manager/general-settings.html">Environment settings</a></li><li><a href="../admin-manager/snaplexes.html">Snaplexes</a><ul><li><a href="../admin-manager/admin-manager-create-snaplex.html">Add a Groundplex</a></li><li><a href="../admin-manager/admin-manager-update-snaplex.html">Update a Snaplex</a></li></ul></li><li><a href="../admin-manager/git-integration.html">Git Integration</a></li><li><a href="../admin-manager/slack.html">Slack setup</a></li><li><a href="../admin-manager/custom-privacy-notice.html">Custom privacy notice</a></li><li><a href="../admin-manager/snap-packs.html">Snap Packs</a><ul><li><a href="../admin-manager/restrict-snap-visibility.html">Restrict Snap visibility</a></li></ul></li><li><a href="../admin-manager/password-expiration.html">Password expiry</a></li><li><a href="../admin-manager/admin-manager-sessions.html">Session timeouts</a></li><li><a href="../admin-manager/authentication.html">Authentication</a><ul><li><a href="../admin-manager/sso.html">SSO authentication</a><ul><li><a href="../admin-manager/create-idp-integration.html">Create IdP application</a></li><li><a href="../admin-manager/configure-sso.html">Configure SSO</a></li></ul></li><li><a href="../admin-manager/jwt.html">JWT authentication</a><ul><li><a href="../admin-manager/jwt-config.html">JWT configuration</a></li></ul></li></ul></li><li><a href="../admin-manager/email-encryption.html">Email encryption</a></li><li><a href="../admin-manager/allowlist.html">Allowlists</a><ul><li><a href="../admin-manager/cloud-triggered-allowlist.html">Cloud-triggered allowlist</a></li><li><a href="../admin-manager/cors-allowlist.html">CORS allowlist</a></li><li><a href="../admin-manager/groundplex-allowlist.html">Groundplex allowlist</a></li><li><a href="../admin-manager/email-allowlist.html">Email domain allowlist</a></li></ul></li><li><a href="../admin-manager/account-encryption.html">Account encryption</a><ul><li><a href="../admin-manager/enhanced-encryption.html">Enable Enhanced Account Encryption (EAE)</a></li><li><a href="../admin-manager/trusted-environment.html">Trusted environments</a></li></ul></li></ul></li><li><a href="../autosync/autosync-home.html">AutoSync</a><ul><li><a href="../autosync/autosync-about.html">Introduction</a></li><li><a href="../autosync/use-autosync.html">How to use AutoSync</a><ul><li><a href="../autosync/create-data-pipeline.html">Create a data pipeline</a></li><li><a href="../autosync/view-data-pipeline.html">View data pipeline</a></li><li><a href="../autosync/dashboard-list-view.html">Use dashboard list view</a></li><li><a href="../autosync/multiple-sources.html">Use multiple sources</a></li><li><a href="../autosync/choose-tables.html">Choose tables</a></li><li><a href="../autosync/transformations.html">Define transformations</a><ul><li><a href="../autosync/filter-columns.html">Filter columns</a></li><li><a href="../autosync/empty-values.html">Replace empty values</a></li><li><a href="../autosync/merge-columns.html">Merge columns</a></li><li><a href="../autosync/mask-data.html">Mask data</a></li><li><a href="../autosync/transformations-csv.html">CSV file transformations</a></li><li><a href="../autosync/transformations-guidelines.html">Transformation tips</a></li></ul></li><li><a href="../autosync/edit-data-pipeline.html">Edit a data pipeline</a></li><li><a href="../autosync/share-pipeline.html">Share a data pipeline</a></li><li><a href="../autosync/enable-notifications.html">Enable notifications</a></li><li><a href="../autosync/stop-data-pipeline.html">Stop a data pipeline</a></li><li><a href="../autosync/delete-data-pipeline.html">Delete a data pipeline</a></li><li><a href="../autosync/retrieve-deleted-data-pipeline.html">Retrieve or remove deleted</a></li><li><a href="../autosync/upgrade-data-pipeline.html">Upgrade data pipelines</a></li><li><a href="../autosync/export-import-pipeline.html">Migrate a data pipeline across environments</a></li></ul></li><li><a href="../autosync/data-load.html">How AutoSync loads data</a><ul><li><a href="../autosync/name-data-type.html">Names and data types</a></li><li><a href="../autosync/precision-scale.html">Precision and scale</a></li><li><a href="../autosync/change-capture.html">Reconcile changes</a></li><li><a href="../autosync/handle-errors.html">Error handling</a></li><li><a href="../autosync/synchronization-schedules.html">Synchronization schedules</a></li><li><a href="../autosync/load-type.html">Load types</a><ul><li><a href="../autosync/file-load.html">Load from files</a></li><li><a href="../autosync/incremental.html">Incremental</a></li><li><a href="../autosync/scd2.html">SCD2</a></li></ul></li></ul></li><li><a href="../autosync/map-data.html">How AutoSync maps data</a><ul></ul></li><li><a href="../autosync/connection-overview.html">Configure endpoints</a><ul><li><a href="../autosync/on-prem-overview.html">On-premises endpoints</a></li><li><a href="../autosync/create-credentials.html">Create credentials</a></li><li><a href="../autosync/edit-credentials.html">Edit or delete credentials</a></li></ul></li><li><a href="../autosync/supported-endpoints.html">Supported endpoints</a><ul><li><a href="../autosync/adls-gen2-as-target.html">ADLS Gen2 target</a></li><li><a href="../autosync/config-redshift-acct-as-data-source.html">Amazon Redshift source</a></li><li><a href="../autosync/config-redshift-acct-as-data-destination.html">Amazon Redshift target</a></li><li><a href="../autosync/config-aws-s3-acct-as-data-source.html">Amazon S3 source</a></li><li><a href="../autosync/aws-s3-as-target.html">Amazon S3 target</a></li><li><a href="../autosync/config-azure-synapse-acct-as-data-source.html">Azure Synapse source</a></li><li><a href="../autosync/config-azure-synapse-acct-as-data-destination.html">Azure Synapse target</a></li><li><a href="../autosync/config-csv-as-data-source.html">CSV file source</a></li><li><a href="../autosync/databricks-as-target.html">Databricks target</a></li><li><a href="../autosync/config-dynamics-365-acct-as-data-source.html">Microsoft Dynamics 365 for Sales source</a></li><li><a href="../autosync/config-gainsightpx-as-data-source.html">Gainsight PX source</a></li><li><a href="../autosync/config-google-analytics-acct-as-data-source.html">Google Analytics 4 source</a></li><li><a href="../autosync/config-bigquery-as-data-source.html">Google BigQuery source</a></li><li><a href="../autosync/config-bigquery-as-destination.html">Google BigQuery target</a></li><li><a href="../autosync/config-google-sheets-acct-as-data-source.html">Google Sheets source</a></li><li><a href="../autosync/source-http-client.html">HTTP client source</a></li><li><a href="../autosync/config-jdbc-acct-as-data-source.html">Generic JDBC source</a></li><li><a href="../autosync/config-marketo-acct-as-data-source.html">Marketo source</a></li><li><a href="../autosync/config-mysql-server-acct-as-data-source.html">MySQL source</a></li><li><a href="../autosync/config-mysql-server-acct-as-data-destination.html">MySQL target</a></li><li><a href="../autosync/config-oracle-acct-as-data-source.html">Oracle source</a></li><li><a href="../autosync/config-oracle-acct-as-data-destination.html">Oracle target</a></li><li><a href="../autosync/config-postgre-as-data-source.html">PostgreSQL source</a></li><li><a href="../autosync/config-postgre-as-data-destination.html">PostgreSQL target</a></li><li><a href="../autosync/config-salesforce-acct-as-data-source.html">Salesforce source</a></li><li><a href="../autosync/config-sap-hana-acct-as-data-destination.html">SAP HANA target</a></li><li><a href="../autosync/config-servicenow-acct-as-data-source.html">ServiceNow source</a></li><li><a href="../autosync/config-sftp-acct-as-data-source.html">SFTP source</a></li><li><a href="../autosync/config-snowflake-acct-as-data-source.html">Snowflake source</a></li><li><a href="../autosync/config-snowflake-acct-as-data-destination.html">Snowflake target</a></li><li><a href="../autosync/config-sql-server-acct-as-data-source.html">SQL Server source</a></li><li><a href="../autosync/config-sql-server-acct-as-data-destination.html">SQL Server target</a></li><li><a href="../autosync/sql-server-target-bulk.html">SQL Server Bulk Load target</a></li><li><a href="../autosync/config-zendesk-acct-as-data-source.html">Zendesk source</a></li></ul></li><li><a href="../autosync/custom-endpoints.html">Create custom endpoints</a><ul><li><a href="../autosync/endpoint-components.html">Endpoint components</a></li><li><a href="../autosync/maven-archetype.html">Maven archetype</a></li><li><a href="../autosync/folder-structure.html">Project folder structure</a></li><li><a href="../autosync/endpoint-schema.html">Endpoint schema</a></li><li><a href="../autosync/common-model.html">Common data model</a></li><li><a href="../autosync/endpoint-mapping-examples.html">CDM mapping examples</a></li><li><a href="../autosync/maven-package.html">Package and deploy</a></li></ul></li><li><a href="../autosync/administration-overview.html">Administration</a><ul><li><a href="../autosync/management-overview.html">Manage AutoSync users</a></li><li><a href="../autosync/account-groups.html">Manage user groups</a></li><li><a href="../autosync/enhanced-account-encryption.html">Interaction with Enhanced Account Encryption</a></li><li><a href="../autosync/monitor-autosync.html">Monitor data pipelines</a></li><li><a href="../autosync/troubleshoot-data-pipelines.html">Troubleshoot data pipelines</a></li></ul></li></ul></li><li><a href="../monitor/monitor-home.html">Monitor</a><ul><li><a href="../monitor/monitor-about.html">Introduction</a></li><li><a href="../monitor/faq.html">FAQs</a></li><li><a href="../monitor/monitor-quick-reference.html">Monitor quick reference</a></li><li><a href="../monitor/monitor-analyze.html">Analyze pipelines and infrastructure</a></li><li><a href="../monitor/insights.html">Insights</a></li><li><a href="../monitor/catalog.html">Asset catalog</a><ul><li><a href="../monitor/view-metadata.html">View metadata and relationships</a><ul><li><a href="../monitor/catalog-task-details.html">View task details</a></li><li><a href="../monitor/catalog-pipeline-details.html">View pipeline details</a></li><li><a href="../monitor/catalog-account-details.html">View account details</a></li></ul></li><li><a href="../monitor/asset-table-config.html">Configure asset table</a></li><li><a href="../monitor/custom-metadata.html">Manage custom metadata</a><ul><li><a href="../monitor/download-upload-metadata.html">Download and upload</a></li><li><a href="../monitor/add-supplemental-metadata.html">Add custom metadata</a></li><li><a href="../monitor/edit-task-metadata.html">Edit task metadata</a></li><li><a href="../monitor/ic-reserved-names.html">Reserved names</a></li></ul></li><li><a href="../monitor/catalog-faq.html">FAQs</a></li></ul></li><li><a href="../monitor/analyze-execution.html">Pipeline executions</a><ul><li><a href="../monitor/find-executions.html">Find executions</a></li><li><a href="../monitor/stop-executions.html">Stop executions</a></li><li><a href="../monitor/execution-table.html">Configure the executions table</a></li><li><a href="../monitor/download-executions.html">Download execution records</a></li><li><a href="../monitor/pipeline-details-panel.html">View pipeline details</a><ul><li><a href="../monitor/snap-statistics-tab.html">Snap Statistics tab</a></li><li><a href="../monitor/pipeline-logs-tab.html">Pipeline Logs tab</a></li><li><a href="../monitor/pipeline-parameters-tab.html">Pipeline Parameters tab</a></li><li><a href="../monitor/state-transition-tab.html">State Transition tab</a></li></ul></li></ul></li><li><a href="../monitor/monitor-snaplex.html">Infrastructure</a><ul><li><a href="../monitor/sys-overview-graph-view.html">System overview graph view</a></li><li><a href="../monitor/sys-overview-list-view.html">System overview table view</a></li><li><a href="../monitor/analyze-infrastructure.html">Analyze and manage Snaplexes</a></li><li><a href="../monitor/snaplex-details-panel.html">Snaplex details panel</a></li><li><a href="../monitor/node-details-panel.html">Node details panel</a></li></ul></li><li><a href="../monitor/metrics-about.html">Metrics</a><ul><li><a href="../monitor/analyze-metrics.html">Graph descriptions</a></li><li><a href="../monitor/use-metric-charts.html">Work with Metrics graphs</a></li></ul></li><li><a href="../monitor/observe-api-metrics.html">API metrics</a><ul><li><a href="../monitor/troubleshooting-api-metrics.html">Troubleshoot APIM requests and Ultra Tasks</a></li></ul></li><li><a href="../monitor/api-usage.html">API usage</a></li><li><a href="../monitor/notification-center.html">Notification center</a><ul><li><a href="../monitor/alerts-tab.html">Alerts tab</a></li><li><a href="../monitor/activity-tab.html">Activity tab</a></li><li><a href="../monitor/notices-tab.html">Notices tab</a></li><li><a href="../monitor/notification-settings-tab.html">Notification settings tab</a></li><li><a href="../monitor/new-notification.html">Create a notification</a></li><li><a href="../monitor/new-broadcast.html">Create a broadcast notice</a></li><li><a href="../monitor/snaplex-node-notification.html">Create a Snaplex node notification</a></li><li><a href="../monitor/task-notification.html">Create a task notification</a></li><li><a href="../monitor/configure-slack.html">Manage the Slack integration</a></li><li><a href="../monitor/node-init-alerts.html">Node initialization alerts</a></li></ul></li><li><a href="../monitor/review-alert-history.html">Alert history</a></li><li><a href="../monitor/review-activity-log.html">Activity logs</a></li><li><a href="../monitor/troubleshooting.html">Troubleshooting</a></li></ul></li><li><a href="../snapgpt/snapgpt-home.html">SnapGPT</a><ul><li><a href="../snapgpt/snapgpt-about.html">Introduction</a></li><li><a href="../snapgpt/snapgpt-use.html">Interact with SnapGPT</a><ul><li><a href="../snapgpt/snapgpt-pipe-gen-rag.html">Generate pipeline</a></li><li><a href="../snapgpt/snapgpt-analyze-pipelines.html">Analyze pipeline</a></li><li><a href="../snapgpt/generate-queries.html">Generate queries</a></li><li><a href="../snapgpt/snapgpt-copilot.html">Configure Snaps with Snap copilot</a><ul><li><a href="../snapgpt/snapgpt-copilot-snap-banner.html">Launch SnapGPT from Snap settings </a></li></ul></li><li><a href="../snapgpt/snapgpt-refine-pipelines.html">Refine pipelines</a></li><li><a href="../snapgpt/snapgpt-pipe-gen-image.html">Generate a pipeline from an image</a></li><li><a href="../snapgpt/snapgpt-generate-expressions-mapper-snap.html">Generate expressions</a><ul><li><a href="../snapgpt/mapper-expr-example1.html">Map to target</a></li><li><a href="../snapgpt/mapper-expr-example2.html">Extract pipeline parameters</a></li></ul></li></ul></li><li><a href="../snapgpt/snapgpt-settings.html">Configure SnapGPT</a></li><li><a href="../snapgpt/snapgpt-best-practices.html">Prompt tips</a></li><li><a href="../snapgpt/snapgpt-thinking-modes.html">Thinking modes</a></li><li><a href="../snapgpt/snapgpt-question-and-answer.html">SnapGPT FAQ</a></li></ul></li><li><a href="../designer/designer-home.html">Designer</a><ul><li><a href="../designer/designer-about.html">Introduction</a></li><li><a href="../designer/designer-toolbar.html">Designer Toolbar</a></li><li><a href="../designer/keyboard-commands.html">Keyboard Commands</a></li><li><a href="../designer/print-pipeline.html">Print Pipeline</a></li><li><a href="../designer/using-pipeline-notes-in-designer.html">Using Pipeline Notes in SnapLogic Designer</a></li></ul></li><li><a href="../apim/apim-home.html">API Management 3.0</a><ul><li><a href="../apim/apim-about.html">SnapLogic API Management</a><ul><li><a href="../apim/api-lifecycle.html">The API and Proxy Lifecycle</a></li><li><a href="../apim/api-about.html">APIs</a><ul><li><a href="../apim/api-view-list.html">View List of APIs</a></li><li><a href="../apim/api-create-design-first.html">Create API Using Design First</a></li><li><a href="../apim/api-create-existing-project.html">Create API Using Existing Project</a></li><li><a href="../apim/api-create-empty.html">Create Empty API</a></li><li><a href="../apim/api-enable-try-it-out.html">Enable "Try It Out" for your API</a></li><li><a href="../apim/api-view-edit.html">View and Edit an API</a></li><li><a href="../apim/api-version-about.html">API Versions</a><ul><li><a href="../apim/api-version-view-list.html">View Versions of an API</a></li><li><a href="../apim/api-version-create-design-first.html">Create API Version Using Design First</a></li><li><a href="../apim/api-version-create-existing-assets.html">Create API Version Using Existing Assets</a></li><li><a href="../apim/api-version-create-empty.html">Create Empty API Version</a></li><li><a href="../apim/api-version-asset-add.html">Add Assets to API Version</a></li><li><a href="../apim/api-version-asset-delete.html">Delete Assets from API Version</a></li><li><a href="../apim/api-version-view-edit.html">View and Edit API Version</a></li><li><a href="../apim/api-version-publish.html">Publish API Version</a></li><li><a href="../apim/api-version-delete.html">Delete API Version</a></li></ul></li><li><a href="../apim/api-policy-about.html">Policies</a><ul><li><a href="../apim/api-policy-add.html">Add Policy to API</a></li><li><a href="../apim/api-policy-view-edit.html">View Policies of an API</a></li><li><a href="../apim/api-policy-delete.html">Delete Policy from API</a></li></ul></li><li><a href="../apim/api-sample-spec.html">Sample API Specification</a></li></ul></li><li><a href="../apim/proxy-about.html">Proxies</a><ul><li><a href="../apim/proxy-create.html">Create Proxy</a></li><li><a href="../apim/proxy-view-edit.html">View and Edit Proxy</a></li><li><a href="../apim/proxy-publish.html">Publish Proxy</a></li><li><a href="../apim/proxy-delete.html">Delete Proxy</a></li><li><a href="../apim/proxy-endpoint-about.html">Proxy Endpoints</a><ul><li><a href="../apim/proxy-endpoint-create.html">Create Proxy Endpoint</a></li><li><a href="../apim/proxy-endpoint-view-edit.html">View and Edit Proxy Endpoint</a></li><li><a href="../apim/proxy-endpoint-delete.html">Delete Proxy Endpoint</a></li></ul></li><li><a href="../apim/proxy-mapping-rule-about.html">Proxy Endpoint Mapping Rules</a><ul><li><a href="../apim/proxy-mapping-rule-view-list.html">View Mapping Rules</a></li><li><a href="../apim/proxy-mapping-rule-create.html">Create Proxy Mapping Rule</a></li><li><a href="../apim/proxy-mapping-rule-view-edit.html">Edit Proxy Mapping Rule</a></li><li><a href="../apim/proxy-mapping-rule-delete.html">Delete Proxy Mapping Rule</a></li><li><a href="../apim/proxy-mapping-rule-prioritize.html">Prioritize Proxy Mapping Rules</a></li></ul></li></ul></li><li><a href="../apim/policy-about.html">Security Policies</a><ul><li><a href="../apim/policy-anonymous-authenticator.html">Anonymous Authenticator</a></li><li><a href="../apim/policy-authorize-by-role.html">Authorize by Role</a></li><li><a href="../apim/policy-cors-restriction.html">CORS Restriction</a><ul><li><a href="../apim/tryapi-cors-settings.html">Setting Up a CORS Restriction for Try It Out</a></li></ul></li></ul></li><li><a href="../apim/devportal-admins-about.html">Developer Portal – Admins</a><ul><li><a href="../apim/devportal-set-up.html">Portal Manager Settings</a></li><li><a href="../apim/devportal-manage-user-access.html">Manage User Access</a></li><li><a href="../apim/apimdashboard-about.html">The APIM Dashboard</a><ul><li><a href="../apim/apimdashboard-customize.html">Customize the APIM Dashboard</a></li></ul></li></ul></li><li><a href="../apim/devportal-users-about.html">Developer Portal – API Consumers</a><ul><li><a href="../apim/devportal-log-in.html">Log in to the Developer Portal</a></li></ul></li><li><a href="../apim/integration-rest-api-tools-about.html">Integration with REST API Tools</a><ul><li><a href="../apim/integration-apigee-edge.html">Integration with Apigee Edge</a></li></ul></li></ul></li></ul></li><li><a href="../classic-apim/classic-apim-home.html">Classic API Management</a></li><li><a href="../public-apis/public-apis-home.html">Public APIs</a><ul><li><a href="../public-apis/public-apis-about.html">Public APIs</a><ul><li><a href="../public-apis/error-code.html">Common error codes</a></li><li><a href="../public-apis/generate-jwt.html">Authenticate using JWT</a><ul><li><a href="../public-apis/okta-jwt-configuration.html">Configure Okta to use JWT</a></li><li><a href="../public-apis/entra-id-configuration.html">Configure Microsoft Entra ID to use JWT</a></li><li><a href="../public-apis/jwt-troubleshooting.html">JWT troubleshooting</a></li></ul></li><li><a href="../public-apis/apis-activity.html">Activity APIs</a><ul><li><a href="../public-apis/get-activities-org.html">Retrieve activities in Env/Org</a></li><li><a href="../public-apis/ref-activity-metadata.html">Reference: Activity metadata</a></li></ul></li><li><a href="../public-apis/apis-apim.html">API Management APIs</a><ul><li><a href="../public-apis/post-apim-create-from-project.html">Create an API version from a project</a></li><li><a href="../public-apis/delete-apim-api-api.html">Delete API</a></li><li><a href="../public-apis/delete-apim-api-version.html">Delete API version</a></li><li><a href="../public-apis/post-apim-publish-versions.html">Publish a set of API versions</a></li><li><a href="../public-apis/post-apim-unpublish-versions.html">Unpublish a set of API versions</a></li><li><a href="../public-apis/post-apim-deprecate-versions.html">Deprecate a set of API versions</a></li><li><a href="../public-apis/post-apim-retire-versions.html">Retire a set of API versions</a></li><li><a href="../public-apis/post-apim-migrate-version-version-path.html">Migrate an API version</a></li><li><a href="../public-apis/post-apim-import-version.html">Import an API version</a></li><li><a href="../public-apis/get-apim-export-version.html">Export an API version</a></li><li><a href="../public-apis/post-apim-migrate-proxy.html">Migrate a proxy</a></li><li><a href="../public-apis/get-apim-export-policies.html">Export APIM policies</a></li><li><a href="../public-apis/post-apim-import-policies.html">Import APIM policies</a></li><li class="active"><a href="../public-apis/post-apim-approve-user.html">Approve a list of users</a></li><li><a href="../public-apis/post-apim-deny-user.html">Deny a list of users</a></li><li><a href="../public-apis/get-apim-pending-user.html">Retrieve a list of pending users</a></li><li><a href="../public-apis/post-apim-policy-response-cache.html">Invalidate response cache</a></li><li><a href="../public-apis/post-apim-get-api-log-org.html">Retrieve API Management logs</a></li><li><a href="../public-apis/apis-apim-git.html">Git operations APIs</a><ul><li><a href="../public-apis/post-apim-git-branch.html">Create a Git branch</a></li><li><a href="../public-apis/post-apim-git-createversion.html">Create API version from Git</a></li><li><a href="../public-apis/post-apim-git-checkout.html">Checkout API version from Git</a></li><li><a href="../public-apis/post-apim-git-pull.html">Pull latest changes from Git</a></li><li><a href="../public-apis/post-apim-git-tag.html">Add a Git tag</a></li><li><a href="../public-apis/get-apim-git-tag.html">Retrieve Git tags</a></li><li><a href="../public-apis/get-apim-git-repo-status.html">Retrieve Git repo status</a></li><li><a href="../public-apis/post-apim-git-discard-changes.html">Discard local changes</a></li><li><a href="../public-apis/get-apim-git-untrack.html">Untrack API version with Git</a></li></ul></li></ul></li><li><a href="../public-apis/apis-asset.html">Asset APIs</a><ul><li><a href="../public-apis/post-assetapi-acl-path.html">Grant access to a project or space</a></li><li><a href="../public-apis/get-assetapi-acl-path.html">Retrieve privileges of current user</a></li><li><a href="../public-apis/delete-assetapi-acl-path.html">Revoke all project access from user or group</a></li><li><a href="../public-apis/post-assetapi-project-path.html">Create new project or project space</a></li><li><a href="../public-apis/put-assetapi-project-path.html">Rename a project or project space</a></li><li><a href="../public-apis/delete-assetapi-project-path.html">Delete a project or project space</a></li><li><a href="../public-apis/get-assetapi-user-settings.html">Retrieve app access info</a></li><li><a href="../public-apis/post-assetapi-user-app-access.html">Grant or revoke app access</a></li><li><a href="../public-apis/post-assetapi-update-owner.html">Update the owner of a task</a></li></ul></li><li><a href="../public-apis/apis-asset-catalog.html">Asset catalog APIs</a><ul><li><a href="../public-apis/post-custom-metadata.html">Create custom metadata</a></li><li><a href="../public-apis/get-custom-metadata.html">Retrieve custom metadata</a></li><li><a href="../public-apis/patch-custom-metadata.html">Update custom metadata</a></li><li><a href="../public-apis/delete-custom-metadata.html">Delete custom metadata</a></li><li><a href="../public-apis/post-custom-columns.html">Create custom columns</a></li><li><a href="../public-apis/delete-custom-columns.html">Delete custom columns</a></li><li><a href="../public-apis/get-lineage.html">Retrieve lineage</a></li><li><a href="../public-apis/get-lineage-pipelineid.html">Retrieve lineage for specific pipeline</a></li><li><a href="../public-apis/get-catalog-task.html">Retrieve tasks list</a></li><li><a href="../public-apis/get-catalog-pipeline.html">Retrieve pipeline list</a></li><li><a href="../public-apis/get-catalog-account.html">Retrieve account list</a></li><li><a href="../public-apis/get-catalog-tasks-id.html">Retrieve tasks list with id</a></li><li><a href="../public-apis/get-catalog-pipeline-id.html">Retrieve pipeline details with id</a></li><li><a href="../public-apis/get-catalog-accounts-id.html">Retrieve account details with id</a></li></ul></li><li><a href="../public-apis/apis-log.html">Log APIs</a><ul><li><a href="../public-apis/get-log-org.html">Retrieve task logs</a></li></ul></li><li><a href="../public-apis/apis-runtime.html">Runtime APIs</a><ul><li><a href="../public-apis/get-runtime-org.html">Retrieve info about pipeline executions matching a filter</a></li><li><a href="../public-apis/get-runtime-org-ruuid.html">Retrieve info about a pipeline execution</a></li><li><a href="../public-apis/get-runtime-apistats-org.html">Retrieve concurrent and daily execution metrics</a></li><li><a href="../public-apis/get-runtime-apistats-org-daily.html">Retrieve daily execution metrics</a></li><li><a href="../public-apis/get-runtime-apistats-org-concurrent.html">Retrieve concurrent execution metrics</a></li><li><a href="../public-apis/post-runtime-start-org-ruuid.html">Resume a resumable pipeline</a></li><li><a href="../public-apis/post-runtime-stop-org-ruuid.html">Stop a pipeline execution</a></li></ul></li><li><a href="../public-apis/apis-pipeline.html">Pipeline APIs</a><ul><li><a href="../public-apis/post-pipeline-quality.html">Check pipeline quality</a></li></ul></li><li><a href="../public-apis/apis-task.html">Task APIs</a><ul><li><a href="../public-apis/post-task-enable.html">Enable a task</a></li><li><a href="../public-apis/post-task-disable.html">Disable a task</a></li><li><a href="../public-apis/patch-task-plex.html">Change the Snaplex of a task</a></li></ul></li><li><a href="../public-apis/apis-project.html">Project APIs</a><ul><li><a href="../public-apis/post-project-git-branch-project-path.html">Create a Git branch</a></li><li><a href="../public-apis/post-project-create-project-project-path.html">Create project from Git files</a></li><li><a href="../public-apis/post-project-checkout-project-path.html">Check out project files from Git</a></li><li><a href="../public-apis/post-project-discard-changes.html">Discard local changes</a></li><li><a href="../public-apis/post-project-pull-project-path.html">Pull project files from Git</a></li><li><a href="../public-apis/post-project-git-tag-project-path.html">Add a Git tag</a></li><li><a href="../public-apis/get-project-git-tag-project-path.html">Retrieve Git tags</a></li><li><a href="../public-apis/get-project-repo-status-project-path.html">Retrieve the status of the Git repository</a></li><li><a href="../public-apis/post-project-copy-assets.html">Copy assets between projects</a></li><li><a href="../public-apis/post-project-migrate-project-path.html">Migrate a project to another Env/Org</a></li><li><a href="../public-apis/get-project-migrate-status-token.html">Retrieve the status of a migration</a></li><li><a href="../public-apis/get-project-export-project-path.html">Export a project</a></li><li><a href="../public-apis/post-project-import-import-path.html">Import a project</a></li><li><a href="../public-apis/get-project-export-individual-asset.html">Export individual assets</a></li><li><a href="../public-apis/post-project-import-individual-asset.html">Import individual assets</a></li><li><a href="../public-apis/untrack-project-git.html">Untrack project with Git</a></li></ul></li><li><a href="../public-apis/apis-snaplex.html">Snaplex APIs</a><ul><li><a href="../public-apis/post-snaplex-restart-plexpath-hostname.html">Request a restart of a node</a></li><li><a href="../public-apis/post-snaplex-maintenance-plexpath-hostname.html">Switch a node to maintenance mode</a></li><li><a href="../public-apis/get-snaplex-config-plexpath.html">Retrieve config info for a Groundplex</a></li><li><a href="../public-apis/get-snaplex-download-configfile.html">Download the slpropz configuration file</a></li><li><a href="../public-apis/post-snaplex-create.html">Create a Groundplex</a></li><li><a href="../public-apis/get-snaplex-org.html">Retrieve info about nodes</a></li><li><a href="../public-apis/put-snaplex-update.html">Update Groundplex properties</a></li><li><a href="../public-apis/post-snaplex-version-plexpath.html">Update the Snaplex to a specific version</a></li><li><a href="../public-apis/post-snaplex-version-latest-plexpath.html">Update the Snaplex to the latest version</a></li><li><a href="../public-apis/get-snaplex-version.html">Get all versions of the Snaplex package</a></li><li><a href="../public-apis/get-snaplex-version-latest.html">Get the latest active version of the Snaplex package</a></li><li><a href="../public-apis/delete-groundplex.html">Delete a Groundplex</a></li></ul></li><li><a href="../public-apis/api-snap-statistics.html">Snap statistics API</a><ul><li><a href="../public-apis/get-snap-statistics.html">Retrieve Snap statistics</a></li></ul></li><li><a href="../public-apis/apis-user-and-group.html">User and group APIs</a><ul><li><a href="../public-apis/post-users.html">Create a user</a></li><li><a href="../public-apis/get-users-email.html">Retrieve info about a user</a></li><li><a href="../public-apis/put-users-email.html">Update a user</a></li><li><a href="../public-apis/delete-users-email.html">Delete a user</a></li><li><a href="../public-apis/put-add-users-org.html">Add a user to an environment</a></li><li><a href="../public-apis/post-groups.html">Create a group or add members</a></li><li><a href="../public-apis/get-groups-org.html">Retrieve groups</a></li><li><a href="../public-apis/get-groups-org-group.html">Retrieve group members</a></li><li><a href="../public-apis/patch-groups-org-group.html">Add or remove users from a group</a></li><li><a href="../public-apis/put-groups-org-group.html">Change group membership</a></li><li><a href="../public-apis/delete-groups-org-group.html">Delete a group</a></li></ul></li><li><a href="../public-apis/api-perms-vs-manager-perms.html">Permission in Manager and in APIs</a></li></ul></li></ul></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    
+    <h1 class="title topictitle1" id="ariaid-title1">Approve a list of users</h1>
+    
+    
+    
+    <div class="body conbody">
+        
+        <section class="section">
+            <pre class="pre codeblock"><code><span class="ph" id="post-apim-approve-user__ph-method">POST</span> <span class="ph">https://<a class="xref" href="public-apis-about.html#public-apis__base-url">{controlplane_path}</a>/api/1/rest/public</span><span class="ph" id="post-apim-approve-user__ph-sig">/apim/approve_users</span>      </code></pre>
+                
+            <p class="p">This API <span class="ph" id="post-apim-approve-user__ph-shortdesc"> approves the user ID or a list of user IDs </span>that
+                appear in the created status under <span class="ph uicontrol">Subscription Manager</span>.</p>
+            <div class="note note note_note"><span class="note__title">Note:</span> The approval process is unsuccessful if the user is not registered in
+                Developer Portal.</div>           
+        </section>       
+        
+        <section class="section"><h2 class="title sectiontitle">Prerequisites</h2>
+            
+            
+            <ul class="ul">
+                <li class="li">Org admin (Environment admin) permissions</li>
+                <li class="li">Developer portal login credentials</li>
+                <li class="li">Specify the user ID or list of user IDs for approval</li>
+            </ul>
+        
+            <div class="sectiondiv">
+                <p class="p sectiondivtitle">Path parameters</p>
+                
+                <table class="table"><caption></caption><colgroup><col style="width:20%"><col style="width:75%"></colgroup><thead class="thead">
+            <tr class="row" id="post-apim-approve-user__row-key-desc">
+              <th class="entry valign-top" id="post-apim-approve-user__row-key-desc__entry__1">Key</th>
+              <th class="entry valign-top" id="post-apim-approve-user__row-key-desc__entry__2">Description</th>
+            </tr>
+          </thead><tbody class="tbody">
+                            <tr class="row">
+                <td class="entry" headers="post-apim-approve-user__row-key-desc__entry__1"><code class="ph codeph">controlplane_path</code></td>
+                <td class="entry" headers="post-apim-approve-user__row-key-desc__entry__2"><strong class="ph b">Required</strong>. The path to the SnapLogic control plane:
+                    <code class="ph codeph">elastic.snaplogic.com</code>
+                  <div class="p">For the UAT or EMEA control plane, substitute the name for <code class="ph codeph">elastic</code>. For
+                    example: <ul class="ul">
+                      <li class="li"><code class="ph codeph">uat.elastic.snaplogic.com</code></li>
+                      <li class="li"><code class="ph codeph">emea.snaplogic.com</code></li>
+                    </ul>
+                  </div></td>
+              </tr>
+                        </tbody></table>
+            </div>
+            
+            <div class="sectiondiv">
+                <p class="p sectiondivtitle">Query parameters</p>
+                <p class="p">None.</p>
+            </div>
+            
+            <div class="sectiondiv">
+                <p class="p sectiondivtitle">Request header</p>
+                <div class="div">
+          
+          <p class="p">In the request header, specify <code class="ph codeph">Basic</code> for authorization, add your credentials (Login and password of your SnapLogic user or service account), and specify <code class="ph codeph">application/json</code> for content type.
+          For more details on accounts refer to <a class="xref" href="../common/../admin-manager/admin-manager-users.html">Manage accounts</a>.</p>
+          <pre class="pre codeblock normalize-space"><code>
+Authorization: Basic {base64_encoded &lt;email&gt;:&lt;password&gt;}
+Content-Type: application/json
+          </code></pre>
+          <p class="p">Example of Basic authentication using Postman</p>
+          <img class="image img75pc noborder" src="../common/../img/cicd/basisc_auth.png">
+        </div>
+            </div>
+
+            <div class="sectiondiv">
+                <div class="div">
+          
+          <p class="p">When using JWT authentication, the API requests includes specific headers. In the
+            request header, specify <code class="ph codeph">Bearer Token</code> for authorization, add the token,
+            and specify <code class="ph codeph">application/json</code> for content type. These headers are
+            automatically added when you configure bearer token authentication in your API client.
+            The authorization header contains the word <span class="ph uicontrol">Bearer</span> followed by a
+            space and your JWT token.</p>
+          <pre class="pre codeblock normalize-space"><code>
+Authorization: Bearer Token {token}
+Content-Type: application/json
+          </code></pre>
+          <p class="p">Example of JWT authenthication using Postman</p>
+          <img class="image img75pc noborder" src="../common/../img/cicd/jwt-auth.png">
+        </div>
+            </div>
+
+            <div class="sectiondiv">
+                <p class="p sectiondivtitle">Request body</p>
+                
+                <pre class="pre codeblock normalize-space" id="post-apim-approve-user__request-body"><code>
+{
+  "org_name": "Automation2",
+  "user_ids": [
+    "test3@gmail.com",
+    "test4@gmail.com",
+    "test1@gmail.com",
+    "test2@gmail.com"
+  ]
+}</code></pre>
+                
+                <table class="table"><caption></caption><colgroup><col style="width:25%"><col style="width:15%"><col style="width:60%"></colgroup><thead class="thead">
+            <tr class="row" id="post-apim-approve-user__row-key-type-desc">
+              <th class="entry valign-top" id="post-apim-approve-user__row-key-type-desc__entry__1">Key</th>
+              <th class="entry valign-top" id="post-apim-approve-user__row-key-type-desc__entry__2">Type</th>
+              <th class="entry valign-top" id="post-apim-approve-user__row-key-type-desc__entry__3">Description</th>
+            </tr>
+          </thead><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry" headers="post-apim-approve-user__row-key-type-desc__entry__1"><code class="ph codeph">org_name</code></td>
+                                <td class="entry" headers="post-apim-approve-user__row-key-type-desc__entry__2">string</td>
+                                <td class="entry" headers="post-apim-approve-user__row-key-type-desc__entry__3">The name of the SnapLogic Environment/Org</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="post-apim-approve-user__row-key-type-desc__entry__1"><code class="ph codeph">user_ids</code></td>
+                                <td class="entry" headers="post-apim-approve-user__row-key-type-desc__entry__2">array/string</td>
+                                <td class="entry" headers="post-apim-approve-user__row-key-type-desc__entry__3">An array that contains the user ID or a list of user
+                                    IDs</td>
+                            </tr>                         
+                        </tbody></table>
+                
+            </div>
+            
+           <div class="sectiondiv">
+                <p class="p sectiondivtitle">Response</p>
+
+                <pre class="pre codeblock normalize-space"><code>
+{
+  "response_map": {
+    "successful approvals": [
+      {
+        "User IDs": [
+          "test3@gmail.com",
+          "test4@gmail.com"
+        ]
+      }
+    ],
+    "failed approvals": [
+      {
+        "User test1@gmail.com": "User has not requested access to this org"
+      },
+      {
+        "User test2@gmail.com": "User has not requested access to this org"
+      }
+    ]
+  }
+}        </code></pre>
+                <table class="table"><caption></caption><colgroup><col style="width:25%"><col style="width:15%"><col style="width:60%"></colgroup><thead class="thead">
+            <tr class="row" id="post-apim-approve-user__d216e379">
+              <th class="entry valign-top" id="post-apim-approve-user__d216e379__entry__1">Key</th>
+              <th class="entry valign-top" id="post-apim-approve-user__d216e379__entry__2">Type</th>
+              <th class="entry valign-top" id="post-apim-approve-user__d216e379__entry__3">Description</th>
+            </tr>
+          </thead><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry" headers="post-apim-approve-user__d216e379__entry__1">
+                                    <code class="ph codeph normalize-space"> { "Successful Approvals"
+                                        : &lt;list of usernames&gt; } </code>
+                                </td>
+                                <td class="entry" headers="post-apim-approve-user__d216e379__entry__2">array</td>
+                                <td class="entry" headers="post-apim-approve-user__d216e379__entry__3">The JSON object array contains the list of user IDs that are
+                                    successfully approved. </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry" headers="post-apim-approve-user__d216e379__entry__1">
+                                    <code class="ph codeph normalize-space"> { "Failed Approvals" :
+                                        &lt;list of username: error when approving&gt; }
+                                    </code>
+                                </td>
+                                <td class="entry" headers="post-apim-approve-user__d216e379__entry__2">array</td>
+                                <td class="entry" headers="post-apim-approve-user__d216e379__entry__3">The  JSON object array contains the list of user IDs that
+                                    failed the approval process. </td>
+                            </tr>                         
+                        </tbody></table>
+                
+            </div>
+        </section>
+        
+    </div>
+    
+</article></main><footer role="contentinfo"><div class="footer">
+  <div>
+  <p class="newsbanner">
+   <span> The migration of the <a href="https://docs-snaplogic.atlassian.net/wiki/spaces/SD/overview?homepageId=34537" target="_blank"> legacy docs </a> to this site is in progress.
+   </span>
+   <span>
+   <img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/x-close.svg" alt="thumbsup-icon">
+   </span>
+  </p>
+  </div>
+  <div class="ftrlegal">
+    <!-- <p class="copyright"><a href="/refs/copyright.html">© <ph class="copyrightyear"></ph> SnapLogic, Inc.</a></p> -->
+     <div class="footer_top">
+     <div>
+     <a href="/index.html"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/ux/sl-logo-indigo-icon.svg" alt="SnapLogic Logo"></a>
+     <a href="/index.html">SnapLogic Documentation</a>
+     </div>
+     <div>
+     <ul>
+      <!-- <li><a href="/refs/copyright.html">© <ph class="copyrightyear"></ph> SnapLogic, Inc.</a></li>  <a class="xref" href="https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/49855/SnapLogic+Releases" target="_blank" rel="external noopener">Release Notes</a>-->
+        <!-- <li><a href="https://learn.snaplogic.com/" target="_blank" rel="external noopener">SnapLogic Academy</a></li> -->
+        <li><span>Explore</span><span><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-up-white-icon.svg" alt="SnapLogic Logo"></span></li>
+        <li><a class="xref" href="https://learn.snaplogic.com/" target="_blank" rel="external noopener">SnapLogic Academy</a></li>
+        <li><a class="xref" href="https://community.snaplogic.com/" target="_blank" rel="external noopener">Integration Nation</a></li>
+        <li><a class="xref" href="https://www.snaplogic.com/" target="_blank" rel="external noopener">Company</a></li>
+    <!-- <li><a href="https://community.snaplogic.com/" target="_blank" rel="external noopener">Integration Nation</a></li> -->
+    <!-- <li><a href="mailto:support@snaplogic.com" target="_blank" rel="external noopener">Support</a></li> -->
+    <!-- <li><a href="https://www.snaplogic.com/" target="_blank" rel="external noopener">Company</a></li> -->
+    </ul>
+       <ul>
+      <li><span>Need Help?</span><span><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/chevron-up-white-icon.svg" alt="SnapLogic Logo"></span></li>
+      <li>
+      <!-- <a><img class='noborder noexpand' src='https://d3132s9xzuu9s8.cloudfront.net/k/img/envelope-icon.svg' alt='envelope-icon'/></a> -->
+      <a href="mailto:documentation@snaplogic.com">Documentation Team</a></li>
+      <li>
+      <!-- <a><img class='noborder noexpand' src='https://d3132s9xzuu9s8.cloudfront.net/k/img/envelope-icon.svg' alt='envelope-icon'/></a> -->
+      <a href="mailto:support@snaplogic.com">Customer Support Team</a></li>
+      </ul>
+      </div>
+    </div>
+    <div class="footer_bottom">
+     <!-- <p  class="footer_logo"> -->
+    <!-- <a href="../index.html"><img class="noborder" src="https://d3132s9xzuu9s8.cloudfront.net/ux/sl-logo-new.svg" alt="SnapLogic Logo"/></a> -->
+    <!-- <a href="../index.html"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/sl-logo-teal.svg" alt="SnapLogic Logo"/></a> -->
+    <!-- <a href="/index.html"><img class="noborder" src="/img/icons/logo/sl_logo_combo_rev_rgb.svg" alt="SnapLogic Logo"/></a> -->
+    <!-- <ph class="footer-site-title">SnapLogic Documentation</ph> -->
+    <!-- </p> -->
+     <ul>
+      <li><a href="/refs/copyright.html">Copyright</a></li>
+       <li class="copyright">© <ph class="copyrightyear"></ph> SnapLogic, Inc.</li>
+    </ul>
+     <!-- <ul> -->
+      <!-- <ul>
+      <li>Need Help?</li>
+      <li><a><img class='noborder noexpand' src='https://d3132s9xzuu9s8.cloudfront.net/k/img/envelope-icon.svg' alt='envelope-icon'/></a><a href="mailto:documentation@snaplogic.com">Documentation Team</a></li>
+      <li><a><img class='noborder noexpand' src='https://d3132s9xzuu9s8.cloudfront.net/k/img/envelope-icon.svg' alt='envelope-icon'/></a><a href="mailto:support@snaplogic.com">Customer Support Team</a></li>
+      </ul> -->
+    <!-- </ul> -->
+    <ul>
+      <li><a class="xref" href="https://www.facebook.com/SnapLogic" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-facebook.svg" alt="ftr-logo"></a></li>
+      <li><a class="xref" href="https://twitter.com/SnapLogic" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-twitter.svg" alt="ftr-logo"></a></li>
+      <li><a class="xref" href="https://www.linkedin.com/company/snaplogic" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-linkedin.svg" alt="ftr-logo"></a></li>
+      <li><a class="xref" href="https://www.instagram.com/snaplogicinc" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-instagram.svg" alt="ftr-logo"></a></li>
+      <li><a class="xref" href="https://www.youtube.com/snaplogic" target="_blank"><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/ftr-logo-youtube.svg" alt="ftr-logo"></a></li>
+    </ul>
+    </div>
+
+  </div>
+
+  <!-- <script src="https://d3132s9xzuu9s8.cloudfront.net/k/sldocs.js"/> -->
+  <script src="../theme/sldocs.js"></script>
+
+</div></footer></body></html>

@@ -6013,6 +6013,15 @@ nav.toc.task-view li.nav-context {
 .product-home-hero-snapgpt {
   background: linear-gradient(135deg, #C75209 0%, var(--SL-orange06) 60%, var(--SL-orange04) 100%);
 }
+.product-home-hero-apim {
+  background: linear-gradient(135deg, var(--SL-blue08) 0%, var(--SL-blue06) 60%, var(--SL-indigo05) 100%);
+}
+.product-home-hero-classic-apim {
+  background: linear-gradient(135deg, var(--SL-indigo08) 0%, var(--SL-blue06) 60%, var(--SL-teal05) 100%);
+}
+.product-home-hero-public-apis {
+  background: linear-gradient(135deg, var(--SL-teal06) 0%, var(--SL-blue06) 60%, var(--SL-indigo05) 100%);
+}
 
 /* Task category hero variants */
 .product-home-hero-get-started {
