@@ -5818,6 +5818,15 @@ nav.toc a.nav-context-link:hover {
   user-select: none;
 }
 
+/* Nav context SVG icons */
+.nav-icon {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  margin-right: 1px;
+}
+
 /* Current view link: muted and non-interactive */
 nav.toc a.nav-context-link.current {
   color: var(--c2-grey5);
@@ -5827,6 +5836,53 @@ nav.toc a.nav-context-link.current {
 
 nav.toc a.nav-context-link.current:hover {
   text-decoration: none;
+}
+
+/* View differentiation: accent border on sidebar */
+li.nav-context {
+  border-left: 3px solid transparent;
+}
+nav.toc.product-view li.nav-context,
+nav.toc:not(.task-view) li.nav-context {
+  border-left-color: var(--SL-indigo06);
+}
+nav.toc.task-view li.nav-context {
+  border-left-color: var(--SL-teal06);
+}
+
+/* First-visit orientation banner (top of content area) */
+.orientation-banner {
+  position: relative;
+  background: var(--SL-indigo01, #EAEDF3);
+  border-bottom: 1px solid var(--SL-indigo03, #B0B8D0);
+  padding: 10px 36px 10px 20px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--c2-grey2, #555);
+}
+.orientation-banner strong {
+  color: var(--c2-grey1, #333);
+}
+.orientation-banner .nav-icon {
+  vertical-align: text-bottom;
+  color: var(--SL-indigo06, #304684);
+}
+.orientation-banner-dismiss {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: 1px solid var(--c2-grey5, #ccc);
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--c2-grey3, #888);
+  cursor: pointer;
+  padding: 2px 8px;
+}
+.orientation-banner-dismiss:hover {
+  color: var(--c2-grey1, #333);
+  border-color: var(--c2-grey3, #888);
 }
 
 @keyframes fadeInDown {

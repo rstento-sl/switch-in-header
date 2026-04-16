@@ -3061,6 +3061,11 @@ $(window).on("resize", function () {
   }
 
   // POC: Add View Switcher to Left Nav
+
+  // SVG icons for nav context (inline so they inherit currentColor)
+  var svgIconProducts = '<svg class="nav-icon" width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>';
+  var svgIconTasks = '<svg class="nav-icon" width="11" height="11" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="1" y="0" width="14" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="5" y="-1" width="6" height="3" rx="1" fill="currentColor"/><line x1="4" y1="6" x2="12" y2="6" stroke="currentColor" stroke-width="1.5"/><line x1="4" y1="9.5" x2="12" y2="9.5" stroke="currentColor" stroke-width="1.5"/><line x1="4" y1="13" x2="9" y2="13" stroke="currentColor" stroke-width="1.5"/></svg>';
+
   const $toc = $('nav.toc');
   if ($toc.length > 0) {
     // Determine current view
@@ -3118,30 +3123,6 @@ $(window).on("resize", function () {
     var allProductsLandingUrl = basePath + '/all-products.html';
     var allTasksLandingUrl = basePath + '/tasks/all-tasks.html';
 
-    // Get appropriate URL based on current location (used for AJAX nav swap)
-    let productUrl = basePath + '/autosync/autosync-home.html';
-    let taskUrl = basePath + '/tasks/placeholders/task-landing-get-started.html'; // Default task entry point
-
-    if (currentPath.includes('/autosync/')) {
-      productUrl = basePath + '/autosync/autosync-home.html';
-      taskUrl = basePath + '/tasks/placeholders/task-landing-develop-integrations.html';
-    } else if (currentPath.includes('/admin-manager/')) {
-      productUrl = basePath + '/admin-manager/admin-manager-home.html';
-      taskUrl = basePath + '/tasks/placeholders/task-landing-administer.html';
-    } else if (currentPath.includes('/monitor/')) {
-      productUrl = basePath + '/monitor/monitor-home.html';
-      taskUrl = basePath + '/tasks/placeholders/task-landing-monitor.html';
-    } else if (currentPath.includes('/designer/')) {
-      productUrl = basePath + '/designer/designer-home.html';
-      taskUrl = basePath + '/tasks/placeholders/task-landing-develop-integrations.html';
-    } else if (currentPath.includes('/snapgpt/')) {
-      productUrl = basePath + '/snapgpt/snapgpt-home.html';
-      taskUrl = basePath + '/tasks/placeholders/task-landing-develop-integrations.html';
-    } else if (currentPath.includes('/tasks/')) {
-      productUrl = basePath + '/autosync/autosync-home.html';
-      taskUrl = basePath + '/tasks/placeholders/task-landing-get-started.html';
-    }
-
     // Product name lookup for display
 
     // Build and insert (or replace) the nav context component
@@ -3189,9 +3170,9 @@ $(window).on("resize", function () {
         '<div class="nav-context-links">' +
           '<span class="nav-context-view-label">Switch to:</span>' +
           '<div class="nav-context-link-row">' +
-            '<a href="' + allProductsLandingUrl + '" class="nav-context-link nav-context-link-products ' + (viewingLabel === 'All Products' ? 'current' : '') + '">All Products</a>' +
+            '<a href="' + allProductsLandingUrl + '" class="nav-context-link nav-context-link-products ' + (viewingLabel === 'All Products' ? 'current' : '') + '">' + svgIconProducts + ' All Products</a>' +
             '<span class="nav-context-separator">|</span>' +
-            '<a href="' + allTasksLandingUrl + '" class="nav-context-link nav-context-link-tasks ' + (viewingLabel === 'All Tasks' ? 'current' : '') + '">All Tasks</a>' +
+            '<a href="' + allTasksLandingUrl + '" class="nav-context-link nav-context-link-tasks ' + (viewingLabel === 'All Tasks' ? 'current' : '') + '">' + svgIconTasks + ' All Tasks</a>' +
           '</div>' +
         '</div>' +
       '</li>';
@@ -3207,38 +3188,18 @@ $(window).on("resize", function () {
       bindTaskNavHandlers();
     }
 
-    // Helper: fetch nav from another page and swap it into the current nav
-    function swapNav(sourceUrl, callback) {
-      console.log('[swapNav] Fetching:', sourceUrl);
-      $.get(sourceUrl, function(html) {
-        var $parsed = $('<div>').html(html);
-        var $newNav = $parsed.find('nav.toc');
-        console.log('[swapNav] Found nav:', $newNav.length > 0);
-        if ($newNav.length) {
-          // Fix relative hrefs: resolve them against the source URL
-          var sourceBase = sourceUrl.substring(0, sourceUrl.lastIndexOf('/') + 1);
-          $newNav.find('a[href]').each(function() {
-            var href = $(this).attr('href');
-            if (href && !href.startsWith('/') && !href.startsWith('http')) {
-              // Resolve relative path against source page's directory
-              var resolved = new URL(href, window.location.origin + sourceBase).pathname;
-              $(this).attr('href', resolved);
-            }
-          });
-          // Replace nav content (nav context will be rebuilt by renderNavContext)
-          $('nav.toc').html($newNav.html());
-          // Reinitialize nav classes
-          MarkParents();
-          if (callback) callback();
-        }
-      }).fail(function(jqXHR, textStatus, errorThrown) {
-        console.error('[swapNav] Failed to fetch:', sourceUrl, textStatus, errorThrown);
-        // Fall back to navigating to the landing page
-        if (sourceUrl.includes('/tasks/')) {
-          window.location.href = allTasksLandingUrl;
-        } else {
-          window.location.href = allProductsLandingUrl;
-        }
+    // First-visit orientation banner (appears at top of content area)
+    if (!localStorage.getItem('docNavOriented')) {
+      var bannerHtml = '<div class="orientation-banner">' +
+        '<button class="orientation-banner-dismiss">Dismiss</button>' +
+        'Use the switch in the left nav to browse by:' +
+        '<br>' + svgIconProducts + ' <strong>All Products</strong> &mdash; explore by product or feature' +
+        '<br>' + svgIconTasks + ' <strong>All Tasks</strong> &mdash; find instructions to accomplish a goal' +
+      '</div>';
+      $('article[role="article"]').prepend(bannerHtml);
+      $('.orientation-banner-dismiss').on('click', function() {
+        localStorage.setItem('docNavOriented', 'true');
+        $('.orientation-banner').slideUp(200, function() { $(this).remove(); });
       });
     }
 
@@ -3298,122 +3259,34 @@ $(window).on("resize", function () {
 
       // Handle View All Products link click
       $('.nav-context-link-products').off('click').on('click', function(e) {
-        e.preventDefault();
-        if ($(this).hasClass('current')) return;
+        if ($(this).hasClass('current')) {
+          e.preventDefault();
+          return;
+        }
 
-        // Set flag to show full product tree
+        // Set flags so the landing page renders correctly
         sessionStorage.setItem('showFullTree', 'true');
         sessionStorage.setItem('activeNav', 'products');
         sessionStorage.removeItem('filteredProduct');
 
-        // Remove active state from dropdown menus
-        $('.product-menu-header .dropdown').removeClass('active');
-        $('.product-menu-header .dropdown-menu a').removeClass('active');
-
-        if (isTaskView || $('nav.toc').hasClass('task-view')) {
-          // Task nav is currently showing — fetch product nav and swap it in
-          swapNav(productUrl, function() {
-            $('nav.toc').addClass('product-view').removeClass('task-view');
-            MarkParents();
-            $('nav.toc > ul > li').show();
-            // Rebuild nav context with updated state
-            renderNavContext('All Products');
-            // Re-bind nav click handlers for the new nav items
-            $('nav.toc').off('click', 'li span').on('click', 'li span', function(ev) {
-              var item = $(this).closest('li');
-              if (item.hasClass('navparent')) {
-                ev.stopPropagation();
-                item.toggleClass('navexpand');
-              }
-            });
-            $('nav.toc').off('click', 'li.navparent > a').on('click', 'li.navparent > a', function(ev) {
-              var item = $(this).closest('li.navparent');
-              if (item.parent().is('nav.toc > ul')) {
-                // Top-level product link: navigate AND expand
-                item.addClass('navexpand');
-              } else {
-                // Nested link: arrow or active toggles expand
-                var clickedOnArrow = ev.offsetX < 50;
-                if (clickedOnArrow || item.hasClass('active')) {
-                  ev.preventDefault();
-                  ev.stopPropagation();
-                  item.toggleClass('navexpand');
-                }
-              }
-            });
-          });
-        } else {
-          // Show all top-level products collapsed, expand only the active one
-          $('nav.toc li').not('.nav-context').removeAttr('style').show().removeClass('navexpand');
-          $('nav.toc .task-view-prompt').remove();
-          MarkParents();
-          // Collapse nested items, then expand path to active topic
-          $('nav.toc > ul > li').not('.nav-context').find('li').hide();
-          var $activeLi = $('nav.toc li.active');
-          if ($activeLi.length) {
-            $activeLi.parents('li').addClass('navexpand').find('> ul > li').show();
-          }
-          renderNavContext('All Products');
-          // Rebind expand/collapse handlers
-          $('nav.toc').off('click', 'li span').on('click', 'li span', function(ev) {
-            var item = $(this).closest('li');
-            if (item.hasClass('navparent')) {
-              ev.stopPropagation();
-              item.toggleClass('navexpand');
-            }
-          });
-          $('nav.toc').off('click', 'li.navparent > a').on('click', 'li.navparent > a', function(ev) {
-            var item = $(this).closest('li.navparent');
-            if (item.parent().is('nav.toc > ul')) {
-              item.addClass('navexpand');
-            } else {
-              var clickedOnArrow = ev.offsetX < 50;
-              if (clickedOnArrow || item.hasClass('active')) {
-                ev.preventDefault();
-                ev.stopPropagation();
-                item.toggleClass('navexpand');
-              }
-            }
-          });
-        }
+        // Navigate to the All Products landing page (href is already set on the link)
       });
 
       // Handle View All Tasks link click
       $('.nav-context-link-tasks').off('click').on('click', function(e) {
-        e.preventDefault();
-        if ($(this).hasClass('current')) return;
+        if ($(this).hasClass('current')) {
+          e.preventDefault();
+          return;
+        }
 
-        // Set flag to show full task tree
+        // Set flags so the landing page renders correctly
         sessionStorage.setItem('showFullTaskTree', 'true');
         sessionStorage.setItem('activeNav', 'tasks');
         sessionStorage.removeItem('filteredTaskSection');
         sessionStorage.removeItem('filteredTaskCategory');
         sessionStorage.removeItem('filteredTaskParent');
 
-        if (!isTaskView || $('nav.toc').hasClass('product-view')) {
-          // Product nav is currently showing — fetch task nav and swap it in
-          swapNav(taskUrl, function() {
-            $('nav.toc').addClass('task-view').removeClass('product-view');
-            MarkParents();
-            $('nav.toc > ul > li').show();
-            renderNavContext('All Tasks');
-            bindTaskNavHandlers();
-          });
-        } else {
-          // Show ALL items including nested ones hidden by prior filtering
-          // Reset all inline styles and classes from prior filtering
-          $('nav.toc li').not('.nav-context').removeAttr('style').removeClass('navexpand');
-          MarkParents();
-          // Show all top-level categories
-          $('nav.toc > ul > li').not('.nav-context').show();
-          // Expand path to active topic if one exists
-          var $activeLi = $('nav.toc li.active');
-          if ($activeLi.length) {
-            $activeLi.parents('li').addClass('navexpand').find('> ul > li').show();
-          }
-          renderNavContext('All Tasks');
-          bindTaskNavHandlers();
-        }
+        // Navigate to the All Tasks landing page (href is already set on the link)
       });
     }
 
