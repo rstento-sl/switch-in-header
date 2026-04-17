@@ -3141,47 +3141,27 @@ $(window).on("resize", function () {
     }
 
 
-    function renderNavContext(overrideLabel) {
-      var filteredTask = sessionStorage.getItem('filteredTaskSection');
-      var filteredTaskParent = sessionStorage.getItem('filteredTaskParent');
-      var showFullTask = sessionStorage.getItem('showFullTaskTree');
-
-      // Determine viewing label
-      var viewingLabel;
-
-      // Determine if we're showing task or product nav
-      // Check: 1) override, 2) nav element's CSS class (set by AJAX swap), 3) URL path
+    function renderNavContext() {
+      // Highlight the active link in the header view switch
       var showingTasks = isTaskView || $('nav.toc').hasClass('task-view');
 
-      if (overrideLabel !== undefined) {
-        viewingLabel = overrideLabel;
-      } else if (showingTasks) {
-        if (filteredTask && showFullTask !== 'true') {
-          viewingLabel = filteredTaskParent || filteredTask;
-        } else {
-          viewingLabel = 'All Tasks';
+      var $headerSwitch = $('#headerViewSwitch');
+      if ($headerSwitch.length) {
+        // Fix hrefs for subdirectory deployment
+        $headerSwitch.find('.header-switch-products').attr('href', allProductsLandingUrl);
+        $headerSwitch.find('.header-switch-tasks').attr('href', allTasksLandingUrl);
+
+        // Mark the active view
+        // Product view includes product pages AND the all-products landing page
+        var isProductLanding = currentPath.includes('/all-products');
+        $headerSwitch.find('.header-switch-link').removeClass('active');
+        if (showingTasks) {
+          $headerSwitch.find('.header-switch-tasks').addClass('active');
+        } else if (isProductView || isProductLanding) {
+          $headerSwitch.find('.header-switch-products').addClass('active');
         }
-      } else {
-        viewingLabel = getProductFromPath() || 'All Products';
       }
 
-      // Remove existing nav context if present
-      $('nav.toc > ul > li.nav-context').remove();
-
-      // Build and insert
-      var html = '<li class="nav-context">' +
-        '<div class="nav-context-links">' +
-          '<span class="nav-context-view-label">Switch to:</span>' +
-          '<div class="nav-context-link-row">' +
-            '<a href="' + allProductsLandingUrl + '" class="nav-context-link nav-context-link-products ' + (viewingLabel === 'All Products' ? 'current' : '') + '">' + svgIconProducts + ' All Products</a>' +
-            '<span class="nav-context-separator">|</span>' +
-            '<a href="' + allTasksLandingUrl + '" class="nav-context-link nav-context-link-tasks ' + (viewingLabel === 'All Tasks' ? 'current' : '') + '">' + svgIconTasks + ' All Tasks</a>' +
-          '</div>' +
-        '</div>' +
-      '</li>';
-
-      $('nav.toc > ul').prepend(html);
-      // Bind click handlers on the freshly inserted links
       bindNavContextHandlers();
     }
 
@@ -3195,7 +3175,7 @@ $(window).on("resize", function () {
     if (!localStorage.getItem('docNavOriented')) {
       var bannerHtml = '<div class="orientation-banner">' +
         '<button class="orientation-banner-dismiss">Dismiss</button>' +
-        'Use the switch in the left nav to browse by:' +
+        'Use the switch in the header to browse by:' +
         '<br>' + svgIconProducts + ' <strong>All Products</strong> &mdash; explore by product or feature' +
         '<br>' + svgIconTasks + ' <strong>All Tasks</strong> &mdash; find instructions to accomplish a goal' +
       '</div>';
@@ -3232,7 +3212,7 @@ $(window).on("resize", function () {
         sessionStorage.setItem('filteredTaskSection', categoryName);
         sessionStorage.setItem('filteredTaskParent', categoryName);
         sessionStorage.removeItem('showFullTaskTree');
-        renderNavContext(categoryName);
+        renderNavContext();
       });
 
       // Nested spans: expand/collapse only
@@ -3256,40 +3236,33 @@ $(window).on("resize", function () {
       });
     }
 
-    // Bind click handlers for nav context links
-    // Called each time renderNavContext rebuilds the component
+    // Bind click handlers for header view switch links
     function bindNavContextHandlers() {
 
-      // Handle View All Products link click
-      $('.nav-context-link-products').off('click').on('click', function(e) {
-        if ($(this).hasClass('current')) {
+      // Handle All Products link click
+      $('.header-switch-products').off('click').on('click', function(e) {
+        if ($(this).hasClass('active')) {
           e.preventDefault();
           return;
         }
 
-        // Set flags so the landing page renders correctly
         sessionStorage.setItem('showFullTree', 'true');
         sessionStorage.setItem('activeNav', 'products');
         sessionStorage.removeItem('filteredProduct');
-
-        // Navigate to the All Products landing page (href is already set on the link)
       });
 
-      // Handle View All Tasks link click
-      $('.nav-context-link-tasks').off('click').on('click', function(e) {
-        if ($(this).hasClass('current')) {
+      // Handle All Tasks link click
+      $('.header-switch-tasks').off('click').on('click', function(e) {
+        if ($(this).hasClass('active')) {
           e.preventDefault();
           return;
         }
 
-        // Set flags so the landing page renders correctly
         sessionStorage.setItem('showFullTaskTree', 'true');
         sessionStorage.setItem('activeNav', 'tasks');
         sessionStorage.removeItem('filteredTaskSection');
         sessionStorage.removeItem('filteredTaskCategory');
         sessionStorage.removeItem('filteredTaskParent');
-
-        // Navigate to the All Tasks landing page (href is already set on the link)
       });
     }
 
@@ -3391,8 +3364,7 @@ $(window).on("resize", function () {
                 $li.hide();
               }
             });
-            // Update viewing label
-            renderNavContext(getProductFromPath() || 'All Products');
+            renderNavContext();
           }
         }
       } else {
@@ -3401,7 +3373,7 @@ $(window).on("resize", function () {
       }
     } else {
       // Default: hide navigation and prompt user to choose
-      $('nav.toc > ul > li').not('.nav-context').hide();
+      $('nav.toc > ul > li').hide();
 
       // Add prompt message
       const taskViewPrompt = `
@@ -3519,7 +3491,7 @@ $(window).on("resize", function () {
             sessionStorage.setItem('filteredTaskSection', categoryName);
             sessionStorage.setItem('filteredTaskParent', categoryName);
             sessionStorage.removeItem('showFullTaskTree');
-            renderNavContext(categoryName);
+            renderNavContext();
           }
         }
       }

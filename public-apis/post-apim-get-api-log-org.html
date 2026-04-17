@@ -76,12 +76,6 @@
     </a>
     <ph class="site-title site-title-compact"><a href="/index.html">SnapLogic Documentation</a></ph>
 
-    <!-- Search bar (compact) -->
-    <div class="search-container-compact desktop-nav">
-      <span onclick="showPopup()" class="search-icon-compact"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
-      <input type="text" id="searchQuery" placeholder="Search docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
-    </div>
-
     <!-- Product Dropdown Menus (smaller) -->
     <nav class="product-menu-header desktop-nav">
       <!-- Dropdown 1: Integration Platform -->
@@ -96,7 +90,17 @@
         </div>
       </div>
 
-      <!-- Dropdown 2: Administration -->
+      <!-- Dropdown 2: Observability -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Observability <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/monitor/monitor-home.html">Monitor</a>
+        </div>
+      </div>
+
+      <!-- Dropdown 3: Administration -->
       <div class="dropdown">
         <button class="dropdown-toggle">
           Administration <span class="arrow">▼</span>
@@ -106,7 +110,7 @@
         </div>
       </div>
 
-      <!-- Dropdown 3: APIs -->
+      <!-- Dropdown 4: APIs -->
       <div class="dropdown">
         <button class="dropdown-toggle">
           APIs <span class="arrow">▼</span>
@@ -117,17 +121,20 @@
           <a href="/public-apis/public-apis-home.html">Public APIs</a>
         </div>
       </div>
-
-      <!-- Dropdown 4: Observability -->
-      <div class="dropdown">
-        <button class="dropdown-toggle">
-          Observability <span class="arrow">▼</span>
-        </button>
-        <div class="dropdown-menu">
-          <a href="/monitor/monitor-home.html">Monitor</a>
-        </div>
-      </div>
     </nav>
+
+    <!-- View switch: All Products | All Tasks -->
+    <div class="header-view-switch desktop-nav" id="headerViewSwitch">
+      <a href="/all-products.html" class="header-switch-link header-switch-products">All Products</a>
+      <span class="header-switch-separator">|</span>
+      <a href="/tasks/all-tasks.html" class="header-switch-link header-switch-tasks">All Tasks</a>
+    </div>
+
+    <!-- Search bar (compact, pushed to far right) -->
+    <div class="search-container-compact desktop-nav">
+      <span onclick="showPopup()" class="search-icon-compact"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
+      <input type="text" id="searchQuery" placeholder="Search docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+    </div>
   </ul>
 
   <ul class="topmenu">
@@ -391,31 +398,31 @@ Content-Type: application/json
         
 
         <table class="table"><caption></caption><colgroup><col style="width:25%"><col style="width:15%"><col style="width:60%"></colgroup><thead class="thead">
-            <tr class="row" id="post-apim-get-api-log-org__d699e379">
-              <th class="entry valign-top" id="post-apim-get-api-log-org__d699e379__entry__1">Key</th>
-              <th class="entry valign-top" id="post-apim-get-api-log-org__d699e379__entry__2">Type</th>
-              <th class="entry valign-top" id="post-apim-get-api-log-org__d699e379__entry__3">Description</th>
+            <tr class="row" id="post-apim-get-api-log-org__d434e379">
+              <th class="entry valign-top" id="post-apim-get-api-log-org__d434e379__entry__1">Key</th>
+              <th class="entry valign-top" id="post-apim-get-api-log-org__d434e379__entry__2">Type</th>
+              <th class="entry valign-top" id="post-apim-get-api-log-org__d434e379__entry__3">Description</th>
             </tr>
           </thead><tbody class="tbody">
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">time</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">string</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3"><span class="ph" id="post-apim-get-api-log-org__ph-earliest-request-time">The earliest time when the task request was received by the FeedMaster (if it exists) or the JCC node</span>, in UTC format.
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">time</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">string</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3"><span class="ph" id="post-apim-get-api-log-org__ph-earliest-request-time">The earliest time when the task request was received by the FeedMaster (if it exists) or the JCC node</span>, in UTC format.
                   Always the same as <code class="ph codeph">request_time</code>.
                 </td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">service</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">string</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">The SnapLogic service that processed the API call. Always <code class="ph codeph">REQUEST_LOG</code>.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">service</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">string</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">The SnapLogic service that processed the API call. Always <code class="ph codeph">REQUEST_LOG</code>.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">criterion...</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">string</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">The criteria used to categorize or group the results.
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">criterion...</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">string</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">The criteria used to categorize or group the results.
                   <ul class="ul">
                     <li class="li"><code class="ph codeph">criterion1</code>. Always the same value as <code class="ph codeph">invoker_snode</code>.</li>
                     <li class="li"><code class="ph codeph">criterion2</code>. Always the same value as <code class="ph codeph">request_url</code>.</li>
@@ -425,51 +432,51 @@ Content-Type: application/json
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">remote_addr</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">string</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">The IP address of the API consumer.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">remote_addr</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">string</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">The IP address of the API consumer.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">request_method</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">string</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">The REST API method used in the request.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">request_method</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">string</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">The REST API method used in the request.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">request_url</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">string</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">The path to the called API, without the host name.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">request_url</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">string</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">The path to the called API, without the host name.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">path_info</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">string</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">Additional path information at the end of the API request URL.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">path_info</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">string</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">Additional path information at the end of the API request URL.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">request_status_code</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">integer</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">The HTTP response code from the authentication and validation step of the API request.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">request_status_code</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">integer</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">The HTTP response code from the authentication and validation step of the API request.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">target_status_code</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">integer</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">The HTTP response code from the Pipeline execution.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">target_status_code</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">integer</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">The HTTP response code from the Pipeline execution.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">auth_type</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">string</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">The authentication type of the API call.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">auth_type</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">string</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">The authentication type of the API call.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">client</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">string</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">client</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">string</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">
                   <p class="p">If Basic Authentication is used with the username and password, this field contains the username.</p>
                   <p class="p">If the API is accessed using a token value in the Task setting, this field is empty.</p>
                   <p class="p">Otherwise, this field contains the IP address of the application that consumes the API.</p>
@@ -477,78 +484,78 @@ Content-Type: application/json
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">roles</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">array</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">The roles of the API consumer that sent the API request.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">roles</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">array</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">The roles of the API consumer that sent the API request.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">bytes_sent</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">integer</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">The length of the response sent to the client, in bytes.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">bytes_sent</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">integer</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">The length of the response sent to the client, in bytes.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">invoker_snode</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">string</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">The snode ID of the Triggered Task or Ultra Task that generated the log entry.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">invoker_snode</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">string</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">The snode ID of the Triggered Task or Ultra Task that generated the log entry.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">error</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">Boolean</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">If <code class="ph codeph">true</code>, an error occurred during the task processing. Otherwise, the processing succeeded.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">error</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">Boolean</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">If <code class="ph codeph">true</code>, an error occurred during the task processing. Otherwise, the processing succeeded.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">processing_time</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">integer</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">The length of time spent to process the API request, in milliseconds.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">processing_time</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">integer</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">The length of time spent to process the API request, in milliseconds.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">request_time</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">integer</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3"><span class="ph">The earliest time when the task request was received by the FeedMaster (if it exists) or the JCC node</span>, as Unix time in milliseconds.
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">request_time</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">integer</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3"><span class="ph">The earliest time when the task request was received by the FeedMaster (if it exists) or the JCC node</span>, as Unix time in milliseconds.
                   Always the same as <code class="ph codeph">time</code>.
                 </td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">request_processing_end_time</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">integer</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">The time when the preprocessing of the task request is completed, as Unix time in milliseconds.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">request_processing_end_time</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">integer</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">The time when the preprocessing of the task request is completed, as Unix time in milliseconds.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">recv_time</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">integer</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">Only for Ultra Tasks. The time when the FeedMaster adds a message to the queue to signal that the task is ready to be processed, as Unix time in milliseconds.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">recv_time</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">integer</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">Only for Ultra Tasks. The time when the FeedMaster adds a message to the queue to signal that the task is ready to be processed, as Unix time in milliseconds.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">start_time</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">integer</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">Only for Ultra Tasks. The time when the JCC node picks up the message from the queue and starts processing the task, as Unix time in milliseconds.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">start_time</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">integer</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">Only for Ultra Tasks. The time when the JCC node picks up the message from the queue and starts processing the task, as Unix time in milliseconds.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">reply_time</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">integer</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">Only for Ultra Tasks. The time when the processing of the task is completed and the JCC node notifies the FeedMaster, as Unix time in milliseconds.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">reply_time</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">integer</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">Only for Ultra Tasks. The time when the processing of the task is completed and the JCC node notifies the FeedMaster, as Unix time in milliseconds.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">response_time</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">integer</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">The time when the API response is sent to the client, as Unix time in milliseconds.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">response_time</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">integer</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">The time when the API response is sent to the client, as Unix time in milliseconds.</td>
                 
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__1"><code class="ph codeph">type</code></td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__2">string</td>
-                <td class="entry" headers="post-apim-get-api-log-org__d699e379__entry__3">The format of the log information. Always <code class="ph codeph">JSON</code>.</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__1"><code class="ph codeph">type</code></td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__2">string</td>
+                <td class="entry" headers="post-apim-get-api-log-org__d434e379__entry__3">The format of the log information. Always <code class="ph codeph">JSON</code>.</td>
               </tr>
 
             </tbody></table>
