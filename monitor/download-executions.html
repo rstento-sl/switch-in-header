@@ -313,9 +313,7 @@
   (function() {
     var css = document.querySelector('link[href$="sldocs.css"]');
     if (css) {
-      var s = document.createElement('script');
-      s.src = css.getAttribute('href').replace('sldocs.css', 'sldocs.js');
-      document.body.appendChild(s);
+      document.write('\x3Cscript src="' + css.getAttribute('href').replace('sldocs.css', 'sldocs.js') + '">\x3C/script>');
     }
   })();
   </script>

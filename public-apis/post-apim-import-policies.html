@@ -373,26 +373,26 @@ Content-Type: application/json
         
 
         <table class="table"><caption></caption><colgroup><col style="width:25%"><col style="width:15%"><col style="width:60%"></colgroup><thead class="thead">
-            <tr class="row" id="post-apim-import-policies__d631e379">
-              <th class="entry valign-top" id="post-apim-import-policies__d631e379__entry__1">Key</th>
-              <th class="entry valign-top" id="post-apim-import-policies__d631e379__entry__2">Type</th>
-              <th class="entry valign-top" id="post-apim-import-policies__d631e379__entry__3">Description</th>
+            <tr class="row" id="post-apim-import-policies__d661e379">
+              <th class="entry valign-top" id="post-apim-import-policies__d661e379__entry__1">Key</th>
+              <th class="entry valign-top" id="post-apim-import-policies__d661e379__entry__2">Type</th>
+              <th class="entry valign-top" id="post-apim-import-policies__d661e379__entry__3">Description</th>
             </tr>
           </thead><tbody class="tbody">
               <tr class="row">
-                <td class="entry" headers="post-apim-import-policies__d631e379__entry__1"><code class="ph codeph">overrode</code></td>
-                <td class="entry" headers="post-apim-import-policies__d631e379__entry__2">array</td>
-                <td class="entry" headers="post-apim-import-policies__d631e379__entry__3">An array of strings containing the names of the policies that were overridden.</td>
+                <td class="entry" headers="post-apim-import-policies__d661e379__entry__1"><code class="ph codeph">overrode</code></td>
+                <td class="entry" headers="post-apim-import-policies__d661e379__entry__2">array</td>
+                <td class="entry" headers="post-apim-import-policies__d661e379__entry__3">An array of strings containing the names of the policies that were overridden.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="post-apim-import-policies__d631e379__entry__1"><code class="ph codeph">ignored</code></td>
-                <td class="entry" headers="post-apim-import-policies__d631e379__entry__2">array</td>
-                <td class="entry" headers="post-apim-import-policies__d631e379__entry__3">An array of strings containing the names of the policies that were ignored.</td>
+                <td class="entry" headers="post-apim-import-policies__d661e379__entry__1"><code class="ph codeph">ignored</code></td>
+                <td class="entry" headers="post-apim-import-policies__d661e379__entry__2">array</td>
+                <td class="entry" headers="post-apim-import-policies__d661e379__entry__3">An array of strings containing the names of the policies that were ignored.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="post-apim-import-policies__d631e379__entry__1"><code class="ph codeph">imported</code></td>
-                <td class="entry" headers="post-apim-import-policies__d631e379__entry__2">array</td>
-                <td class="entry" headers="post-apim-import-policies__d631e379__entry__3">An array of strings containing the names of the policies that were successfully imported.</td>
+                <td class="entry" headers="post-apim-import-policies__d661e379__entry__1"><code class="ph codeph">imported</code></td>
+                <td class="entry" headers="post-apim-import-policies__d661e379__entry__2">array</td>
+                <td class="entry" headers="post-apim-import-policies__d661e379__entry__3">An array of strings containing the names of the policies that were successfully imported.</td>
               </tr>
             </tbody></table>
       </div>
@@ -477,9 +477,7 @@ Content-Type: application/json
   (function() {
     var css = document.querySelector('link[href$="sldocs.css"]');
     if (css) {
-      var s = document.createElement('script');
-      s.src = css.getAttribute('href').replace('sldocs.css', 'sldocs.js');
-      document.body.appendChild(s);
+      document.write('\x3Cscript src="' + css.getAttribute('href').replace('sldocs.css', 'sldocs.js') + '">\x3C/script>');
     }
   })();
   </script>

@@ -358,33 +358,33 @@ Content-Type: application/json
 </code></pre>
 
         <table class="table"><caption></caption><colgroup><col style="width:25%"><col style="width:15%"><col style="width:60%"></colgroup><thead class="thead">
-            <tr class="row" id="get-runtime-apistats-org-concurrent__d992e379">
-              <th class="entry valign-top" id="get-runtime-apistats-org-concurrent__d992e379__entry__1">Key</th>
-              <th class="entry valign-top" id="get-runtime-apistats-org-concurrent__d992e379__entry__2">Type</th>
-              <th class="entry valign-top" id="get-runtime-apistats-org-concurrent__d992e379__entry__3">Description</th>
+            <tr class="row" id="get-runtime-apistats-org-concurrent__d1082e379">
+              <th class="entry valign-top" id="get-runtime-apistats-org-concurrent__d1082e379__entry__1">Key</th>
+              <th class="entry valign-top" id="get-runtime-apistats-org-concurrent__d1082e379__entry__2">Type</th>
+              <th class="entry valign-top" id="get-runtime-apistats-org-concurrent__d1082e379__entry__3">Description</th>
             </tr>
           </thead><tbody class="tbody">
               <tr class="row">
-                <td class="entry" headers="get-runtime-apistats-org-concurrent__d992e379__entry__1"><code class="ph codeph">organization</code></td>
-                <td class="entry" headers="get-runtime-apistats-org-concurrent__d992e379__entry__2">string</td>
-                <td class="entry" headers="get-runtime-apistats-org-concurrent__d992e379__entry__3">The name of the SnapLogic Environment/Org.</td>
+                <td class="entry" headers="get-runtime-apistats-org-concurrent__d1082e379__entry__1"><code class="ph codeph">organization</code></td>
+                <td class="entry" headers="get-runtime-apistats-org-concurrent__d1082e379__entry__2">string</td>
+                <td class="entry" headers="get-runtime-apistats-org-concurrent__d1082e379__entry__3">The name of the SnapLogic Environment/Org.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-apistats-org-concurrent__d992e379__entry__1"><code class="ph codeph">time_stamp</code></td>
-                <td class="entry" headers="get-runtime-apistats-org-concurrent__d992e379__entry__2">string</td>
-                <td class="entry" headers="get-runtime-apistats-org-concurrent__d992e379__entry__3">The timestamp when the statistics were collected.
+                <td class="entry" headers="get-runtime-apistats-org-concurrent__d1082e379__entry__1"><code class="ph codeph">time_stamp</code></td>
+                <td class="entry" headers="get-runtime-apistats-org-concurrent__d1082e379__entry__2">string</td>
+                <td class="entry" headers="get-runtime-apistats-org-concurrent__d1082e379__entry__3">The timestamp when the statistics were collected.
                   <p class="p"><span class="ph"><span class="ph"><strong class="ph b">Format</strong>: </span> <a class="xref" href="https://www.w3.org/TR/NOTE-datetime" target="_blank" rel="external noopener">UTC</a></span></p>
                 </td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-apistats-org-concurrent__d992e379__entry__1"><code class="ph codeph">concurrent_call_in_progress</code></td>
-                <td class="entry" headers="get-runtime-apistats-org-concurrent__d992e379__entry__2">integer</td>
-                <td class="entry" headers="get-runtime-apistats-org-concurrent__d992e379__entry__3">The number of pipeline executions that are concurrently in progress.</td>
+                <td class="entry" headers="get-runtime-apistats-org-concurrent__d1082e379__entry__1"><code class="ph codeph">concurrent_call_in_progress</code></td>
+                <td class="entry" headers="get-runtime-apistats-org-concurrent__d1082e379__entry__2">integer</td>
+                <td class="entry" headers="get-runtime-apistats-org-concurrent__d1082e379__entry__3">The number of pipeline executions that are concurrently in progress.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-apistats-org-concurrent__d992e379__entry__1"><code class="ph codeph">tasks</code></td>
-                <td class="entry" headers="get-runtime-apistats-org-concurrent__d992e379__entry__2">array</td>
-                <td class="entry" headers="get-runtime-apistats-org-concurrent__d992e379__entry__3"><span class="ph" id="get-runtime-apistats-org-concurrent__ph-response-task-metadata-array">An array of objects containing metadata about each task.</span></td>
+                <td class="entry" headers="get-runtime-apistats-org-concurrent__d1082e379__entry__1"><code class="ph codeph">tasks</code></td>
+                <td class="entry" headers="get-runtime-apistats-org-concurrent__d1082e379__entry__2">array</td>
+                <td class="entry" headers="get-runtime-apistats-org-concurrent__d1082e379__entry__3"><span class="ph" id="get-runtime-apistats-org-concurrent__ph-response-task-metadata-array">An array of objects containing metadata about each task.</span></td>
               </tr>
             </tbody></table>
 
@@ -472,9 +472,7 @@ Content-Type: application/json
   (function() {
     var css = document.querySelector('link[href$="sldocs.css"]');
     if (css) {
-      var s = document.createElement('script');
-      s.src = css.getAttribute('href').replace('sldocs.css', 'sldocs.js');
-      document.body.appendChild(s);
+      document.write('\x3Cscript src="' + css.getAttribute('href').replace('sldocs.css', 'sldocs.js') + '">\x3C/script>');
     }
   })();
   </script>

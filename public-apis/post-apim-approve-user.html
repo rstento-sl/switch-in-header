@@ -364,29 +364,29 @@ Content-Type: application/json
   }
 }        </code></pre>
                 <table class="table"><caption></caption><colgroup><col style="width:25%"><col style="width:15%"><col style="width:60%"></colgroup><thead class="thead">
-            <tr class="row" id="post-apim-approve-user__d211e379">
-              <th class="entry valign-top" id="post-apim-approve-user__d211e379__entry__1">Key</th>
-              <th class="entry valign-top" id="post-apim-approve-user__d211e379__entry__2">Type</th>
-              <th class="entry valign-top" id="post-apim-approve-user__d211e379__entry__3">Description</th>
+            <tr class="row" id="post-apim-approve-user__d213e379">
+              <th class="entry valign-top" id="post-apim-approve-user__d213e379__entry__1">Key</th>
+              <th class="entry valign-top" id="post-apim-approve-user__d213e379__entry__2">Type</th>
+              <th class="entry valign-top" id="post-apim-approve-user__d213e379__entry__3">Description</th>
             </tr>
           </thead><tbody class="tbody">
                             <tr class="row">
-                                <td class="entry" headers="post-apim-approve-user__d211e379__entry__1">
+                                <td class="entry" headers="post-apim-approve-user__d213e379__entry__1">
                                     <code class="ph codeph normalize-space"> { "Successful Approvals"
                                         : &lt;list of usernames&gt; } </code>
                                 </td>
-                                <td class="entry" headers="post-apim-approve-user__d211e379__entry__2">array</td>
-                                <td class="entry" headers="post-apim-approve-user__d211e379__entry__3">The JSON object array contains the list of user IDs that are
+                                <td class="entry" headers="post-apim-approve-user__d213e379__entry__2">array</td>
+                                <td class="entry" headers="post-apim-approve-user__d213e379__entry__3">The JSON object array contains the list of user IDs that are
                                     successfully approved. </td>
                             </tr>
                             <tr class="row">
-                                <td class="entry" headers="post-apim-approve-user__d211e379__entry__1">
+                                <td class="entry" headers="post-apim-approve-user__d213e379__entry__1">
                                     <code class="ph codeph normalize-space"> { "Failed Approvals" :
                                         &lt;list of username: error when approving&gt; }
                                     </code>
                                 </td>
-                                <td class="entry" headers="post-apim-approve-user__d211e379__entry__2">array</td>
-                                <td class="entry" headers="post-apim-approve-user__d211e379__entry__3">The  JSON object array contains the list of user IDs that
+                                <td class="entry" headers="post-apim-approve-user__d213e379__entry__2">array</td>
+                                <td class="entry" headers="post-apim-approve-user__d213e379__entry__3">The  JSON object array contains the list of user IDs that
                                     failed the approval process. </td>
                             </tr>                         
                         </tbody></table>
@@ -472,9 +472,7 @@ Content-Type: application/json
   (function() {
     var css = document.querySelector('link[href$="sldocs.css"]');
     if (css) {
-      var s = document.createElement('script');
-      s.src = css.getAttribute('href').replace('sldocs.css', 'sldocs.js');
-      document.body.appendChild(s);
+      document.write('\x3Cscript src="' + css.getAttribute('href').replace('sldocs.css', 'sldocs.js') + '">\x3C/script>');
     }
   })();
   </script>

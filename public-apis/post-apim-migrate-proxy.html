@@ -422,39 +422,39 @@ Content-Type: application/json
 </code></pre>
 
         <table class="table"><caption></caption><colgroup><col style="width:25%"><col style="width:15%"><col style="width:60%"></colgroup><thead class="thead">
-            <tr class="row" id="post-apim-migrate-proxy__d641e379">
-              <th class="entry valign-top" id="post-apim-migrate-proxy__d641e379__entry__1">Key</th>
-              <th class="entry valign-top" id="post-apim-migrate-proxy__d641e379__entry__2">Type</th>
-              <th class="entry valign-top" id="post-apim-migrate-proxy__d641e379__entry__3">Description</th>
+            <tr class="row" id="post-apim-migrate-proxy__d1094e379">
+              <th class="entry valign-top" id="post-apim-migrate-proxy__d1094e379__entry__1">Key</th>
+              <th class="entry valign-top" id="post-apim-migrate-proxy__d1094e379__entry__2">Type</th>
+              <th class="entry valign-top" id="post-apim-migrate-proxy__d1094e379__entry__3">Description</th>
             </tr>
           </thead><tbody class="tbody">
 
               <tr class="row">
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__1"><code class="ph codeph">source_proxy_path</code></td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__2">string</td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__3">The path to the source proxy.
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__1"><code class="ph codeph">source_proxy_path</code></td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__2">string</td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__3">The path to the source proxy.
                   <p class="p"><span class="ph"><strong class="ph b">Format</strong>: </span> <span class="ph"><code class="ph codeph">/{env_org}/apim/{proxy_name}</code></span></p>
                 </td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__1"><code class="ph codeph">destination_proxy_path</code></td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__2">string</td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__3">The path to the destination proxy.
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__1"><code class="ph codeph">destination_proxy_path</code></td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__2">string</td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__3">The path to the destination proxy.
                   <p class="p"><span class="ph"><strong class="ph b">Format</strong>: </span> <span class="ph"><code class="ph codeph">/{env_org}/apim/{proxy_name}</code></span></p>
                 </td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__1"><code class="ph codeph">proxy_status</code></td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__2">object</td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__3">Information about the migration of the proxy and its policies.</td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__1"><code class="ph codeph">proxy_status</code></td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__2">object</td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__3">Information about the migration of the proxy and its policies.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__1"><code class="ph codeph">proxy_status</code> » <code class="ph codeph">deleted_duplicate_proxy</code></td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__2">object</td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__3">If <code class="ph codeph">duplicate_check</code> was set to <code class="ph codeph">false</code>, information about the existing proxy with the same name, if any, in the destination Environment/Org.
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__1"><code class="ph codeph">proxy_status</code> » <code class="ph codeph">deleted_duplicate_proxy</code></td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__2">object</td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__3">If <code class="ph codeph">duplicate_check</code> was set to <code class="ph codeph">false</code>, information about the existing proxy with the same name, if any, in the destination Environment/Org.
                   <ul class="ul">
                     <li class="li"><code class="ph codeph">proxy_path</code>. (string) The path to the existing proxy with the same name.</li>
                     <li class="li"><code class="ph codeph">snode_id</code>. (string) <span class="ph">The ID of the JCC node that performed the operation.</span></li>
@@ -463,9 +463,9 @@ Content-Type: application/json
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__1"><code class="ph codeph">proxy_status</code> » <code class="ph codeph">status</code></td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__2">string</td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__3">The status of the migration of the proxy.
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__1"><code class="ph codeph">proxy_status</code> » <code class="ph codeph">status</code></td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__2">string</td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__3">The status of the migration of the proxy.
                   <div class="p"><span class="ph"><strong class="ph b">Possible values:</strong> </span>
                     <ul class="ul">
                       <li class="li"><code class="ph codeph">Migrated proxy.</code></li>
@@ -476,21 +476,21 @@ Content-Type: application/json
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__1"><code class="ph codeph">proxy_status</code> » <code class="ph codeph">snode_id</code></td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__2">string</td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__3"><span class="ph">The ID of the JCC node that performed the operation.</span></td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__1"><code class="ph codeph">proxy_status</code> » <code class="ph codeph">snode_id</code></td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__2">string</td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__3"><span class="ph">The ID of the JCC node that performed the operation.</span></td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__1"><code class="ph codeph">proxy_status</code> » <code class="ph codeph">migrated_policies</code></td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__2">array</td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__3">An array of strings containing the friendly names of the policies that were migrated with the proxy.</td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__1"><code class="ph codeph">proxy_status</code> » <code class="ph codeph">migrated_policies</code></td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__2">array</td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__3">An array of strings containing the friendly names of the policies that were migrated with the proxy.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__1"><code class="ph codeph">proxy_status</code> » <code class="ph codeph">files</code></td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__2">array</td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__3">An array of objects containing information about the migrated files.
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__1"><code class="ph codeph">proxy_status</code> » <code class="ph codeph">files</code></td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__2">array</td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__3">An array of objects containing information about the migrated files.
                   Each object contains the following information:
                   <ul class="ul">
                     <li class="li"><code class="ph codeph">status</code>. (string) The status of the migration of the file.
@@ -509,15 +509,15 @@ Content-Type: application/json
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__1"><code class="ph codeph">proxy_endpoint_status</code></td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__2">object</td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__3">Information about the migration of the proxy's endpoints.</td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__1"><code class="ph codeph">proxy_endpoint_status</code></td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__2">object</td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__3">Information about the migration of the proxy's endpoints.</td>
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__1"><code class="ph codeph">proxy_endpoint_status</code> » <code class="ph codeph">status</code></td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__2">string</td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__3">The status of the migration of the proxy endpoints.
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__1"><code class="ph codeph">proxy_endpoint_status</code> » <code class="ph codeph">status</code></td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__2">string</td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__3">The status of the migration of the proxy endpoints.
                   <div class="p"><span class="ph"><strong class="ph b">Possible values:</strong> </span>
                     <ul class="ul">
                       <li class="li"><code class="ph codeph">Migrated proxy endpoints.</code></li>
@@ -528,9 +528,9 @@ Content-Type: application/json
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__1"><code class="ph codeph">proxy_endpoint_status</code> » <code class="ph codeph">proxy_endpoints</code></td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__2">array</td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__3">An array of objects containing information about the migrated endpoints.
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__1"><code class="ph codeph">proxy_endpoint_status</code> » <code class="ph codeph">proxy_endpoints</code></td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__2">array</td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__3">An array of objects containing information about the migrated endpoints.
                   Each object contains a key-value pair.
                   <ul class="ul">
                     <li class="li">Key: The endpoint name.</li>
@@ -546,9 +546,9 @@ Content-Type: application/json
               </tr>
 
               <tr class="row">
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__1"><code class="ph codeph">reason</code></td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__2">string</td>
-                <td class="entry" headers="post-apim-migrate-proxy__d641e379__entry__3">If the migration failed, the reason for the failure.</td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__1"><code class="ph codeph">reason</code></td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__2">string</td>
+                <td class="entry" headers="post-apim-migrate-proxy__d1094e379__entry__3">If the migration failed, the reason for the failure.</td>
               </tr>
 
             </tbody></table>
@@ -634,9 +634,7 @@ Content-Type: application/json
   (function() {
     var css = document.querySelector('link[href$="sldocs.css"]');
     if (css) {
-      var s = document.createElement('script');
-      s.src = css.getAttribute('href').replace('sldocs.css', 'sldocs.js');
-      document.body.appendChild(s);
+      document.write('\x3Cscript src="' + css.getAttribute('href').replace('sldocs.css', 'sldocs.js') + '">\x3C/script>');
     }
   })();
   </script>

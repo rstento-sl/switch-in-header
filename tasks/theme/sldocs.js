@@ -3295,6 +3295,9 @@ $(window).on("resize", function () {
     else if (currentPath.includes('/designer/')) currentProduct = 'DESIGNER';
     else if (currentPath.includes('/snapgpt/')) currentProduct = 'SNAPGPT';
     else if (currentPath.includes('/monitor/')) currentProduct = 'MONITOR';
+    else if (currentPath.includes('/apim/')) currentProduct = 'API MANAGEMENT 3.0';
+    else if (currentPath.includes('/classic-apim/')) currentProduct = 'CLASSIC API MANAGEMENT';
+    else if (currentPath.includes('/public-apis/')) currentProduct = 'PUBLIC APIS';
 
     // If stored filter doesn't match the current page's product, update it
     if (filteredProduct && currentProduct && filteredProduct !== currentProduct) {
@@ -3314,11 +3317,7 @@ $(window).on("resize", function () {
         const $productLink = $li.children('a').first();
         const productName = $productLink.text().trim().toUpperCase();
 
-        if ((effectiveFilter === 'ADMIN MANAGER' && productName === 'ADMIN MANAGER') ||
-            (effectiveFilter === 'AUTOSYNC' && productName === 'AUTOSYNC') ||
-            (effectiveFilter === 'DESIGNER' && productName === 'DESIGNER') ||
-            (effectiveFilter === 'SNAPGPT' && productName === 'SNAPGPT') ||
-            (effectiveFilter === 'MONITOR' && productName === 'MONITOR')) {
+        if (productName === effectiveFilter) {
           // Found the selected product
           selectedProductLi = $li;
         } else if ($productLink.length > 0) {

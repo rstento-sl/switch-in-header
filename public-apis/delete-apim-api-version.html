@@ -352,27 +352,27 @@ Content-Type: application/json
     "http_status_code": 200
 }</code></pre>
         <table class="table"><caption></caption><colgroup><col style="width:25%"><col style="width:15%"><col style="width:60%"></colgroup><thead class="thead">
-            <tr class="row" id="delete-apim-api-version__d612e379">
-              <th class="entry valign-top" id="delete-apim-api-version__d612e379__entry__1">Key</th>
-              <th class="entry valign-top" id="delete-apim-api-version__d612e379__entry__2">Type</th>
-              <th class="entry valign-top" id="delete-apim-api-version__d612e379__entry__3">Description</th>
+            <tr class="row" id="delete-apim-api-version__d603e379">
+              <th class="entry valign-top" id="delete-apim-api-version__d603e379__entry__1">Key</th>
+              <th class="entry valign-top" id="delete-apim-api-version__d603e379__entry__2">Type</th>
+              <th class="entry valign-top" id="delete-apim-api-version__d603e379__entry__3">Description</th>
             </tr>
           </thead><tbody class="tbody">
               <tr class="row">
-                <td class="entry" headers="delete-apim-api-version__d612e379__entry__1"><code class="ph codeph">disabled_jobs</code></td>
-                <td class="entry" headers="delete-apim-api-version__d612e379__entry__2">array</td>
-                <td class="entry" headers="delete-apim-api-version__d612e379__entry__3">Paths to the disabled tasks in the API version.</td>
+                <td class="entry" headers="delete-apim-api-version__d603e379__entry__1"><code class="ph codeph">disabled_jobs</code></td>
+                <td class="entry" headers="delete-apim-api-version__d603e379__entry__2">array</td>
+                <td class="entry" headers="delete-apim-api-version__d603e379__entry__3">Paths to the disabled tasks in the API version.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="delete-apim-api-version__d612e379__entry__1">
+                <td class="entry" headers="delete-apim-api-version__d603e379__entry__1">
                   <code class="ph codeph">deleted_plexes</code></td>
-                <td class="entry" headers="delete-apim-api-version__d612e379__entry__2">array</td>
-                <td class="entry" headers="delete-apim-api-version__d612e379__entry__3">Paths to the disabled plexes.</td>
+                <td class="entry" headers="delete-apim-api-version__d603e379__entry__2">array</td>
+                <td class="entry" headers="delete-apim-api-version__d603e379__entry__3">Paths to the disabled plexes.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="delete-apim-api-version__d612e379__entry__1"><code class="ph codeph">path</code></td>
-                <td class="entry" headers="delete-apim-api-version__d612e379__entry__2">array</td>
-                <td class="entry" headers="delete-apim-api-version__d612e379__entry__3">All the assets in the API version.</td>
+                <td class="entry" headers="delete-apim-api-version__d603e379__entry__1"><code class="ph codeph">path</code></td>
+                <td class="entry" headers="delete-apim-api-version__d603e379__entry__2">array</td>
+                <td class="entry" headers="delete-apim-api-version__d603e379__entry__3">All the assets in the API version.</td>
               </tr>
             </tbody></table>
         <div class="sectiondiv">
@@ -483,9 +483,7 @@ Content-Type: application/json
   (function() {
     var css = document.querySelector('link[href$="sldocs.css"]');
     if (css) {
-      var s = document.createElement('script');
-      s.src = css.getAttribute('href').replace('sldocs.css', 'sldocs.js');
-      document.body.appendChild(s);
+      document.write('\x3Cscript src="' + css.getAttribute('href').replace('sldocs.css', 'sldocs.js') + '">\x3C/script>');
     }
   })();
   </script>
