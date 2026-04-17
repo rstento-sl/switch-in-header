@@ -393,7 +393,7 @@ function DisplayBreadcrumbs(){
     var bp = '';
     (function() {
       var cp = window.location.pathname;
-      var segs = ['/autosync/', '/admin-manager/', '/designer/', '/snapgpt/', '/monitor/', '/apim/', '/classic-apim/', '/public-apis/', '/tasks/'];
+      var segs = ['/autosync/', '/admin-manager/', '/designer/', '/snapgpt/', '/monitor/', '/apim/', '/classic-apim/', '/public-apis/', '/tasks/', '/all-products', '/all-tasks'];
       for (var s = 0; s < segs.length; s++) {
         var si = cp.indexOf(segs[s]);
         if (si >= 0) { bp = cp.substring(0, si); return; }
@@ -3094,7 +3094,7 @@ $(window).on("resize", function () {
     // Looks for the first known product or task path segment and treats everything before it as the base.
     var basePath = '';
     (function() {
-      var knownSegments = ['/autosync/', '/admin-manager/', '/designer/', '/snapgpt/', '/monitor/', '/apim/', '/classic-apim/', '/public-apis/', '/tasks/'];
+      var knownSegments = ['/autosync/', '/admin-manager/', '/designer/', '/snapgpt/', '/monitor/', '/apim/', '/classic-apim/', '/public-apis/', '/tasks/', '/all-products', '/all-tasks'];
       for (var i = 0; i < knownSegments.length; i++) {
         var idx = currentPath.indexOf(knownSegments[i]);
         if (idx >= 0) {
