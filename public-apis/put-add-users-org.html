@@ -76,6 +76,12 @@
     </a>
     <ph class="site-title site-title-compact"><a href="/index.html">SnapLogic Documentation</a></ph>
 
+    <!-- Search bar (compact) -->
+    <div class="search-container-compact desktop-nav">
+      <span onclick="showPopup()" class="search-icon-compact"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
+      <input type="text" id="searchQuery" placeholder="Search docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+    </div>
+
     <!-- Product Dropdown Menus (smaller) -->
     <nav class="product-menu-header desktop-nav">
       <!-- Dropdown 1: Integration Platform -->
@@ -90,17 +96,7 @@
         </div>
       </div>
 
-      <!-- Dropdown 2: Observability -->
-      <div class="dropdown">
-        <button class="dropdown-toggle">
-          Observability <span class="arrow">▼</span>
-        </button>
-        <div class="dropdown-menu">
-          <a href="/monitor/monitor-home.html">Monitor</a>
-        </div>
-      </div>
-
-      <!-- Dropdown 3: Administration -->
+      <!-- Dropdown 2: Administration -->
       <div class="dropdown">
         <button class="dropdown-toggle">
           Administration <span class="arrow">▼</span>
@@ -110,7 +106,7 @@
         </div>
       </div>
 
-      <!-- Dropdown 4: APIs -->
+      <!-- Dropdown 3: APIs -->
       <div class="dropdown">
         <button class="dropdown-toggle">
           APIs <span class="arrow">▼</span>
@@ -121,20 +117,17 @@
           <a href="/public-apis/public-apis-home.html">Public APIs</a>
         </div>
       </div>
+
+      <!-- Dropdown 4: Observability -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Observability <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/monitor/monitor-home.html">Monitor</a>
+        </div>
+      </div>
     </nav>
-
-    <!-- View switch: All Products | All Tasks -->
-    <div class="header-view-switch desktop-nav" id="headerViewSwitch">
-      <a href="/all-products.html" class="header-switch-link header-switch-products">All Products</a>
-      <span class="header-switch-separator">|</span>
-      <a href="/tasks/all-tasks.html" class="header-switch-link header-switch-tasks">All Tasks</a>
-    </div>
-
-    <!-- Search bar (compact, pushed to far right) -->
-    <div class="search-container-compact desktop-nav">
-      <span onclick="showPopup()" class="search-icon-compact"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
-      <input type="text" id="searchQuery" placeholder="Search docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
-    </div>
   </ul>
 
   <ul class="topmenu">
@@ -367,100 +360,100 @@ Content-Type: application/json
 </code></pre>
         
               <table class="table"><caption></caption><colgroup><col style="width:25%"><col style="width:15%"><col style="width:60%"></colgroup><thead class="thead">
-            <tr class="row" id="put-add-users-org__d893e379">
-              <th class="entry valign-top" id="put-add-users-org__d893e379__entry__1">Key</th>
-              <th class="entry valign-top" id="put-add-users-org__d893e379__entry__2">Type</th>
-              <th class="entry valign-top" id="put-add-users-org__d893e379__entry__3">Description</th>
+            <tr class="row" id="put-add-users-org__d946e379">
+              <th class="entry valign-top" id="put-add-users-org__d946e379__entry__1">Key</th>
+              <th class="entry valign-top" id="put-add-users-org__d946e379__entry__2">Type</th>
+              <th class="entry valign-top" id="put-add-users-org__d946e379__entry__3">Description</th>
             </tr>
           </thead><tbody class="tbody">
                     <tr class="row">
-                <td class="entry" headers="put-add-users-org__d893e379__entry__1"><code class="ph codeph">email</code></td>
-                <td class="entry" headers="put-add-users-org__d893e379__entry__2">string</td>
-                <td class="entry" headers="put-add-users-org__d893e379__entry__3"><span class="ph">The email address of the user.</span></td>
+                <td class="entry" headers="put-add-users-org__d946e379__entry__1"><code class="ph codeph">email</code></td>
+                <td class="entry" headers="put-add-users-org__d946e379__entry__2">string</td>
+                <td class="entry" headers="put-add-users-org__d946e379__entry__3"><span class="ph">The email address of the user.</span></td>
               </tr>
                     <tr class="row">
-                <td class="entry" headers="put-add-users-org__d893e379__entry__1"><code class="ph codeph">first_name</code></td>
-                <td class="entry" headers="put-add-users-org__d893e379__entry__2">string</td>
-                <td class="entry" headers="put-add-users-org__d893e379__entry__3">The first name of the user.</td>
+                <td class="entry" headers="put-add-users-org__d946e379__entry__1"><code class="ph codeph">first_name</code></td>
+                <td class="entry" headers="put-add-users-org__d946e379__entry__2">string</td>
+                <td class="entry" headers="put-add-users-org__d946e379__entry__3">The first name of the user.</td>
               </tr>
                     <tr class="row">
-                <td class="entry" headers="put-add-users-org__d893e379__entry__1"><code class="ph codeph">last_name</code></td>
-                <td class="entry" headers="put-add-users-org__d893e379__entry__2">string</td>
-                <td class="entry" headers="put-add-users-org__d893e379__entry__3">The last name of the user.</td>
+                <td class="entry" headers="put-add-users-org__d946e379__entry__1"><code class="ph codeph">last_name</code></td>
+                <td class="entry" headers="put-add-users-org__d946e379__entry__2">string</td>
+                <td class="entry" headers="put-add-users-org__d946e379__entry__3">The last name of the user.</td>
               </tr>
                     <tr class="row">
-                <td class="entry" headers="put-add-users-org__d893e379__entry__1"><code class="ph codeph">allow_password_login</code></td>
-                <td class="entry" headers="put-add-users-org__d893e379__entry__2">Boolean</td>
-                <td class="entry" headers="put-add-users-org__d893e379__entry__3">If <code class="ph codeph">true</code>, the user is allowed to log in with a password.
+                <td class="entry" headers="put-add-users-org__d946e379__entry__1"><code class="ph codeph">allow_password_login</code></td>
+                <td class="entry" headers="put-add-users-org__d946e379__entry__2">Boolean</td>
+                <td class="entry" headers="put-add-users-org__d946e379__entry__3">If <code class="ph codeph">true</code>, the user is allowed to log in with a password.
                   
                 </td>
               </tr>
                     <tr class="row">
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__1"><code class="ph codeph">organizations</code></td>
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__2"><code class="ph codeph">array</code></td>
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__3">An array of objects containing information about the environment (Org) that the
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__1"><code class="ph codeph">organizations</code></td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__2"><code class="ph codeph">array</code></td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__3">An array of objects containing information about the environment (Org) that the
                 user belongs to. Each object contains name and ID of the environment and a Boolean
                 (administrator) that indicates whether the user is assigned the administrator role in the
                 environment.</td>
                     </tr>
                     <tr class="row">
-                <td class="entry" headers="put-add-users-org__d893e379__entry__1"><code class="ph codeph">created_by</code></td>
-                <td class="entry" headers="put-add-users-org__d893e379__entry__2">string</td>
-                <td class="entry" headers="put-add-users-org__d893e379__entry__3">The user who originally created the account, if it is a service account.
+                <td class="entry" headers="put-add-users-org__d946e379__entry__1"><code class="ph codeph">created_by</code></td>
+                <td class="entry" headers="put-add-users-org__d946e379__entry__2">string</td>
+                <td class="entry" headers="put-add-users-org__d946e379__entry__3">The user who originally created the account, if it is a service account.
                   
                   <p class="p">Learn more: <a class="xref" href="https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/1439028" target="_blank" rel="external noopener">Creating a User</a></p>
                 </td>
               </tr>
                     <tr class="row">
-                <td class="entry" headers="put-add-users-org__d893e379__entry__1"><code class="ph codeph">ui_access</code></td>
-                <td class="entry" headers="put-add-users-org__d893e379__entry__2">Boolean</td>
-                <td class="entry" headers="put-add-users-org__d893e379__entry__3">If <code class="ph codeph">true</code>, the user is granted access to the SnapLogic UI.</td>
+                <td class="entry" headers="put-add-users-org__d946e379__entry__1"><code class="ph codeph">ui_access</code></td>
+                <td class="entry" headers="put-add-users-org__d946e379__entry__2">Boolean</td>
+                <td class="entry" headers="put-add-users-org__d946e379__entry__3">If <code class="ph codeph">true</code>, the user is granted access to the SnapLogic UI.</td>
               </tr>
                     <tr class="row">
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__1"><code class="ph codeph">password_expired</code></td>
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__2">boolean</td>
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__3">If <code class="ph codeph">true</code>, the user's password is expired.</td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__1"><code class="ph codeph">password_expired</code></td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__2">boolean</td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__3">If <code class="ph codeph">true</code>, the user's password is expired.</td>
                     </tr>
                     <tr class="row">
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__1"><code class="ph codeph">password_last_updated</code></td>
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__2">string</td>
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__3">When the user's password was last changed. <span class="ph"><span class="ph"><strong class="ph b">Format</strong>: </span> <a class="xref" href="https://www.w3.org/TR/NOTE-datetime" target="_blank" rel="external noopener">UTC</a></span>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__1"><code class="ph codeph">password_last_updated</code></td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__2">string</td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__3">When the user's password was last changed. <span class="ph"><span class="ph"><strong class="ph b">Format</strong>: </span> <a class="xref" href="https://www.w3.org/TR/NOTE-datetime" target="_blank" rel="external noopener">UTC</a></span>
               </td>
                     </tr> 
                       <tr class="row">
-                        <td class="entry" headers="put-add-users-org__d893e379__entry__1"><code class="ph codeph">user_locked_out</code></td>
-                        <td class="entry" headers="put-add-users-org__d893e379__entry__2">boolean</td>
-                        <td class="entry" headers="put-add-users-org__d893e379__entry__3">If <code class="ph codeph">true</code>, the user is denied access to the Snaplex. </td>
+                        <td class="entry" headers="put-add-users-org__d946e379__entry__1"><code class="ph codeph">user_locked_out</code></td>
+                        <td class="entry" headers="put-add-users-org__d946e379__entry__2">boolean</td>
+                        <td class="entry" headers="put-add-users-org__d946e379__entry__3">If <code class="ph codeph">true</code>, the user is denied access to the Snaplex. </td>
                       </tr>
                     <tr class="row">
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__1"><code class="ph codeph">service_account</code></td>
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__2">boolean</td>
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__3">If <code class="ph codeph">true</code> the user has a service account.</td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__1"><code class="ph codeph">service_account</code></td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__2">boolean</td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__3">If <code class="ph codeph">true</code> the user has a service account.</td>
                     </tr>
                     <tr class="row">
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__1"><code class="ph codeph">failed_logins</code></td>
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__2">integer</td>
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__3">The number of login attempts that failed.</td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__1"><code class="ph codeph">failed_logins</code></td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__2">integer</td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__3">The number of login attempts that failed.</td>
                     </tr>
                     <tr class="row">
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__1"><code class="ph codeph">basic_access</code></td>
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__2">string</td>
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__3"><span class="ph"><span class="ph"><strong class="ph b">Format</strong>: </span> <a class="xref" href="https://www.w3.org/TR/NOTE-datetime" target="_blank" rel="external noopener">UTC</a></span></td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__1"><code class="ph codeph">basic_access</code></td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__2">string</td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__3"><span class="ph"><span class="ph"><strong class="ph b">Format</strong>: </span> <a class="xref" href="https://www.w3.org/TR/NOTE-datetime" target="_blank" rel="external noopener">UTC</a></span></td>
                     </tr>
                     <tr class="row">
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__1"><code class="ph codeph">maintainers</code></td>
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__2"></td>
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__3">N/A</td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__1"><code class="ph codeph">maintainers</code></td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__2"></td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__3">N/A</td>
                     </tr>
                     <tr class="row">
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__1"><code class="ph codeph">managed</code></td>
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__2"></td>
-                      <td class="entry" headers="put-add-users-org__d893e379__entry__3">N/A</td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__1"><code class="ph codeph">managed</code></td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__2"></td>
+                      <td class="entry" headers="put-add-users-org__d946e379__entry__3">N/A</td>
                     </tr>
             <tr class="row">
-              <td class="entry" headers="put-add-users-org__d893e379__entry__1"></td>
-              <td class="entry" headers="put-add-users-org__d893e379__entry__2"></td>
-              <td class="entry" headers="put-add-users-org__d893e379__entry__3"></td>
+              <td class="entry" headers="put-add-users-org__d946e379__entry__1"></td>
+              <td class="entry" headers="put-add-users-org__d946e379__entry__2"></td>
+              <td class="entry" headers="put-add-users-org__d946e379__entry__3"></td>
             </tr>
                   </tbody></table>
       </section>

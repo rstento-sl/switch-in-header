@@ -76,6 +76,12 @@
     </a>
     <ph class="site-title site-title-compact"><a href="/index.html">SnapLogic Documentation</a></ph>
 
+    <!-- Search bar (compact) -->
+    <div class="search-container-compact desktop-nav">
+      <span onclick="showPopup()" class="search-icon-compact"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
+      <input type="text" id="searchQuery" placeholder="Search docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+    </div>
+
     <!-- Product Dropdown Menus (smaller) -->
     <nav class="product-menu-header desktop-nav">
       <!-- Dropdown 1: Integration Platform -->
@@ -90,17 +96,7 @@
         </div>
       </div>
 
-      <!-- Dropdown 2: Observability -->
-      <div class="dropdown">
-        <button class="dropdown-toggle">
-          Observability <span class="arrow">▼</span>
-        </button>
-        <div class="dropdown-menu">
-          <a href="/monitor/monitor-home.html">Monitor</a>
-        </div>
-      </div>
-
-      <!-- Dropdown 3: Administration -->
+      <!-- Dropdown 2: Administration -->
       <div class="dropdown">
         <button class="dropdown-toggle">
           Administration <span class="arrow">▼</span>
@@ -110,7 +106,7 @@
         </div>
       </div>
 
-      <!-- Dropdown 4: APIs -->
+      <!-- Dropdown 3: APIs -->
       <div class="dropdown">
         <button class="dropdown-toggle">
           APIs <span class="arrow">▼</span>
@@ -121,20 +117,17 @@
           <a href="/public-apis/public-apis-home.html">Public APIs</a>
         </div>
       </div>
+
+      <!-- Dropdown 4: Observability -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Observability <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/monitor/monitor-home.html">Monitor</a>
+        </div>
+      </div>
     </nav>
-
-    <!-- View switch: All Products | All Tasks -->
-    <div class="header-view-switch desktop-nav" id="headerViewSwitch">
-      <a href="/all-products.html" class="header-switch-link header-switch-products">All Products</a>
-      <span class="header-switch-separator">|</span>
-      <a href="/tasks/all-tasks.html" class="header-switch-link header-switch-tasks">All Tasks</a>
-    </div>
-
-    <!-- Search bar (compact, pushed to far right) -->
-    <div class="search-container-compact desktop-nav">
-      <span onclick="showPopup()" class="search-icon-compact"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
-      <input type="text" id="searchQuery" placeholder="Search docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
-    </div>
   </ul>
 
   <ul class="topmenu">
@@ -496,88 +489,88 @@ Content-Type: application/json
 </code></pre>
 
         <table class="table"><caption></caption><colgroup><col style="width:25%"><col style="width:15%"><col style="width:60%"></colgroup><thead class="thead">
-            <tr class="row" id="get-runtime-org__d760e379">
-              <th class="entry valign-top" id="get-runtime-org__d760e379__entry__1">Key</th>
-              <th class="entry valign-top" id="get-runtime-org__d760e379__entry__2">Type</th>
-              <th class="entry valign-top" id="get-runtime-org__d760e379__entry__3">Description</th>
+            <tr class="row" id="get-runtime-org__d969e379">
+              <th class="entry valign-top" id="get-runtime-org__d969e379__entry__1">Key</th>
+              <th class="entry valign-top" id="get-runtime-org__d969e379__entry__2">Type</th>
+              <th class="entry valign-top" id="get-runtime-org__d969e379__entry__3">Description</th>
             </tr>
           </thead><tbody class="tbody">
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">entries</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">array</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3"><span class="ph" id="get-runtime-org__ph-response-array-pipeline-metadata">An array of objects containing metadata about each pipeline execution.</span></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">entries</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">array</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3"><span class="ph" id="get-runtime-org__ph-response-array-pipeline-metadata">An array of objects containing metadata about each pipeline execution.</span></td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">pipe_id</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">string</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3">The ID of the pipeline.</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">pipe_id</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">string</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3">The ID of the pipeline.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">has_lints</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">Boolean</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3">If pipeline finished with lints warning.</td> 
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">has_lints</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">Boolean</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3">If pipeline finished with lints warning.</td> 
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">documents</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">integer</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3"></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">documents</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">integer</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3"></td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">user_id</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">string</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3">The user who ran the pipeline.</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">user_id</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">string</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3">The user who ran the pipeline.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">ccid</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">string</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3">The ID of the JCC node where the pipeline ran.</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">ccid</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">string</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3">The ID of the JCC node where the pipeline ran.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">child_has_lints</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">Boolean</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3"></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">child_has_lints</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">Boolean</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3"></td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">runtime_path_id</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">string</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3"><span class="ph">The identifier of the Snaplex.</span>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">runtime_path_id</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">string</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3"><span class="ph">The identifier of the Snaplex.</span>
                   <p class="p"><span class="ph"><strong class="ph b">Format</strong>: </span> <span class="ph"> <code class="ph codeph">{org}/rt/{snaplex-location}/{snaplex-environment}</code></span></p>
                 </td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">parent_ruuid</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">string</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3">The Runtime ID of the parent pipeline that triggered this child pipeline.</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">parent_ruuid</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">string</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3">The Runtime ID of the parent pipeline that triggered this child pipeline.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">subpipes</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">object</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3"></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">subpipes</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">object</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3"></td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">state_timestamp</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">string</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3"></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">state_timestamp</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">string</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3"></td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">error_documents</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">integer</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3"></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">error_documents</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">integer</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3"></td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">label</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">string</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3">The name of the pipeline.</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">label</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">string</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3">The name of the pipeline.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">path_id</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">string</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3">Project path of the pipeline.</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">path_id</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">string</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3">Project path of the pipeline.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">state</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">string</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3">The status of the pipeline execution.
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">state</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">string</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3">The status of the pipeline execution.
                   <div class="p"><span class="ph"><strong class="ph b">Valid values:</strong> </span><ul class="ul">
           <li class="li"><code class="ph codeph">Queued</code> – Pipeline is queued for processing; all pipelines start in this state.</li>
           <li class="li"><code class="ph codeph">NoUpdate</code> – Intermediate state at startup.</li>
@@ -595,41 +588,41 @@ Content-Type: application/json
                 </td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">create_time</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">string</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3">The time when the pipeline execution instance was created.
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">create_time</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">string</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3">The time when the pipeline execution instance was created.
                   <p class="p"><span class="ph"><span class="ph"><strong class="ph b">Format</strong>: </span> <a class="xref" href="https://www.w3.org/TR/NOTE-datetime" target="_blank" rel="external noopener">UTC</a></span></p>
                 </td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">invoker</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">string</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3">The user who invoked the pipeline execution.</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">invoker</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">string</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3">The user who invoked the pipeline execution.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">duration</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">integer</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3">The length of time that the pipeline ran, expressed in seconds.</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">duration</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">integer</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3">The length of time that the pipeline ran, expressed in seconds.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">cc_label</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">string</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3"></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">cc_label</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">string</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3"></td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">id</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">string</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3">The ID of the pipeline execution.</td> 
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">id</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">string</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3">The ID of the pipeline execution.</td> 
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">runtime_label</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">string</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3">The name of the pipeline.</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">runtime_label</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">string</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3">The name of the pipeline.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">mode</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">string</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3">The mode of the pipeline execution. 
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">mode</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">string</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3">The mode of the pipeline execution. 
                   <div class="p"><span class="ph"><strong class="ph b">Possible values:</strong> </span>
                     <ul class="ul">
                       <li class="li"><code class="ph codeph">standard</code></li>
@@ -638,19 +631,19 @@ Content-Type: application/json
                 </td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">total</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">integer</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3">The total number of results available.</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">total</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">integer</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3">The total number of results available.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">limit</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">integer</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3">The number of results returned.</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">limit</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">integer</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3">The number of results returned.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="get-runtime-org__d760e379__entry__1"><code class="ph codeph">offset</code></td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__2">integer</td>
-                <td class="entry" headers="get-runtime-org__d760e379__entry__3">The index of the first result returned.</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__1"><code class="ph codeph">offset</code></td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__2">integer</td>
+                <td class="entry" headers="get-runtime-org__d969e379__entry__3">The index of the first result returned.</td>
               </tr>
             </tbody></table>
 

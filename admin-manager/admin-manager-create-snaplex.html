@@ -76,6 +76,12 @@
     </a>
     <ph class="site-title site-title-compact"><a href="/index.html">SnapLogic Documentation</a></ph>
 
+    <!-- Search bar (compact) -->
+    <div class="search-container-compact desktop-nav">
+      <span onclick="showPopup()" class="search-icon-compact"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
+      <input type="text" id="searchQuery" placeholder="Search docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+    </div>
+
     <!-- Product Dropdown Menus (smaller) -->
     <nav class="product-menu-header desktop-nav">
       <!-- Dropdown 1: Integration Platform -->
@@ -90,17 +96,7 @@
         </div>
       </div>
 
-      <!-- Dropdown 2: Observability -->
-      <div class="dropdown">
-        <button class="dropdown-toggle">
-          Observability <span class="arrow">▼</span>
-        </button>
-        <div class="dropdown-menu">
-          <a href="/monitor/monitor-home.html">Monitor</a>
-        </div>
-      </div>
-
-      <!-- Dropdown 3: Administration -->
+      <!-- Dropdown 2: Administration -->
       <div class="dropdown">
         <button class="dropdown-toggle">
           Administration <span class="arrow">▼</span>
@@ -110,7 +106,7 @@
         </div>
       </div>
 
-      <!-- Dropdown 4: APIs -->
+      <!-- Dropdown 3: APIs -->
       <div class="dropdown">
         <button class="dropdown-toggle">
           APIs <span class="arrow">▼</span>
@@ -121,20 +117,17 @@
           <a href="/public-apis/public-apis-home.html">Public APIs</a>
         </div>
       </div>
+
+      <!-- Dropdown 4: Observability -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Observability <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/monitor/monitor-home.html">Monitor</a>
+        </div>
+      </div>
     </nav>
-
-    <!-- View switch: All Products | All Tasks -->
-    <div class="header-view-switch desktop-nav" id="headerViewSwitch">
-      <a href="/all-products.html" class="header-switch-link header-switch-products">All Products</a>
-      <span class="header-switch-separator">|</span>
-      <a href="/tasks/all-tasks.html" class="header-switch-link header-switch-tasks">All Tasks</a>
-    </div>
-
-    <!-- Search bar (compact, pushed to far right) -->
-    <div class="search-container-compact desktop-nav">
-      <span onclick="showPopup()" class="search-icon-compact"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
-      <input type="text" id="searchQuery" placeholder="Search docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
-    </div>
   </ul>
 
   <ul class="topmenu">
@@ -365,15 +358,15 @@
 
         <div class="div tabset-snaplex-log tabcontent">
           <table class="table flddesc"><caption></caption><colgroup><col style="width:25%"><col style="width:75%"></colgroup><thead class="thead">
-            <tr class="row" id="admin-manager-create-snaplex__d832e266">
-            	<th class="entry valign-top" id="admin-manager-create-snaplex__d832e266__entry__1">Field/Field set</th>
-              <th class="entry valign-top" id="admin-manager-create-snaplex__d832e266__entry__2">Description</th>
+            <tr class="row" id="admin-manager-create-snaplex__d305e266">
+            	<th class="entry valign-top" id="admin-manager-create-snaplex__d305e266__entry__1">Field/Field set</th>
+              <th class="entry valign-top" id="admin-manager-create-snaplex__d305e266__entry__2">Description</th>
             </tr>
           </thead><tbody class="tbody">
 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">Level</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2">Specify the minimum level of logging or the type of details that you want to enable for the new Snaplex.
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">Level</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2">Specify the minimum level of logging or the type of details that you want to enable for the new Snaplex.
                     Available values:
                     <ul class="ul">
                       <li class="li">Trace: Records details of all events associated with the Snaplex.</li>
@@ -387,16 +380,16 @@
                 </tr>
 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">Log file size</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2">
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">Log file size</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2">
                     <p class="p">The maximum size of the log file to be created for the Snaplex.</p>
                     <span class="ph"><strong class="ph b">Default value:</strong> </span> <kbd class="ph userinput">300</kbd>
                   </td>
                 </tr>
                 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">Metric</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2"><p class="p">Select the log file size in <kbd class="ph userinput">KB, MB or GB</kbd> from the
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">Metric</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2"><p class="p">Select the log file size in <kbd class="ph userinput">KB, MB or GB</kbd> from the
                     dropdown.</p>
                     <span class="ph"><strong class="ph b">Default value:</strong> </span>
                     <kbd class="ph userinput">MB</kbd>
@@ -404,8 +397,8 @@
                 </tr>               
                 
                 <tr class="row">  
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">Main backup count</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2"><p class="p">The number of backup main log files that SnapLogic must maintain for the
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">Main backup count</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2"><p class="p">The number of backup main log files that SnapLogic must maintain for the
                     Snaplex. </p> 
                     <span class="ph"><strong class="ph b">Default value:</strong> </span>
                     <kbd class="ph userinput">40</kbd>
@@ -413,16 +406,16 @@
                 </tr>
 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">Error backup count</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2"><p class="p">The number of backup error log files that SnapLogic must maintain for the
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">Error backup count</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2"><p class="p">The number of backup error log files that SnapLogic must maintain for the
                     Snaplex.</p>
                     <span class="ph"><strong class="ph b">Default value:</strong> </span><kbd class="ph userinput">5</kbd>
                   </td>
                 </tr>
 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">Access backup count</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2">
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">Access backup count</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2">
                     <p class="p">The number of backup access log files that SnapLogic must maintain for the Snaplex.</p>
                     <span class="ph"><strong class="ph b">Default value:</strong> </span> <kbd class="ph userinput">5</kbd>
                   </td>
@@ -433,17 +426,17 @@
 
         <div class="div tabset-snaplex-node tabcontent">
           <table class="table flddesc"><caption></caption><colgroup><col style="width:25%"><col style="width:75%"></colgroup><thead class="thead">
-            <tr class="row" id="admin-manager-create-snaplex__d832e266">
-            	<th class="entry valign-top" id="admin-manager-create-snaplex__d832e266__entry__1">Field/Field set</th>
-              <th class="entry valign-top" id="admin-manager-create-snaplex__d832e266__entry__2">Description</th>
+            <tr class="row" id="admin-manager-create-snaplex__d305e266">
+            	<th class="entry valign-top" id="admin-manager-create-snaplex__d305e266__entry__1">Field/Field set</th>
+              <th class="entry valign-top" id="admin-manager-create-snaplex__d305e266__entry__2">Description</th>
             </tr>
           </thead><tbody class="tbody">
 
                 
                 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">Max. slots</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2"> Each Snap in a pipeline consumes a slot, so a pipeline can only execute on a node with free slots that are equal to or greater than the number of Snaps. If no nodes have sufficient slots for normal pipelines, the execution fails.
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">Max. slots</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2"> Each Snap in a pipeline consumes a slot, so a pipeline can only execute on a node with free slots that are equal to or greater than the number of Snaps. If no nodes have sufficient slots for normal pipelines, the execution fails.
                     For pipelines invoked with Ultra Tasks, the execution is queued.
                     
                     <span class="ph"><strong class="ph b">Default value:</strong> </span>
@@ -452,8 +445,8 @@
                 </tr>
 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">Reserved slot %</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2"> The percentage of slots that you want to reserve on a node for pipelines
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">Reserved slot %</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2"> The percentage of slots that you want to reserve on a node for pipelines
                     executed through the Designer tab. Pipelines executed using Tasks or the
                     Pipeline Execute Snap do not have access to these slots. Changes made to this
                     setting do not require a restart. <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span><kbd class="ph userinput">15</kbd>
@@ -461,31 +454,31 @@
                 </tr>
 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">Max. memory</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2"> The memory threshold at–and above–which no more pipelines can be assigned
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">Max. memory</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2"> The memory threshold at–and above–which no more pipelines can be assigned
                     to a node. Changes made to this setting do not require a restart. <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span><kbd class="ph userinput">85</kbd>
                     </p></td>
                 </tr>
 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">Max. restart wait time</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2">The maximum wait time before restarting a node. The toggle allows the
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">Max. restart wait time</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2">The maximum wait time before restarting a node. The toggle allows the
                     Admin Manager to <span class="ph uicontrol">Set restart wait time to Forever</span>. Once
                     enabled the <span class="ph uicontrol">default value field</span> gets disabled.  
                     <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span><kbd class="ph userinput">15</kbd> minutes</p></td>
                 </tr>
 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">Max. heap size</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2"> The maximum JVM heap size. <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> auto
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">Max. heap size</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2"> The maximum JVM heap size. <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> auto
                       </p><div class="note important note_important"><span class="note__title">Important:</span> When the value is <kbd class="ph userinput">auto</kbd>,
                       SnapLogic automatically sets the maximum heap size based on the available
                       machine memory. </div></td>
                 </tr>
 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">HTTP Interface</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2"> Specify the location from which the Snaplex node can accept HTTP network
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">HTTP Interface</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2"> Specify the location from which the Snaplex node can accept HTTP network
                     connections. The following options are available: <ul class="ul">
                       <li class="li">Localhost only (127.0.0.1)</li>
                       <li class="li">Any interface (0.0.0.0)</li>
@@ -496,23 +489,23 @@
                 </tr>
 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">HTTP Port</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2"> The HTTP port on which the Snaplex node listens for connections. 
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">HTTP Port</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2"> The HTTP port on which the Snaplex node listens for connections. 
                     <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span><kbd class="ph userinput">8090</kbd> for a JCC node and <kbd class="ph userinput">8091</kbd> for a FeedMaster.</p> 
                   </td>
                 </tr>
 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">HTTPS Ports</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2">
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">HTTPS Ports</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2">
                     <p class="p">The HTTPS port on which the Snaplex node listens for connections.</p>
                     <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> None.</p>
                   </td>
                 </tr>
 
                  <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">Snaplex node types (Hostname/server type)</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2">
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">Snaplex node types (Hostname/server type)</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2">
                     <p class="p">Add a Hostname for the type of server JCC or FeedMaster from the dropdown.
                       You can also add new nodes using the <span class="ph uicontrol">+ Add new node type</span>.
                     </p>
@@ -521,8 +514,8 @@
                 </tr>
 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">Global properties (Key/Value pairs)</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2">
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">Global properties (Key/Value pairs)</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2">
                     <p class="p">Internal configuration options. Do not edit these values without contacting your CSM.
                       You can also add new nodes using the <span class="ph uicontrol">+ Add new global property</span>.
                     </p>
@@ -535,22 +528,22 @@
 
         <div class="div tabset-snaplex-proxies tabcontent">
           <table class="table flddesc"><caption></caption><colgroup><col style="width:25%"><col style="width:75%"></colgroup><thead class="thead">
-            <tr class="row" id="admin-manager-create-snaplex__d832e266">
-            	<th class="entry valign-top" id="admin-manager-create-snaplex__d832e266__entry__1">Field/Field set</th>
-              <th class="entry valign-top" id="admin-manager-create-snaplex__d832e266__entry__2">Description</th>
+            <tr class="row" id="admin-manager-create-snaplex__d305e266">
+            	<th class="entry valign-top" id="admin-manager-create-snaplex__d305e266__entry__1">Field/Field set</th>
+              <th class="entry valign-top" id="admin-manager-create-snaplex__d305e266__entry__2">Description</th>
             </tr>
           </thead><tbody class="tbody">
 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">HTTP proxy host name</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2"> Configuration details associated with the HTTP proxy server. The URL of
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">HTTP proxy host name</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2"> Configuration details associated with the HTTP proxy server. The URL of
                     the HTTP proxy host. <p class="p"><span class="ph"><strong class="ph b">Example</strong>: </span> 172.0.10.162 </p><p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> None.</p>
                   </td>
                 </tr>
 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">Port</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2">
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">Port</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2">
                     <p class="p">The port number on which the HTTP proxy host listens.</p>
                     <p class="p"><span class="ph"><strong class="ph b">Example</strong>: </span><kbd class="ph userinput">3127</kbd></p>
                     <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> None.</p>
@@ -558,8 +551,8 @@
                 </tr>
 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">Non-proxy host</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2">
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">Non-proxy host</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2">
                     <p class="p">The hostnames or IP addresses that should be contacted directly instead of through the proxy.
                       Patterns might start or end with a * for wildcards.
                       There is an option to add new proxy host using <span class="ph uicontrol">+ Add new non-proxy host</span>.
@@ -568,16 +561,16 @@
                 </tr>
                 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">HTTPS proxy host name</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2"> Configuration details associated with the HTTPS proxy server. The URL of
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">HTTPS proxy host name</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2"> Configuration details associated with the HTTPS proxy server. The URL of
                     the HTTPS proxy host. <p class="p"><span class="ph"><strong class="ph b">Example</strong>: </span><kbd class="ph userinput">172.0.10.162</kbd>
                     </p><p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> None.</p>
                   </td>
                 </tr>
 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">Port</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2">
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">Port</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2">
                     <p class="p">The port number on which the HTTPS proxy host listens.</p>
                     <p class="p"><span class="ph"><strong class="ph b">Example</strong>: </span><kbd class="ph userinput">3127</kbd></p>
                     <p class="p"><span class="ph"><strong class="ph b">Default value:</strong> </span> None.</p>
@@ -585,8 +578,8 @@
                 </tr>
 
                 <tr class="row">
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__1">Non-proxy host</td>
-                  <td class="entry" headers="admin-manager-create-snaplex__d832e266__entry__2">
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__1">Non-proxy host</td>
+                  <td class="entry" headers="admin-manager-create-snaplex__d305e266__entry__2">
                     <p class="p">The hostnames or IP addresses that should be contacted directly instead of through the proxy.
                       Patterns might start or end with a * for wildcards.
                       There is an option to add new proxy host using <span class="ph uicontrol">+ Add new non-proxy host</span>.

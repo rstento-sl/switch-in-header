@@ -77,6 +77,12 @@
     </a>
     <ph class="site-title site-title-compact"><a href="/index.html">SnapLogic Documentation</a></ph>
 
+    <!-- Search bar (compact) -->
+    <div class="search-container-compact desktop-nav">
+      <span onclick="showPopup()" class="search-icon-compact"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
+      <input type="text" id="searchQuery" placeholder="Search docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+    </div>
+
     <!-- Product Dropdown Menus (smaller) -->
     <nav class="product-menu-header desktop-nav">
       <!-- Dropdown 1: Integration Platform -->
@@ -91,17 +97,7 @@
         </div>
       </div>
 
-      <!-- Dropdown 2: Observability -->
-      <div class="dropdown">
-        <button class="dropdown-toggle">
-          Observability <span class="arrow">▼</span>
-        </button>
-        <div class="dropdown-menu">
-          <a href="/monitor/monitor-home.html">Monitor</a>
-        </div>
-      </div>
-
-      <!-- Dropdown 3: Administration -->
+      <!-- Dropdown 2: Administration -->
       <div class="dropdown">
         <button class="dropdown-toggle">
           Administration <span class="arrow">▼</span>
@@ -111,7 +107,7 @@
         </div>
       </div>
 
-      <!-- Dropdown 4: APIs -->
+      <!-- Dropdown 3: APIs -->
       <div class="dropdown">
         <button class="dropdown-toggle">
           APIs <span class="arrow">▼</span>
@@ -122,20 +118,17 @@
           <a href="/public-apis/public-apis-home.html">Public APIs</a>
         </div>
       </div>
+
+      <!-- Dropdown 4: Observability -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Observability <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/monitor/monitor-home.html">Monitor</a>
+        </div>
+      </div>
     </nav>
-
-    <!-- View switch: All Products | All Tasks -->
-    <div class="header-view-switch desktop-nav" id="headerViewSwitch">
-      <a href="/all-products.html" class="header-switch-link header-switch-products">All Products</a>
-      <span class="header-switch-separator">|</span>
-      <a href="/tasks/all-tasks.html" class="header-switch-link header-switch-tasks">All Tasks</a>
-    </div>
-
-    <!-- Search bar (compact, pushed to far right) -->
-    <div class="search-container-compact desktop-nav">
-      <span onclick="showPopup()" class="search-icon-compact"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
-      <input type="text" id="searchQuery" placeholder="Search docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
-    </div>
   </ul>
 
   <ul class="topmenu">

@@ -76,6 +76,12 @@
     </a>
     <ph class="site-title site-title-compact"><a href="/index.html">SnapLogic Documentation</a></ph>
 
+    <!-- Search bar (compact) -->
+    <div class="search-container-compact desktop-nav">
+      <span onclick="showPopup()" class="search-icon-compact"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
+      <input type="text" id="searchQuery" placeholder="Search docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+    </div>
+
     <!-- Product Dropdown Menus (smaller) -->
     <nav class="product-menu-header desktop-nav">
       <!-- Dropdown 1: Integration Platform -->
@@ -90,17 +96,7 @@
         </div>
       </div>
 
-      <!-- Dropdown 2: Observability -->
-      <div class="dropdown">
-        <button class="dropdown-toggle">
-          Observability <span class="arrow">▼</span>
-        </button>
-        <div class="dropdown-menu">
-          <a href="/monitor/monitor-home.html">Monitor</a>
-        </div>
-      </div>
-
-      <!-- Dropdown 3: Administration -->
+      <!-- Dropdown 2: Administration -->
       <div class="dropdown">
         <button class="dropdown-toggle">
           Administration <span class="arrow">▼</span>
@@ -110,7 +106,7 @@
         </div>
       </div>
 
-      <!-- Dropdown 4: APIs -->
+      <!-- Dropdown 3: APIs -->
       <div class="dropdown">
         <button class="dropdown-toggle">
           APIs <span class="arrow">▼</span>
@@ -121,20 +117,17 @@
           <a href="/public-apis/public-apis-home.html">Public APIs</a>
         </div>
       </div>
+
+      <!-- Dropdown 4: Observability -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Observability <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/monitor/monitor-home.html">Monitor</a>
+        </div>
+      </div>
     </nav>
-
-    <!-- View switch: All Products | All Tasks -->
-    <div class="header-view-switch desktop-nav" id="headerViewSwitch">
-      <a href="/all-products.html" class="header-switch-link header-switch-products">All Products</a>
-      <span class="header-switch-separator">|</span>
-      <a href="/tasks/all-tasks.html" class="header-switch-link header-switch-tasks">All Tasks</a>
-    </div>
-
-    <!-- Search bar (compact, pushed to far right) -->
-    <div class="search-container-compact desktop-nav">
-      <span onclick="showPopup()" class="search-icon-compact"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
-      <input type="text" id="searchQuery" placeholder="Search docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
-    </div>
   </ul>
 
   <ul class="topmenu">
@@ -368,36 +361,36 @@ Content-Type: application/json
 }    </code></pre>
       
       <table class="table"><caption></caption><colgroup><col style="width:25%"><col style="width:15%"><col style="width:60%"></colgroup><thead class="thead">
-            <tr class="row" id="post-apim-git-tag__d327e379">
-              <th class="entry valign-top" id="post-apim-git-tag__d327e379__entry__1">Key</th>
-              <th class="entry valign-top" id="post-apim-git-tag__d327e379__entry__2">Type</th>
-              <th class="entry valign-top" id="post-apim-git-tag__d327e379__entry__3">Description</th>
+            <tr class="row" id="post-apim-git-tag__d358e379">
+              <th class="entry valign-top" id="post-apim-git-tag__d358e379__entry__1">Key</th>
+              <th class="entry valign-top" id="post-apim-git-tag__d358e379__entry__2">Type</th>
+              <th class="entry valign-top" id="post-apim-git-tag__d358e379__entry__3">Description</th>
             </tr>
           </thead><tbody class="tbody">
             <tr class="row">
-              <td class="entry" headers="post-apim-git-tag__d327e379__entry__1"><code class="ph codeph">tag</code></td>
-              <td class="entry" headers="post-apim-git-tag__d327e379__entry__2">string</td>
-              <td class="entry" headers="post-apim-git-tag__d327e379__entry__3">The specified git tag.</td>
+              <td class="entry" headers="post-apim-git-tag__d358e379__entry__1"><code class="ph codeph">tag</code></td>
+              <td class="entry" headers="post-apim-git-tag__d358e379__entry__2">string</td>
+              <td class="entry" headers="post-apim-git-tag__d358e379__entry__3">The specified git tag.</td>
             </tr>
             <tr class="row">
-              <td class="entry" headers="post-apim-git-tag__d327e379__entry__1"><code class="ph codeph">message</code></td>
-              <td class="entry" headers="post-apim-git-tag__d327e379__entry__2">string</td>
-              <td class="entry" headers="post-apim-git-tag__d327e379__entry__3">The message related to git tag.</td>
+              <td class="entry" headers="post-apim-git-tag__d358e379__entry__1"><code class="ph codeph">message</code></td>
+              <td class="entry" headers="post-apim-git-tag__d358e379__entry__2">string</td>
+              <td class="entry" headers="post-apim-git-tag__d358e379__entry__3">The message related to git tag.</td>
             </tr>
             <tr class="row">
-              <td class="entry" headers="post-apim-git-tag__d327e379__entry__1"><code class="ph codeph">tag_sha</code></td>
-              <td class="entry" headers="post-apim-git-tag__d327e379__entry__2">string</td>
-              <td class="entry" headers="post-apim-git-tag__d327e379__entry__3">The unique ID of the tag when created.</td>
+              <td class="entry" headers="post-apim-git-tag__d358e379__entry__1"><code class="ph codeph">tag_sha</code></td>
+              <td class="entry" headers="post-apim-git-tag__d358e379__entry__2">string</td>
+              <td class="entry" headers="post-apim-git-tag__d358e379__entry__3">The unique ID of the tag when created.</td>
             </tr>
             <tr class="row">
-              <td class="entry" headers="post-apim-git-tag__d327e379__entry__1"><code class="ph codeph">commit_sha</code></td>
-              <td class="entry" headers="post-apim-git-tag__d327e379__entry__2">string</td>
-              <td class="entry" headers="post-apim-git-tag__d327e379__entry__3">The unique ID of the commit.</td>
+              <td class="entry" headers="post-apim-git-tag__d358e379__entry__1"><code class="ph codeph">commit_sha</code></td>
+              <td class="entry" headers="post-apim-git-tag__d358e379__entry__2">string</td>
+              <td class="entry" headers="post-apim-git-tag__d358e379__entry__3">The unique ID of the commit.</td>
             </tr>
             <tr class="row">
-              <td class="entry" headers="post-apim-git-tag__d327e379__entry__1"><code class="ph codeph">tagger</code></td>
-              <td class="entry" headers="post-apim-git-tag__d327e379__entry__2">string</td>
-              <td class="entry" headers="post-apim-git-tag__d327e379__entry__3">Email ID of the tagger.</td>
+              <td class="entry" headers="post-apim-git-tag__d358e379__entry__1"><code class="ph codeph">tagger</code></td>
+              <td class="entry" headers="post-apim-git-tag__d358e379__entry__2">string</td>
+              <td class="entry" headers="post-apim-git-tag__d358e379__entry__3">Email ID of the tagger.</td>
             </tr>
           </tbody></table>
      </div>

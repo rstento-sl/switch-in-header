@@ -76,6 +76,12 @@
     </a>
     <ph class="site-title site-title-compact"><a href="/index.html">SnapLogic Documentation</a></ph>
 
+    <!-- Search bar (compact) -->
+    <div class="search-container-compact desktop-nav">
+      <span onclick="showPopup()" class="search-icon-compact"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
+      <input type="text" id="searchQuery" placeholder="Search docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
+    </div>
+
     <!-- Product Dropdown Menus (smaller) -->
     <nav class="product-menu-header desktop-nav">
       <!-- Dropdown 1: Integration Platform -->
@@ -90,17 +96,7 @@
         </div>
       </div>
 
-      <!-- Dropdown 2: Observability -->
-      <div class="dropdown">
-        <button class="dropdown-toggle">
-          Observability <span class="arrow">▼</span>
-        </button>
-        <div class="dropdown-menu">
-          <a href="/monitor/monitor-home.html">Monitor</a>
-        </div>
-      </div>
-
-      <!-- Dropdown 3: Administration -->
+      <!-- Dropdown 2: Administration -->
       <div class="dropdown">
         <button class="dropdown-toggle">
           Administration <span class="arrow">▼</span>
@@ -110,7 +106,7 @@
         </div>
       </div>
 
-      <!-- Dropdown 4: APIs -->
+      <!-- Dropdown 3: APIs -->
       <div class="dropdown">
         <button class="dropdown-toggle">
           APIs <span class="arrow">▼</span>
@@ -121,20 +117,17 @@
           <a href="/public-apis/public-apis-home.html">Public APIs</a>
         </div>
       </div>
+
+      <!-- Dropdown 4: Observability -->
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          Observability <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <a href="/monitor/monitor-home.html">Monitor</a>
+        </div>
+      </div>
     </nav>
-
-    <!-- View switch: All Products | All Tasks -->
-    <div class="header-view-switch desktop-nav" id="headerViewSwitch">
-      <a href="/all-products.html" class="header-switch-link header-switch-products">All Products</a>
-      <span class="header-switch-separator">|</span>
-      <a href="/tasks/all-tasks.html" class="header-switch-link header-switch-tasks">All Tasks</a>
-    </div>
-
-    <!-- Search bar (compact, pushed to far right) -->
-    <div class="search-container-compact desktop-nav">
-      <span onclick="showPopup()" class="search-icon-compact"><i><img class="noborder noexpand" src="https://d3132s9xzuu9s8.cloudfront.net/k/img/search-icon-white.svg" alt="search-icon"></i></span>
-      <input type="text" id="searchQuery" placeholder="Search docs" spellcheck="false" autocomplete="off" onfocus="showdropdown()">
-    </div>
   </ul>
 
   <ul class="topmenu">
@@ -375,27 +368,27 @@ Content-Type: application/json
     "http_status_code": 200
 }</code></pre>
         <table class="table"><caption></caption><colgroup><col style="width:25%"><col style="width:15%"><col style="width:60%"></colgroup><thead class="thead">
-            <tr class="row" id="delete-apim-api-api__d615e379">
-              <th class="entry valign-top" id="delete-apim-api-api__d615e379__entry__1">Key</th>
-              <th class="entry valign-top" id="delete-apim-api-api__d615e379__entry__2">Type</th>
-              <th class="entry valign-top" id="delete-apim-api-api__d615e379__entry__3">Description</th>
+            <tr class="row" id="delete-apim-api-api__d1221e379">
+              <th class="entry valign-top" id="delete-apim-api-api__d1221e379__entry__1">Key</th>
+              <th class="entry valign-top" id="delete-apim-api-api__d1221e379__entry__2">Type</th>
+              <th class="entry valign-top" id="delete-apim-api-api__d1221e379__entry__3">Description</th>
             </tr>
           </thead><tbody class="tbody">
               <tr class="row">
-                <td class="entry" headers="delete-apim-api-api__d615e379__entry__1"><code class="ph codeph">disabled_jobs</code></td>
-                <td class="entry" headers="delete-apim-api-api__d615e379__entry__2">array</td>
-                <td class="entry" headers="delete-apim-api-api__d615e379__entry__3">Paths to the disabled tasks in the API version.</td>
+                <td class="entry" headers="delete-apim-api-api__d1221e379__entry__1"><code class="ph codeph">disabled_jobs</code></td>
+                <td class="entry" headers="delete-apim-api-api__d1221e379__entry__2">array</td>
+                <td class="entry" headers="delete-apim-api-api__d1221e379__entry__3">Paths to the disabled tasks in the API version.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="delete-apim-api-api__d615e379__entry__1">
+                <td class="entry" headers="delete-apim-api-api__d1221e379__entry__1">
                   <code class="ph codeph">deleted_plexes</code></td>
-                <td class="entry" headers="delete-apim-api-api__d615e379__entry__2">array</td>
-                <td class="entry" headers="delete-apim-api-api__d615e379__entry__3">Paths to the disabled plexes.</td>
+                <td class="entry" headers="delete-apim-api-api__d1221e379__entry__2">array</td>
+                <td class="entry" headers="delete-apim-api-api__d1221e379__entry__3">Paths to the disabled plexes.</td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="delete-apim-api-api__d615e379__entry__1"><code class="ph codeph">path</code></td>
-                <td class="entry" headers="delete-apim-api-api__d615e379__entry__2">array</td>
-                <td class="entry" headers="delete-apim-api-api__d615e379__entry__3">All the assets in the API version.</td>
+                <td class="entry" headers="delete-apim-api-api__d1221e379__entry__1"><code class="ph codeph">path</code></td>
+                <td class="entry" headers="delete-apim-api-api__d1221e379__entry__2">array</td>
+                <td class="entry" headers="delete-apim-api-api__d1221e379__entry__3">All the assets in the API version.</td>
               </tr>
             </tbody></table>
         <div class="sectiondiv">
