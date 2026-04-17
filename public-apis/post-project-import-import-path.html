@@ -341,25 +341,25 @@ Content-Type: multipart/form-data
       <div class="sectiondiv">
         <p class="p sectiondivtitle">Request body</p>
         <table class="table"><caption></caption><colgroup><col style="width:25%"><col style="width:15%"><col style="width:60%"></colgroup><thead class="thead">
-            <tr class="row" id="post-project-import-import-path__d716e379">
-              <th class="entry valign-top" id="post-project-import-import-path__d716e379__entry__1">Key</th>
-              <th class="entry valign-top" id="post-project-import-import-path__d716e379__entry__2">Type</th>
-              <th class="entry valign-top" id="post-project-import-import-path__d716e379__entry__3">Description</th>
+            <tr class="row" id="post-project-import-import-path__d742e379">
+              <th class="entry valign-top" id="post-project-import-import-path__d742e379__entry__1">Key</th>
+              <th class="entry valign-top" id="post-project-import-import-path__d742e379__entry__2">Type</th>
+              <th class="entry valign-top" id="post-project-import-import-path__d742e379__entry__3">Description</th>
             </tr>
           </thead><tbody class="tbody">
               <tr class="row">
-                <td class="entry" headers="post-project-import-import-path__d716e379__entry__1"><code class="ph codeph">file</code></td>
-                <td class="entry" headers="post-project-import-import-path__d716e379__entry__2">string</td>
-                <td class="entry" headers="post-project-import-import-path__d716e379__entry__3">The unmodified zip file of the source project that was exported. <div class="note important note_important"><span class="note__title">Important:</span> The project zip file must be exported from the source project
+                <td class="entry" headers="post-project-import-import-path__d742e379__entry__1"><code class="ph codeph">file</code></td>
+                <td class="entry" headers="post-project-import-import-path__d742e379__entry__2">string</td>
+                <td class="entry" headers="post-project-import-import-path__d742e379__entry__3">The unmodified zip file of the source project that was exported. <div class="note important note_important"><span class="note__title">Important:</span> The project zip file must be exported from the source project
                     and must be imported without changes to the new location.</div>
                   <p class="p">The name of this zip file does not indicate the name of the target project,
                     which is specified in <code class="ph codeph">import_path</code>.</p>
                 </td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="post-project-import-import-path__d716e379__entry__1"><code class="ph codeph">file_account</code></td>
-                <td class="entry" headers="post-project-import-import-path__d716e379__entry__2">string</td>
-                <td class="entry" headers="post-project-import-import-path__d716e379__entry__3"><span class="ph"><strong class="ph b">Optional.</strong> </span> The JSON file containing the list of accounts
+                <td class="entry" headers="post-project-import-import-path__d742e379__entry__1"><code class="ph codeph">file_account</code></td>
+                <td class="entry" headers="post-project-import-import-path__d742e379__entry__2">string</td>
+                <td class="entry" headers="post-project-import-import-path__d742e379__entry__3"><span class="ph"><strong class="ph b">Optional.</strong> </span> The JSON file containing the list of accounts
                   to modify. <div class="p">To create this file: <ol class="ol">
                       <li class="li">Extract the <code class="ph codeph">accounts_template.json</code> file from the exported
                         zip file. The JSON includes nodes for each account associated with the
@@ -380,9 +380,9 @@ Content-Type: multipart/form-data
                 </td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="post-project-import-import-path__d716e379__entry__1"><code class="ph codeph">file_expr</code></td>
-                <td class="entry" headers="post-project-import-import-path__d716e379__entry__2">string</td>
-                <td class="entry" headers="post-project-import-import-path__d716e379__entry__3"><span class="ph"><strong class="ph b">Optional.</strong> </span> A zip file containing expression files to add
+                <td class="entry" headers="post-project-import-import-path__d742e379__entry__1"><code class="ph codeph">file_expr</code></td>
+                <td class="entry" headers="post-project-import-import-path__d742e379__entry__2">string</td>
+                <td class="entry" headers="post-project-import-import-path__d742e379__entry__3"><span class="ph"><strong class="ph b">Optional.</strong> </span> A zip file containing expression files to add
                   to the root of the project in the new location. <p class="p">If an expression file with the
                     same name already exists in the target location, it is overwritten.</p>
                   <p class="p">If this file is not provided, no additional expression files are added to the
@@ -436,16 +436,16 @@ Content-Type: multipart/form-data
 }
 </code></pre>
         <table class="table"><caption></caption><colgroup><col style="width:25%"><col style="width:15%"><col style="width:60%"></colgroup><thead class="thead">
-            <tr class="row" id="post-project-import-import-path__d716e379">
-              <th class="entry valign-top" id="post-project-import-import-path__d716e379__entry__1">Key</th>
-              <th class="entry valign-top" id="post-project-import-import-path__d716e379__entry__2">Type</th>
-              <th class="entry valign-top" id="post-project-import-import-path__d716e379__entry__3">Description</th>
+            <tr class="row" id="post-project-import-import-path__d742e379">
+              <th class="entry valign-top" id="post-project-import-import-path__d742e379__entry__1">Key</th>
+              <th class="entry valign-top" id="post-project-import-import-path__d742e379__entry__2">Type</th>
+              <th class="entry valign-top" id="post-project-import-import-path__d742e379__entry__3">Description</th>
             </tr>
           </thead><tbody class="tbody">
               <tr class="row">
-                <td class="entry" headers="post-project-import-import-path__d716e379__entry__1"><code class="ph codeph">successful</code></td>
-                <td class="entry" headers="post-project-import-import-path__d716e379__entry__2">array</td>
-                <td class="entry" headers="post-project-import-import-path__d716e379__entry__3">An array of objects that contain: <ul class="ul">
+                <td class="entry" headers="post-project-import-import-path__d742e379__entry__1"><code class="ph codeph">successful</code></td>
+                <td class="entry" headers="post-project-import-import-path__d742e379__entry__2">array</td>
+                <td class="entry" headers="post-project-import-import-path__d742e379__entry__3">An array of objects that contain: <ul class="ul">
                     <li class="li">the node ID</li>
                     <li class="li">the asset or expression file that was successfully imported</li>
                   </ul>
@@ -454,9 +454,9 @@ Content-Type: multipart/form-data
                 </td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="post-project-import-import-path__d716e379__entry__1"><code class="ph codeph">failed</code></td>
-                <td class="entry" headers="post-project-import-import-path__d716e379__entry__2">array</td>
-                <td class="entry" headers="post-project-import-import-path__d716e379__entry__3">An array of objects that contain: <ul class="ul">
+                <td class="entry" headers="post-project-import-import-path__d742e379__entry__1"><code class="ph codeph">failed</code></td>
+                <td class="entry" headers="post-project-import-import-path__d742e379__entry__2">array</td>
+                <td class="entry" headers="post-project-import-import-path__d742e379__entry__3">An array of objects that contain: <ul class="ul">
                     <li class="li">the status code</li>
                     <li class="li">the reason for the failure</li>
                     <li class="li">the node ID</li>
@@ -465,9 +465,9 @@ Content-Type: multipart/form-data
                 </td>
               </tr>
               <tr class="row">
-                <td class="entry" headers="post-project-import-import-path__d716e379__entry__1"><code class="ph codeph">warnings</code></td>
-                <td class="entry" headers="post-project-import-import-path__d716e379__entry__2">array</td>
-                <td class="entry" headers="post-project-import-import-path__d716e379__entry__3">An array of objects that contain: <ul class="ul">
+                <td class="entry" headers="post-project-import-import-path__d742e379__entry__1"><code class="ph codeph">warnings</code></td>
+                <td class="entry" headers="post-project-import-import-path__d742e379__entry__2">array</td>
+                <td class="entry" headers="post-project-import-import-path__d742e379__entry__3">An array of objects that contain: <ul class="ul">
                     <li class="li">the warning message</li>
                     <li class="li">the node ID</li>
                     <li class="li">the asset or expression file that generated warnings</li>
@@ -703,15 +703,6 @@ Content-Type: multipart/form-data
   </div>
 
   <!-- <script src="https://d3132s9xzuu9s8.cloudfront.net/k/sldocs.js"/> -->
-  <!-- Dynamically resolve JS path from DITA-OT-generated CSS link (works for
-       both root-level and subdirectory pages, and on subdirectory deployments) -->
-  <script>
-  (function() {
-    var css = document.querySelector('link[href$="sldocs.css"]');
-    if (css) {
-      document.write('\x3Cscript src="' + css.getAttribute('href').replace('sldocs.css', 'sldocs.js') + '">\x3C/script>');
-    }
-  })();
-  </script>
+  <script src="../theme/sldocs.js"></script>
 
 </div></footer></body></html>
